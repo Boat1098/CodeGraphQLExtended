@@ -1,0 +1,893 @@
+FilePath:E:\File\CGQL\java2graph\input\Graph_Check.java
+FileName:Graph_Check.java
+package:null
+import:java.io.File
+import:java.io.FileReader
+import:java.io.FileWriter
+import:java.io.IOException
+import:java.nio.file.Files
+import:java.nio.file.Paths
+import:java.util.*
+import:java.lang.Integer
+import:java.util.stream.Stream
+import:com.opencsv.CSVReader
+import:org.apache.velocity.util.ArrayListWrapper
+{
+}
+class:Graph_Check
+method:read String:filename 16:37
+{
+v: List<List<String>> list = new ArrayList<>(); 19
+v: line = csvReader.readNext(); 26
+v: csvReader.close(); 29
+v: CSVReader csvReader = new CSVReader(fileReader); 21
+v: Enter Enter 16.37
+v: FileReader fileReader = new FileReader(filename); 20
+v: return list; 30
+v: list.add(Arrays.asList(line)); 25
+v: String[] line = csvReader.readNext(); 22
+v: String filename 16
+v: line != null 23
+estart: String filename
+eend: FileReader fileReader = new FileReader(filename); 16!20
+estart: List<List<String>> list = new ArrayList<>();
+eend: list.add(Arrays.asList(line)); 19!25
+estart: List<List<String>> list = new ArrayList<>();
+eend: return list; 19!30
+estart: FileReader fileReader = new FileReader(filename);
+eend: CSVReader csvReader = new CSVReader(fileReader); 20!21
+estart: CSVReader csvReader = new CSVReader(fileReader);
+eend: String[] line = csvReader.readNext(); 21!22
+estart: CSVReader csvReader = new CSVReader(fileReader);
+eend: line = csvReader.readNext(); 21!26
+estart: CSVReader csvReader = new CSVReader(fileReader);
+eend: csvReader.close(); 21!29
+estart: String[] line = csvReader.readNext();
+eend: line != null 22!23
+estart: String[] line = csvReader.readNext();
+eend: list.add(Arrays.asList(line)); 22!25
+estart: line != null
+eend: list.add(Arrays.asList(line)); 23!25
+estart: line != null
+eend: line = csvReader.readNext(); 23!26
+estart: line = csvReader.readNext();
+eend: line != null 26!23
+estart: line = csvReader.readNext();
+eend: list.add(Arrays.asList(line)); 26!25
+estart: Enter Enter
+eend: String filename 16!16
+estart: Enter Enter
+eend: List<List<String>> list = new ArrayList<>(); 16!19
+estart: Enter Enter
+eend: FileReader fileReader = new FileReader(filename); 16!20
+estart: Enter Enter
+eend: CSVReader csvReader = new CSVReader(fileReader); 16!21
+estart: Enter Enter
+eend: String[] line = csvReader.readNext(); 16!22
+estart: Enter Enter
+eend: line != null 16!23
+estart: Enter Enter
+eend: csvReader.close(); 16!29
+estart: Enter Enter
+eend: return list; 16!30
+}
+class:Graph_Check
+method:getPointerNode List<String>:lines 58:133
+{
+v: pointerNode.add(node); 105
+v: String fullName = null; 63
+v: i++ 112
+v: fullNames.add(fullName); 100
+v: fullNames.add(fullName); 106
+v: pointerNode.add(node); 123
+v: node = identifierNode.get(i); 70
+v: pointerNode.add(node); 75
+v: pointerNode.add(node); 93
+v: line.contains(\"calloc\") 103
+v: List<List<String>> identifierNode = read(identiferFile); 61
+v: fullName.contains(\"[\") 79
+v: fullName.contains(\"[\") 121
+v: List<String> node = null; 62
+v: i++ 68
+v: Enter Enter 58.133
+v: line = lines.get(Integer.parseInt(node.get(7)) - 1); 72
+v: pointerNode.add(node); 87
+v: line.contains(\"malloc\") 91
+v: fullName.contains(\"*\") 116
+v: fullNames.contains(fullName) 126
+v: return pointerNode; 132
+v: pointerNode.add(node); 118
+v: pointerNode.add(node); 128
+v: i < paramterNode.size() 112
+v: List<List<String>> paramterNode = read(paramterFile); 111
+v: String identiferFile = \"./result/nodes_IDENTIFIER_data.csv\"; 60
+v: fullName = node.get(13); 115
+v: List<List<String>> pointerNode = new ArrayList<>(); 65
+v: pointerNode.add(node); 99
+v: pointerNode.add(node); 81
+v: node = paramterNode.get(i); 114
+v: int i = 0; 67
+v: line.contains(\"fork\") 85
+v: fullNames.add(fullName); 94
+v: List<String> fullNames = new ArrayList<>(); 66
+v: String paramterFile = \"./result/nodes_METHOD_PARAMETER_IN_data.csv\"; 110
+v: List<String> lines 58
+v: fullNames.add(fullName); 82
+v: i < identifierNode.size() 68
+v: line.contains(\"realloc\") 97
+v: fullNames.add(fullName); 76
+v: String line = null; 64
+v: fullName.contains(\"*\") 73
+v: fullNames.add(fullName); 88
+v: i = 0 68
+v: i = 0 112
+v: fullName = node.get(11); 71
+estart: List<String> lines
+eend: line = lines.get(Integer.parseInt(node.get(7)) - 1); 58!72
+estart: String identiferFile = \"./result/nodes_IDENTIFIER_data.csv\";
+eend: List<List<String>> identifierNode = read(identiferFile); 60!61
+estart: List<List<String>> identifierNode = read(identiferFile);
+eend: i < identifierNode.size() 61!68
+estart: List<List<String>> identifierNode = read(identiferFile);
+eend: node = identifierNode.get(i); 61!70
+estart: List<List<String>> pointerNode = new ArrayList<>();
+eend: pointerNode.add(node); 65!75
+estart: List<List<String>> pointerNode = new ArrayList<>();
+eend: pointerNode.add(node); 65!81
+estart: List<List<String>> pointerNode = new ArrayList<>();
+eend: pointerNode.add(node); 65!87
+estart: List<List<String>> pointerNode = new ArrayList<>();
+eend: pointerNode.add(node); 65!93
+estart: List<List<String>> pointerNode = new ArrayList<>();
+eend: pointerNode.add(node); 65!99
+estart: List<List<String>> pointerNode = new ArrayList<>();
+eend: pointerNode.add(node); 65!105
+estart: List<List<String>> pointerNode = new ArrayList<>();
+eend: pointerNode.add(node); 65!118
+estart: List<List<String>> pointerNode = new ArrayList<>();
+eend: pointerNode.add(node); 65!123
+estart: List<List<String>> pointerNode = new ArrayList<>();
+eend: pointerNode.add(node); 65!128
+estart: List<List<String>> pointerNode = new ArrayList<>();
+eend: return pointerNode; 65!132
+estart: List<String> fullNames = new ArrayList<>();
+eend: fullNames.add(fullName); 66!76
+estart: List<String> fullNames = new ArrayList<>();
+eend: fullNames.add(fullName); 66!82
+estart: List<String> fullNames = new ArrayList<>();
+eend: fullNames.add(fullName); 66!88
+estart: List<String> fullNames = new ArrayList<>();
+eend: fullNames.add(fullName); 66!94
+estart: List<String> fullNames = new ArrayList<>();
+eend: fullNames.add(fullName); 66!100
+estart: List<String> fullNames = new ArrayList<>();
+eend: fullNames.add(fullName); 66!106
+estart: List<String> fullNames = new ArrayList<>();
+eend: fullNames.contains(fullName) 66!126
+estart: i = 0
+eend: i < identifierNode.size() 68!68
+estart: i = 0
+eend: i++ 68!68
+estart: i = 0
+eend: node = identifierNode.get(i); 68!70
+estart: i < identifierNode.size()
+eend: i++ 68!68
+estart: i < identifierNode.size()
+eend: node = identifierNode.get(i); 68!70
+estart: i < identifierNode.size()
+eend: fullName = node.get(11); 68!71
+estart: i < identifierNode.size()
+eend: line = lines.get(Integer.parseInt(node.get(7)) - 1); 68!72
+estart: i < identifierNode.size()
+eend: fullName.contains(\"*\") 68!73
+estart: i < identifierNode.size()
+eend: fullName.contains(\"[\") 68!79
+estart: i < identifierNode.size()
+eend: line.contains(\"fork\") 68!85
+estart: i < identifierNode.size()
+eend: line.contains(\"malloc\") 68!91
+estart: i < identifierNode.size()
+eend: line.contains(\"realloc\") 68!97
+estart: i < identifierNode.size()
+eend: line.contains(\"calloc\") 68!103
+estart: i++
+eend: i < identifierNode.size() 68!68
+estart: i++
+eend: i++ 68!68
+estart: i++
+eend: node = identifierNode.get(i); 68!70
+estart: node = identifierNode.get(i);
+eend: fullName = node.get(11); 70!71
+estart: node = identifierNode.get(i);
+eend: line = lines.get(Integer.parseInt(node.get(7)) - 1); 70!72
+estart: node = identifierNode.get(i);
+eend: pointerNode.add(node); 70!75
+estart: node = identifierNode.get(i);
+eend: pointerNode.add(node); 70!81
+estart: node = identifierNode.get(i);
+eend: pointerNode.add(node); 70!87
+estart: node = identifierNode.get(i);
+eend: pointerNode.add(node); 70!93
+estart: node = identifierNode.get(i);
+eend: pointerNode.add(node); 70!99
+estart: node = identifierNode.get(i);
+eend: pointerNode.add(node); 70!105
+estart: fullName = node.get(11);
+eend: fullName.contains(\"*\") 71!73
+estart: fullName = node.get(11);
+eend: fullNames.add(fullName); 71!76
+estart: fullName = node.get(11);
+eend: fullName.contains(\"[\") 71!79
+estart: fullName = node.get(11);
+eend: fullNames.add(fullName); 71!82
+estart: fullName = node.get(11);
+eend: fullNames.add(fullName); 71!88
+estart: fullName = node.get(11);
+eend: fullNames.add(fullName); 71!94
+estart: fullName = node.get(11);
+eend: fullNames.add(fullName); 71!100
+estart: fullName = node.get(11);
+eend: fullNames.add(fullName); 71!106
+estart: line = lines.get(Integer.parseInt(node.get(7)) - 1);
+eend: line.contains(\"fork\") 72!85
+estart: line = lines.get(Integer.parseInt(node.get(7)) - 1);
+eend: line.contains(\"malloc\") 72!91
+estart: line = lines.get(Integer.parseInt(node.get(7)) - 1);
+eend: line.contains(\"realloc\") 72!97
+estart: line = lines.get(Integer.parseInt(node.get(7)) - 1);
+eend: line.contains(\"calloc\") 72!103
+estart: fullName.contains(\"*\")
+eend: pointerNode.add(node); 73!75
+estart: fullName.contains(\"*\")
+eend: fullNames.add(fullName); 73!76
+estart: fullName.contains(\"[\")
+eend: pointerNode.add(node); 79!81
+estart: fullName.contains(\"[\")
+eend: fullNames.add(fullName); 79!82
+estart: line.contains(\"fork\")
+eend: pointerNode.add(node); 85!87
+estart: line.contains(\"fork\")
+eend: fullNames.add(fullName); 85!88
+estart: line.contains(\"malloc\")
+eend: pointerNode.add(node); 91!93
+estart: line.contains(\"malloc\")
+eend: fullNames.add(fullName); 91!94
+estart: line.contains(\"realloc\")
+eend: pointerNode.add(node); 97!99
+estart: line.contains(\"realloc\")
+eend: fullNames.add(fullName); 97!100
+estart: line.contains(\"calloc\")
+eend: pointerNode.add(node); 103!105
+estart: line.contains(\"calloc\")
+eend: fullNames.add(fullName); 103!106
+estart: String paramterFile = \"./result/nodes_METHOD_PARAMETER_IN_data.csv\";
+eend: List<List<String>> paramterNode = read(paramterFile); 110!111
+estart: List<List<String>> paramterNode = read(paramterFile);
+eend: i < paramterNode.size() 111!112
+estart: List<List<String>> paramterNode = read(paramterFile);
+eend: node = paramterNode.get(i); 111!114
+estart: i = 0
+eend: i < paramterNode.size() 112!112
+estart: i = 0
+eend: i++ 112!112
+estart: i = 0
+eend: node = paramterNode.get(i); 112!114
+estart: i < paramterNode.size()
+eend: i++ 112!112
+estart: i < paramterNode.size()
+eend: node = paramterNode.get(i); 112!114
+estart: i < paramterNode.size()
+eend: fullName = node.get(13); 112!115
+estart: i < paramterNode.size()
+eend: fullName.contains(\"*\") 112!116
+estart: i < paramterNode.size()
+eend: fullName.contains(\"[\") 112!121
+estart: i < paramterNode.size()
+eend: fullNames.contains(fullName) 112!126
+estart: i++
+eend: i < paramterNode.size() 112!112
+estart: i++
+eend: i++ 112!112
+estart: i++
+eend: node = paramterNode.get(i); 112!114
+estart: node = paramterNode.get(i);
+eend: fullName = node.get(13); 114!115
+estart: node = paramterNode.get(i);
+eend: pointerNode.add(node); 114!118
+estart: node = paramterNode.get(i);
+eend: pointerNode.add(node); 114!123
+estart: node = paramterNode.get(i);
+eend: pointerNode.add(node); 114!128
+estart: fullName = node.get(13);
+eend: fullName.contains(\"*\") 115!116
+estart: fullName = node.get(13);
+eend: fullName.contains(\"[\") 115!121
+estart: fullName = node.get(13);
+eend: fullNames.contains(fullName) 115!126
+estart: fullName.contains(\"*\")
+eend: pointerNode.add(node); 116!118
+estart: fullName.contains(\"[\")
+eend: pointerNode.add(node); 121!123
+estart: fullNames.contains(fullName)
+eend: pointerNode.add(node); 126!128
+estart: Enter Enter
+eend: List<String> lines 58!58
+estart: Enter Enter
+eend: String identiferFile = \"./result/nodes_IDENTIFIER_data.csv\"; 58!60
+estart: Enter Enter
+eend: List<List<String>> identifierNode = read(identiferFile); 58!61
+estart: Enter Enter
+eend: List<String> node = null; 58!62
+estart: Enter Enter
+eend: String fullName = null; 58!63
+estart: Enter Enter
+eend: String line = null; 58!64
+estart: Enter Enter
+eend: List<List<String>> pointerNode = new ArrayList<>(); 58!65
+estart: Enter Enter
+eend: List<String> fullNames = new ArrayList<>(); 58!66
+estart: Enter Enter
+eend: int i = 0; 58!67
+estart: Enter Enter
+eend: i = 0 58!68
+estart: Enter Enter
+eend: i < identifierNode.size() 58!68
+estart: Enter Enter
+eend: String paramterFile = \"./result/nodes_METHOD_PARAMETER_IN_data.csv\"; 58!110
+estart: Enter Enter
+eend: List<List<String>> paramterNode = read(paramterFile); 58!111
+estart: Enter Enter
+eend: i = 0 58!112
+estart: Enter Enter
+eend: i < paramterNode.size() 58!112
+estart: Enter Enter
+eend: return pointerNode; 58!132
+}
+class:Graph_Check
+method:getCallNode List:pointerId 142:200
+{
+v: int i = 0; 147
+v: List<String> id = new ArrayList<>(); 155
+v: pointerId.contains(edge.get(1)) 181
+v: callID.contains(edge.get(0)) 179
+v: pointerId.contains(edge.get(1)) 161
+v: id.contains(edge.get(0)) 183
+v: List<String> edge = edgesAst.get(i); 178
+v: i = 0 195
+v: i++ 148
+v: List<List<String>> edgesCDG = read(edgesCDGPath); 153
+v: i < id.size() 195
+v: callID.contains(edge.get(0)) 159
+v: String edgesAstPath = \"./result/edges_AST_data.csv\"; 174
+v: i = 0 176
+v: i < callNode.size() 148
+v: callID.add(callNode.get(i).get(0)); 150
+v: List<List<String>> node = new ArrayList<>(); 154
+v: List<String> edge = edgesCDG.get(i); 158
+v: id.add(edge.get(0)); 189
+v: List pointerId 142
+v: Enter Enter 142.200
+v: String callNodePath = \"./result/nodes_CALL_data.csv\"; 144
+v: i++ 156
+v: i = 0 156
+v: List<List<String>> edgesAst = read(edgesAstPath); 175
+v: List<List<String>> callNode = read(callNodePath); 145
+v: id.contains(edge.get(0)) 163
+v: i < edgesAst.size() 176
+v: node.add(callNode.get(callID.indexOf(id.get(i)))); 197
+v: i = 0 148
+v: List<String> callID = new ArrayList<>(); 146
+v: String edgesCDGPath = \"./result/edges_CDG_data.csv\"; 152
+v: i++ 195
+v: return node; 199
+v: i++ 176
+v: i < edgesCDG.size() 156
+v: id.add(edge.get(0)); 169
+estart: List pointerId
+eend: pointerId.contains(edge.get(1)) 142!161
+estart: List pointerId
+eend: pointerId.contains(edge.get(1)) 142!181
+estart: String callNodePath = \"./result/nodes_CALL_data.csv\";
+eend: List<List<String>> callNode = read(callNodePath); 144!145
+estart: List<List<String>> callNode = read(callNodePath);
+eend: i < callNode.size() 145!148
+estart: List<List<String>> callNode = read(callNodePath);
+eend: callID.add(callNode.get(i).get(0)); 145!150
+estart: List<List<String>> callNode = read(callNodePath);
+eend: node.add(callNode.get(callID.indexOf(id.get(i)))); 145!197
+estart: List<String> callID = new ArrayList<>();
+eend: callID.add(callNode.get(i).get(0)); 146!150
+estart: List<String> callID = new ArrayList<>();
+eend: callID.contains(edge.get(0)) 146!159
+estart: List<String> callID = new ArrayList<>();
+eend: callID.contains(edge.get(0)) 146!179
+estart: List<String> callID = new ArrayList<>();
+eend: node.add(callNode.get(callID.indexOf(id.get(i)))); 146!197
+estart: i = 0
+eend: i < callNode.size() 148!148
+estart: i = 0
+eend: i++ 148!148
+estart: i = 0
+eend: callID.add(callNode.get(i).get(0)); 148!150
+estart: i < callNode.size()
+eend: i++ 148!148
+estart: i < callNode.size()
+eend: callID.add(callNode.get(i).get(0)); 148!150
+estart: i++
+eend: i < callNode.size() 148!148
+estart: i++
+eend: i++ 148!148
+estart: i++
+eend: callID.add(callNode.get(i).get(0)); 148!150
+estart: String edgesCDGPath = \"./result/edges_CDG_data.csv\";
+eend: List<List<String>> edgesCDG = read(edgesCDGPath); 152!153
+estart: List<List<String>> edgesCDG = read(edgesCDGPath);
+eend: i < edgesCDG.size() 153!156
+estart: List<List<String>> edgesCDG = read(edgesCDGPath);
+eend: List<String> edge = edgesCDG.get(i); 153!158
+estart: List<List<String>> node = new ArrayList<>();
+eend: node.add(callNode.get(callID.indexOf(id.get(i)))); 154!197
+estart: List<List<String>> node = new ArrayList<>();
+eend: return node; 154!199
+estart: List<String> id = new ArrayList<>();
+eend: id.contains(edge.get(0)) 155!163
+estart: List<String> id = new ArrayList<>();
+eend: id.add(edge.get(0)); 155!169
+estart: List<String> id = new ArrayList<>();
+eend: id.contains(edge.get(0)) 155!183
+estart: List<String> id = new ArrayList<>();
+eend: id.add(edge.get(0)); 155!189
+estart: List<String> id = new ArrayList<>();
+eend: i < id.size() 155!195
+estart: List<String> id = new ArrayList<>();
+eend: node.add(callNode.get(callID.indexOf(id.get(i)))); 155!197
+estart: i = 0
+eend: i < edgesCDG.size() 156!156
+estart: i = 0
+eend: i++ 156!156
+estart: i = 0
+eend: List<String> edge = edgesCDG.get(i); 156!158
+estart: i < edgesCDG.size()
+eend: i++ 156!156
+estart: i < edgesCDG.size()
+eend: List<String> edge = edgesCDG.get(i); 156!158
+estart: i < edgesCDG.size()
+eend: callID.contains(edge.get(0)) 156!159
+estart: i++
+eend: i < edgesCDG.size() 156!156
+estart: i++
+eend: i++ 156!156
+estart: i++
+eend: List<String> edge = edgesCDG.get(i); 156!158
+estart: List<String> edge = edgesCDG.get(i);
+eend: callID.contains(edge.get(0)) 158!159
+estart: List<String> edge = edgesCDG.get(i);
+eend: pointerId.contains(edge.get(1)) 158!161
+estart: List<String> edge = edgesCDG.get(i);
+eend: id.contains(edge.get(0)) 158!163
+estart: List<String> edge = edgesCDG.get(i);
+eend: id.add(edge.get(0)); 158!169
+estart: callID.contains(edge.get(0))
+eend: pointerId.contains(edge.get(1)) 159!161
+estart: pointerId.contains(edge.get(1))
+eend: id.contains(edge.get(0)) 161!163
+estart: id.contains(edge.get(0))
+eend: id.add(edge.get(0)); 163!169
+estart: String edgesAstPath = \"./result/edges_AST_data.csv\";
+eend: List<List<String>> edgesAst = read(edgesAstPath); 174!175
+estart: List<List<String>> edgesAst = read(edgesAstPath);
+eend: i < edgesAst.size() 175!176
+estart: List<List<String>> edgesAst = read(edgesAstPath);
+eend: List<String> edge = edgesAst.get(i); 175!178
+estart: i = 0
+eend: i < edgesAst.size() 176!176
+estart: i = 0
+eend: i++ 176!176
+estart: i = 0
+eend: List<String> edge = edgesAst.get(i); 176!178
+estart: i < edgesAst.size()
+eend: i++ 176!176
+estart: i < edgesAst.size()
+eend: List<String> edge = edgesAst.get(i); 176!178
+estart: i < edgesAst.size()
+eend: callID.contains(edge.get(0)) 176!179
+estart: i++
+eend: i < edgesAst.size() 176!176
+estart: i++
+eend: i++ 176!176
+estart: i++
+eend: List<String> edge = edgesAst.get(i); 176!178
+estart: List<String> edge = edgesAst.get(i);
+eend: callID.contains(edge.get(0)) 178!179
+estart: List<String> edge = edgesAst.get(i);
+eend: pointerId.contains(edge.get(1)) 178!181
+estart: List<String> edge = edgesAst.get(i);
+eend: id.contains(edge.get(0)) 178!183
+estart: List<String> edge = edgesAst.get(i);
+eend: id.add(edge.get(0)); 178!189
+estart: callID.contains(edge.get(0))
+eend: pointerId.contains(edge.get(1)) 179!181
+estart: pointerId.contains(edge.get(1))
+eend: id.contains(edge.get(0)) 181!183
+estart: id.contains(edge.get(0))
+eend: id.add(edge.get(0)); 183!189
+estart: i = 0
+eend: i < id.size() 195!195
+estart: i = 0
+eend: i++ 195!195
+estart: i = 0
+eend: node.add(callNode.get(callID.indexOf(id.get(i)))); 195!197
+estart: i < id.size()
+eend: i++ 195!195
+estart: i < id.size()
+eend: node.add(callNode.get(callID.indexOf(id.get(i)))); 195!197
+estart: i++
+eend: i < id.size() 195!195
+estart: i++
+eend: i++ 195!195
+estart: i++
+eend: node.add(callNode.get(callID.indexOf(id.get(i)))); 195!197
+estart: Enter Enter
+eend: List pointerId 142!142
+estart: Enter Enter
+eend: String callNodePath = \"./result/nodes_CALL_data.csv\"; 142!144
+estart: Enter Enter
+eend: List<List<String>> callNode = read(callNodePath); 142!145
+estart: Enter Enter
+eend: List<String> callID = new ArrayList<>(); 142!146
+estart: Enter Enter
+eend: int i = 0; 142!147
+estart: Enter Enter
+eend: i = 0 142!148
+estart: Enter Enter
+eend: i < callNode.size() 142!148
+estart: Enter Enter
+eend: String edgesCDGPath = \"./result/edges_CDG_data.csv\"; 142!152
+estart: Enter Enter
+eend: List<List<String>> edgesCDG = read(edgesCDGPath); 142!153
+estart: Enter Enter
+eend: List<List<String>> node = new ArrayList<>(); 142!154
+estart: Enter Enter
+eend: List<String> id = new ArrayList<>(); 142!155
+estart: Enter Enter
+eend: i = 0 142!156
+estart: Enter Enter
+eend: i < edgesCDG.size() 142!156
+estart: Enter Enter
+eend: String edgesAstPath = \"./result/edges_AST_data.csv\"; 142!174
+estart: Enter Enter
+eend: List<List<String>> edgesAst = read(edgesAstPath); 142!175
+estart: Enter Enter
+eend: i = 0 142!176
+estart: Enter Enter
+eend: i < edgesAst.size() 142!176
+estart: Enter Enter
+eend: i = 0 142!195
+estart: Enter Enter
+eend: i < id.size() 142!195
+estart: Enter Enter
+eend: return node; 142!199
+}
+class:Graph_Check
+method:getLinesNumber List<List<String>>:pointerNode List<List<String>>:callNode 224:257
+{
+v: pointer.size() == 12 231
+v: !linesNumber.contains(Integer.parseInt(pointer.get(7))) 233
+v: i++ 228
+v: i = 0 246
+v: i++ 246
+v: !linesNumber.contains(Integer.parseInt(call.get(8))) 249
+v: linesNumber.add(Integer.parseInt(pointer.get(7))); 235
+v: i < callNode.size() 246
+v: Comparator<Integer> comparator = Comparator.comparingInt(null); 254
+v: List<List<String>> pointerNode 224
+v: List<List<String>> callNode 224
+v: List<Integer> linesNumber = new ArrayList<>(); 227
+v: List<String> pointer = pointerNode.get(i); 230
+v: !linesNumber.contains(Integer.parseInt(pointer.get(9))) 240
+v: linesNumber.sort(comparator); 255
+v: return linesNumber; 256
+v: List<String> call = callNode.get(i); 248
+v: Enter Enter 224.257
+v: int i = 0; 226
+v: i < pointerNode.size() 228
+v: i = 0 228
+v: linesNumber.add(Integer.parseInt(pointer.get(9))); 242
+v: linesNumber.add(Integer.parseInt(call.get(8))); 251
+estart: List<List<String>> pointerNode
+eend: i < pointerNode.size() 224!228
+estart: List<List<String>> pointerNode
+eend: List<String> pointer = pointerNode.get(i); 224!230
+estart: List<List<String>> callNode
+eend: i < callNode.size() 224!246
+estart: List<List<String>> callNode
+eend: List<String> call = callNode.get(i); 224!248
+estart: List<Integer> linesNumber = new ArrayList<>();
+eend: linesNumber.add(Integer.parseInt(pointer.get(7))); 227!235
+estart: List<Integer> linesNumber = new ArrayList<>();
+eend: linesNumber.add(Integer.parseInt(pointer.get(9))); 227!242
+estart: List<Integer> linesNumber = new ArrayList<>();
+eend: linesNumber.add(Integer.parseInt(call.get(8))); 227!251
+estart: List<Integer> linesNumber = new ArrayList<>();
+eend: linesNumber.sort(comparator); 227!255
+estart: List<Integer> linesNumber = new ArrayList<>();
+eend: return linesNumber; 227!256
+estart: i = 0
+eend: i < pointerNode.size() 228!228
+estart: i = 0
+eend: i++ 228!228
+estart: i = 0
+eend: List<String> pointer = pointerNode.get(i); 228!230
+estart: i < pointerNode.size()
+eend: i++ 228!228
+estart: i < pointerNode.size()
+eend: List<String> pointer = pointerNode.get(i); 228!230
+estart: i < pointerNode.size()
+eend: pointer.size() == 12 228!231
+estart: i++
+eend: i < pointerNode.size() 228!228
+estart: i++
+eend: i++ 228!228
+estart: i++
+eend: List<String> pointer = pointerNode.get(i); 228!230
+estart: List<String> pointer = pointerNode.get(i);
+eend: pointer.size() == 12 230!231
+estart: List<String> pointer = pointerNode.get(i);
+eend: linesNumber.add(Integer.parseInt(pointer.get(7))); 230!235
+estart: List<String> pointer = pointerNode.get(i);
+eend: linesNumber.add(Integer.parseInt(pointer.get(9))); 230!242
+estart: pointer.size() == 12
+eend: !linesNumber.contains(Integer.parseInt(pointer.get(7))) 231!233
+estart: pointer.size() == 12
+eend: !linesNumber.contains(Integer.parseInt(pointer.get(9))) 231!240
+estart: !linesNumber.contains(Integer.parseInt(pointer.get(7)))
+eend: linesNumber.add(Integer.parseInt(pointer.get(7))); 233!235
+estart: !linesNumber.contains(Integer.parseInt(pointer.get(9)))
+eend: linesNumber.add(Integer.parseInt(pointer.get(9))); 240!242
+estart: i = 0
+eend: i < callNode.size() 246!246
+estart: i = 0
+eend: i++ 246!246
+estart: i = 0
+eend: List<String> call = callNode.get(i); 246!248
+estart: i < callNode.size()
+eend: i++ 246!246
+estart: i < callNode.size()
+eend: List<String> call = callNode.get(i); 246!248
+estart: i < callNode.size()
+eend: !linesNumber.contains(Integer.parseInt(call.get(8))) 246!249
+estart: i++
+eend: i < callNode.size() 246!246
+estart: i++
+eend: i++ 246!246
+estart: i++
+eend: List<String> call = callNode.get(i); 246!248
+estart: List<String> call = callNode.get(i);
+eend: linesNumber.add(Integer.parseInt(call.get(8))); 248!251
+estart: !linesNumber.contains(Integer.parseInt(call.get(8)))
+eend: linesNumber.add(Integer.parseInt(call.get(8))); 249!251
+estart: Comparator<Integer> comparator = Comparator.comparingInt(null);
+eend: linesNumber.sort(comparator); 254!255
+estart: Enter Enter
+eend: List<List<String>> pointerNode 224!224
+estart: Enter Enter
+eend: List<List<String>> callNode 224!224
+estart: Enter Enter
+eend: int i = 0; 224!226
+estart: Enter Enter
+eend: List<Integer> linesNumber = new ArrayList<>(); 224!227
+estart: Enter Enter
+eend: i = 0 224!228
+estart: Enter Enter
+eend: i < pointerNode.size() 224!228
+estart: Enter Enter
+eend: i = 0 224!246
+estart: Enter Enter
+eend: i < callNode.size() 224!246
+estart: Enter Enter
+eend: Comparator<Integer> comparator = Comparator.comparingInt(null); 224!254
+estart: Enter Enter
+eend: linesNumber.sort(comparator); 224!255
+estart: Enter Enter
+eend: return linesNumber; 224!256
+}
+class:Graph_Check
+method:clean 259:270
+{
+v: String delcmd = \"del /q /f result.txt\"; 262
+v: Enter Enter 259.270
+v: Runtime delrun = Runtime.getRuntime(); 263
+v: Process delpro = delrun.exec(new String[][]j2cpg.pe.ExpressionInfo@3c1); 264
+estart: String delcmd = \"del /q /f result.txt\";
+eend: Process delpro = delrun.exec(new String[][]j2cpg.pe.ExpressionInfo@3c1); 262!264
+estart: Runtime delrun = Runtime.getRuntime();
+eend: Process delpro = delrun.exec(new String[][]j2cpg.pe.ExpressionInfo@3c1); 263!264
+estart: Enter Enter
+eend: String delcmd = \"del /q /f result.txt\"; 259!262
+estart: Enter Enter
+eend: Runtime delrun = Runtime.getRuntime(); 259!263
+estart: Enter Enter
+eend: Process delpro = delrun.exec(new String[][]j2cpg.pe.ExpressionInfo@3c1); 259!264
+}
+class:Graph_Check
+method:export List<Integer>:lines List<String>:file 272:296
+{
+v: FileWriter fileWriter = new FileWriter(out); 278
+v: i++ 279
+v: Enter Enter 272.296
+v: fileWriter.write(\"\"); 283
+v: String outFile = \"result.txt\"; 276
+v: int i = 0; 275
+v: fileWriter.close(); 286
+v: fileWriter.flush(); 285
+v: List<String> file 272
+v: File out = new File(outFile); 277
+v: i = 0 279
+v: i < lines.size() 279
+v: String line = file.get(lines.get(i) - 1); 281
+v: fileWriter.write(line); 282
+v: List<Integer> lines 272
+estart: List<Integer> lines
+eend: i < lines.size() 272!279
+estart: List<Integer> lines
+eend: String line = file.get(lines.get(i) - 1); 272!281
+estart: List<String> file
+eend: String line = file.get(lines.get(i) - 1); 272!281
+estart: String outFile = \"result.txt\";
+eend: File out = new File(outFile); 276!277
+estart: File out = new File(outFile);
+eend: FileWriter fileWriter = new FileWriter(out); 277!278
+estart: FileWriter fileWriter = new FileWriter(out);
+eend: fileWriter.write(line); 278!282
+estart: FileWriter fileWriter = new FileWriter(out);
+eend: fileWriter.write(\"\"); 278!283
+estart: FileWriter fileWriter = new FileWriter(out);
+eend: fileWriter.flush(); 278!285
+estart: FileWriter fileWriter = new FileWriter(out);
+eend: fileWriter.close(); 278!286
+estart: i = 0
+eend: i < lines.size() 279!279
+estart: i = 0
+eend: i++ 279!279
+estart: i = 0
+eend: String line = file.get(lines.get(i) - 1); 279!281
+estart: i < lines.size()
+eend: i++ 279!279
+estart: i < lines.size()
+eend: String line = file.get(lines.get(i) - 1); 279!281
+estart: i < lines.size()
+eend: fileWriter.write(line); 279!282
+estart: i < lines.size()
+eend: fileWriter.write(\"\"); 279!283
+estart: i++
+eend: i < lines.size() 279!279
+estart: i++
+eend: i++ 279!279
+estart: i++
+eend: String line = file.get(lines.get(i) - 1); 279!281
+estart: String line = file.get(lines.get(i) - 1);
+eend: fileWriter.write(line); 281!282
+estart: Enter Enter
+eend: List<Integer> lines 272!272
+estart: Enter Enter
+eend: List<String> file 272!272
+estart: Enter Enter
+eend: int i = 0; 272!275
+estart: Enter Enter
+eend: String outFile = \"result.txt\"; 272!276
+estart: Enter Enter
+eend: File out = new File(outFile); 272!277
+estart: Enter Enter
+eend: FileWriter fileWriter = new FileWriter(out); 272!278
+estart: Enter Enter
+eend: i = 0 272!279
+estart: Enter Enter
+eend: i < lines.size() 272!279
+estart: Enter Enter
+eend: fileWriter.flush(); 272!285
+estart: Enter Enter
+eend: fileWriter.close(); 272!286
+}
+class:Graph_Check
+method:readFile String:filePath 298:314
+{
+v: List<String> file = Files.readAllLines(Paths.get(filePath)); 301
+v: return file; 302
+v: String filePath 298
+v: Enter Enter 298.314
+estart: String filePath
+eend: List<String> file = Files.readAllLines(Paths.get(filePath)); 298!301
+estart: List<String> file = Files.readAllLines(Paths.get(filePath));
+eend: return file; 301!302
+estart: Enter Enter
+eend: String filePath 298!298
+estart: Enter Enter
+eend: List<String> file = Files.readAllLines(Paths.get(filePath)); 298!301
+estart: Enter Enter
+eend: return file; 298!302
+}
+class:Graph_Check
+method:main String[]:args 316:336
+{
+v: export(lineNumber,file); 333
+v: List<Integer> lineNumber = getLinesNumber(pointerIdentifierNode,callNode); 331
+v: clean(); 332
+v: Enter Enter 316.336
+v: String[] args 316
+v: int i = 0; 325
+v: List<String> pointerId = new ArrayList<>(); 324
+v: file == null 319
+v: List<List<String>> callNode = getCallNode(pointerId); 330
+v: List<String> file = readFile(\"target.c\"); 318
+v: List<List<String>> pointerIdentifierNode = getPointerNode(file); 323
+v: pointerId.add(pointerIdentifierNode.get(i).get(0)); 328
+v: i = 0 326
+v: return; 321
+v: i++ 326
+v: return; 335
+v: i < pointerIdentifierNode.size() 326
+estart: List<String> file = readFile(\"target.c\");
+eend: file == null 318!319
+estart: List<String> file = readFile(\"target.c\");
+eend: List<List<String>> pointerIdentifierNode = getPointerNode(file); 318!323
+estart: List<String> file = readFile(\"target.c\");
+eend: export(lineNumber,file); 318!333
+estart: file == null
+eend: return; 319!321
+estart: List<List<String>> pointerIdentifierNode = getPointerNode(file);
+eend: i < pointerIdentifierNode.size() 323!326
+estart: List<List<String>> pointerIdentifierNode = getPointerNode(file);
+eend: pointerId.add(pointerIdentifierNode.get(i).get(0)); 323!328
+estart: List<List<String>> pointerIdentifierNode = getPointerNode(file);
+eend: List<Integer> lineNumber = getLinesNumber(pointerIdentifierNode,callNode); 323!331
+estart: List<String> pointerId = new ArrayList<>();
+eend: pointerId.add(pointerIdentifierNode.get(i).get(0)); 324!328
+estart: List<String> pointerId = new ArrayList<>();
+eend: List<List<String>> callNode = getCallNode(pointerId); 324!330
+estart: i = 0
+eend: i < pointerIdentifierNode.size() 326!326
+estart: i = 0
+eend: i++ 326!326
+estart: i = 0
+eend: pointerId.add(pointerIdentifierNode.get(i).get(0)); 326!328
+estart: i < pointerIdentifierNode.size()
+eend: i++ 326!326
+estart: i < pointerIdentifierNode.size()
+eend: pointerId.add(pointerIdentifierNode.get(i).get(0)); 326!328
+estart: i++
+eend: i < pointerIdentifierNode.size() 326!326
+estart: i++
+eend: i++ 326!326
+estart: i++
+eend: pointerId.add(pointerIdentifierNode.get(i).get(0)); 326!328
+estart: List<List<String>> callNode = getCallNode(pointerId);
+eend: List<Integer> lineNumber = getLinesNumber(pointerIdentifierNode,callNode); 330!331
+estart: List<Integer> lineNumber = getLinesNumber(pointerIdentifierNode,callNode);
+eend: export(lineNumber,file); 331!333
+estart: Enter Enter
+eend: String[] args 316!316
+estart: Enter Enter
+eend: List<String> file = readFile(\"target.c\"); 316!318
+estart: Enter Enter
+eend: file == null 316!319
+estart: Enter Enter
+eend: List<List<String>> pointerIdentifierNode = getPointerNode(file); 316!323
+estart: Enter Enter
+eend: List<String> pointerId = new ArrayList<>(); 316!324
+estart: Enter Enter
+eend: int i = 0; 316!325
+estart: Enter Enter
+eend: i = 0 316!326
+estart: Enter Enter
+eend: i < pointerIdentifierNode.size() 316!326
+estart: Enter Enter
+eend: List<List<String>> callNode = getCallNode(pointerId); 316!330
+estart: Enter Enter
+eend: List<Integer> lineNumber = getLinesNumber(pointerIdentifierNode,callNode); 316!331
+estart: Enter Enter
+eend: clean(); 316!332
+estart: Enter Enter
+eend: export(lineNumber,file); 316!333
+estart: Enter Enter
+eend: return; 316!335
+}

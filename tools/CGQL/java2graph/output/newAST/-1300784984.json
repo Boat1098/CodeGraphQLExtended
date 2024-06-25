@@ -1,0 +1,40 @@
+{
+  "_type": "FileStart",
+  "funcStartList": [
+    {
+      "_type": "FuncStart",
+      "name": "actionPerformed",
+      "FunctionDef": {
+        "_type": "FunctionDef",
+        "args": {
+          "_type": "arguments",
+          "args": [
+            {
+              "_type": "arg",
+              "isArray": false,
+              "argClass": "AnActionEvent",
+              "arg": "e",
+              "end_lineno": 9,
+              "lineno": 9,
+              "name": "e"
+            }
+          ],
+          "name": "AnActionEvent e",
+          "end_lineno": 9,
+          "lineno": 9
+        },
+        "modifier": [
+          "public"
+        ],
+        "primitiveType": "void",
+        "body": [],
+        "end_lineno": 12,
+        "lineno": 8,
+        "name": "actionPerformed"
+      },
+      "end_lineno": 12,
+      "lineno": 8
+    }
+  ],
+  "hashCode": "-1300784984"
+}

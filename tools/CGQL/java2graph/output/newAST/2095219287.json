@@ -1,0 +1,1020 @@
+{
+  "_type": "FileStart",
+  "funcStartList": [
+    {
+      "_type": "FuncStart",
+      "name": "scan",
+      "FunctionDef": {
+        "_type": "FunctionDef",
+        "args": {
+          "_type": "arguments",
+          "args": [
+            {
+              "_type": "arg",
+              "isArray": false,
+              "argClass": "String",
+              "arg": "filepath",
+              "end_lineno": 10,
+              "lineno": 10,
+              "name": "filepath"
+            }
+          ],
+          "name": "String filepath",
+          "end_lineno": 10,
+          "lineno": 10
+        },
+        "modifier": [
+          "public",
+          "static"
+        ],
+        "primitiveType": "boolean",
+        "body": [
+          {
+            "_type": "Try",
+            "tryBody": [
+              {
+                "_type": "null",
+                "end_lineno": 13,
+                "lineno": 13,
+                "name": "String scancmd=\\\".\\\\joern-cli\\\\joern-parse \\\" + filepath;"
+              },
+              {
+                "_type": "null",
+                "end_lineno": 14,
+                "lineno": 14,
+                "name": "System.out.println(scancmd);"
+              },
+              {
+                "_type": "null",
+                "end_lineno": 15,
+                "lineno": 15,
+                "name": "Runtime scanrun=Runtime.getRuntime();"
+              },
+              {
+                "_type": "null",
+                "end_lineno": 16,
+                "lineno": 16,
+                "name": "Process scanpro=scanrun.exec(new String[]{\\\"cmd.exe\\\",\\\"/c\\\",scancmd});"
+              },
+              {
+                "_type": "Decl",
+                "targets": [
+                  {
+                    "_type": "Name",
+                    "type": "int",
+                    "id": "status",
+                    "end_lineno": 17,
+                    "lineno": 17,
+                    "name": "status"
+                  }
+                ],
+                "value": {
+                  "_type": "Call",
+                  "args": [],
+                  "func": {
+                    "_type": "Attribute",
+                    "attr": "waitFor",
+                    "value": {
+                      "_type": "Name",
+                      "id": "scanpro",
+                      "end_lineno": 17,
+                      "lineno": 17,
+                      "name": "scanpro"
+                    },
+                    "end_lineno": 17,
+                    "lineno": 17,
+                    "name": "scanpro.waitFor()"
+                  },
+                  "end_lineno": 17,
+                  "lineno": 17,
+                  "name": "scanpro.waitFor()"
+                },
+                "end_lineno": 17,
+                "lineno": 17,
+                "name": "int status=scanpro.waitFor();",
+                "type": "int"
+              },
+              {
+                "_type": "If",
+                "body": [
+                  {
+                    "_type": "null",
+                    "end_lineno": 25,
+                    "lineno": 25,
+                    "name": "System.out.println(\\\"Scan Finished!\\\");"
+                  },
+                  {
+                    "_type": "null",
+                    "end_lineno": 26,
+                    "lineno": 26,
+                    "name": "return true;"
+                  }
+                ],
+                "test": {
+                  "_type": "BinOp",
+                  "left": {
+                    "_type": "Name",
+                    "id": "status",
+                    "end_lineno": 18,
+                    "lineno": 18,
+                    "name": "status"
+                  },
+                  "op": "!=",
+                  "right": {
+                    "_type": "Constant",
+                    "value": "0",
+                    "end_lineno": 18,
+                    "lineno": 18,
+                    "name": "0",
+                    "isNull": false
+                  },
+                  "end_lineno": 18,
+                  "lineno": 18,
+                  "name": "status != 0"
+                },
+                "end_lineno": 27,
+                "lineno": 18,
+                "name": "if (status != 0) {System.out.println(\\\"Failed to call shell's command\\\");return false;} else {System.out.println(\\\"Scan Finished!\\\");return true;}"
+              }
+            ],
+            "catchClauses": [
+              {
+                "_type": "Catch",
+                "body": [
+                  {
+                    "_type": "Expr",
+                    "value": {
+                      "_type": "Call",
+                      "args": [],
+                      "func": {
+                        "_type": "Attribute",
+                        "attr": "printStackTrace",
+                        "value": {
+                          "_type": "Name",
+                          "id": "exception",
+                          "end_lineno": 31,
+                          "lineno": 31,
+                          "name": "exception"
+                        },
+                        "end_lineno": 31,
+                        "lineno": 31,
+                        "name": "exception.printStackTrace()"
+                      },
+                      "end_lineno": 31,
+                      "lineno": 31,
+                      "name": "exception.printStackTrace()"
+                    },
+                    "end_lineno": 31,
+                    "lineno": 31,
+                    "name": "exception.printStackTrace();"
+                  },
+                  {
+                    "_type": "null",
+                    "end_lineno": 32,
+                    "lineno": 32,
+                    "name": "return false;"
+                  }
+                ],
+                "exception": {
+                  "_type": "arg",
+                  "isArray": false,
+                  "argClass": "InterruptedException",
+                  "arg": "exception",
+                  "end_lineno": 29,
+                  "lineno": 29,
+                  "name": "exception"
+                },
+                "end_lineno": 33,
+                "lineno": 29,
+                "name": "catch (InterruptedException exception) {exception.printStackTrace();return false;}"
+              },
+              {
+                "_type": "Catch",
+                "body": [
+                  {
+                    "_type": "Expr",
+                    "value": {
+                      "_type": "Call",
+                      "args": [],
+                      "func": {
+                        "_type": "Attribute",
+                        "attr": "printStackTrace",
+                        "value": {
+                          "_type": "Name",
+                          "id": "ioException",
+                          "end_lineno": 36,
+                          "lineno": 36,
+                          "name": "ioException"
+                        },
+                        "end_lineno": 36,
+                        "lineno": 36,
+                        "name": "ioException.printStackTrace()"
+                      },
+                      "end_lineno": 36,
+                      "lineno": 36,
+                      "name": "ioException.printStackTrace()"
+                    },
+                    "end_lineno": 36,
+                    "lineno": 36,
+                    "name": "ioException.printStackTrace();"
+                  },
+                  {
+                    "_type": "null",
+                    "end_lineno": 37,
+                    "lineno": 37,
+                    "name": "return false;"
+                  }
+                ],
+                "exception": {
+                  "_type": "arg",
+                  "isArray": false,
+                  "argClass": "IOException",
+                  "arg": "ioException",
+                  "end_lineno": 34,
+                  "lineno": 34,
+                  "name": "ioException"
+                },
+                "end_lineno": 38,
+                "lineno": 34,
+                "name": "catch (IOException ioException) {ioException.printStackTrace();return false;}"
+              }
+            ],
+            "finallyBody": [],
+            "end_lineno": 38,
+            "lineno": 12,
+            "name": "try {String scancmd=\\\".\\\\joern-cli\\\\joern-parse \\\" + filepath;System.out.println(scancmd);Runtime scanrun=Runtime.getRuntime();Process scanpro=scanrun.exec(new String[]{\\\"cmd.exe\\\",\\\"/c\\\",scancmd});int status=scanpro.waitFor();if (status != 0) {System.out.println(\\\"Failed to call shell's command\\\");return false;} else {System.out.println(\\\"Scan Finished!\\\");return true;}} catch (InterruptedException exception) {exception.printStackTrace();return false;}catch (IOException ioException) {ioException.printStackTrace();return false;}",
+            "try_end_lineno": 28,
+            "try_lineno": 12,
+            "finally_end_lineno": 0,
+            "finally_lineno": 0
+          }
+        ],
+        "end_lineno": 39,
+        "lineno": 10,
+        "name": "scan"
+      },
+      "end_lineno": 39,
+      "lineno": 10
+    },
+    {
+      "_type": "FuncStart",
+      "name": "clean",
+      "FunctionDef": {
+        "_type": "FunctionDef",
+        "args": {
+          "_type": "arguments",
+          "args": [],
+          "end_lineno": 0,
+          "lineno": 0
+        },
+        "modifier": [
+          "public",
+          "static"
+        ],
+        "primitiveType": "void",
+        "body": [
+          {
+            "_type": "Try",
+            "tryBody": [
+              {
+                "_type": "Decl",
+                "targets": [
+                  {
+                    "_type": "Name",
+                    "type": "String",
+                    "id": "delcmd",
+                    "end_lineno": 44,
+                    "lineno": 44,
+                    "name": "delcmd"
+                  }
+                ],
+                "value": {
+                  "_type": "Constant",
+                  "value": "\\\"rd /s /q result\\\"",
+                  "end_lineno": 44,
+                  "lineno": 44,
+                  "name": "\\\"rd /s /q result\\\"",
+                  "isNull": false
+                },
+                "end_lineno": 44,
+                "lineno": 44,
+                "name": "String delcmd=\\\"rd /s /q result\\\";",
+                "type": "String"
+              },
+              {
+                "_type": "null",
+                "end_lineno": 45,
+                "lineno": 45,
+                "name": "Runtime delrun=Runtime.getRuntime();"
+              },
+              {
+                "_type": "null",
+                "end_lineno": 46,
+                "lineno": 46,
+                "name": "Process delpro=delrun.exec(new String[]{\\\"cmd.exe\\\",\\\"/c\\\",delcmd});"
+              },
+              {
+                "_type": "Decl",
+                "targets": [
+                  {
+                    "_type": "Name",
+                    "type": "int",
+                    "id": "delsta",
+                    "end_lineno": 47,
+                    "lineno": 47,
+                    "name": "delsta"
+                  }
+                ],
+                "value": {
+                  "_type": "Call",
+                  "args": [],
+                  "func": {
+                    "_type": "Attribute",
+                    "attr": "waitFor",
+                    "value": {
+                      "_type": "Name",
+                      "id": "delpro",
+                      "end_lineno": 47,
+                      "lineno": 47,
+                      "name": "delpro"
+                    },
+                    "end_lineno": 47,
+                    "lineno": 47,
+                    "name": "delpro.waitFor()"
+                  },
+                  "end_lineno": 47,
+                  "lineno": 47,
+                  "name": "delpro.waitFor()"
+                },
+                "end_lineno": 47,
+                "lineno": 47,
+                "name": "int delsta=delpro.waitFor();",
+                "type": "int"
+              }
+            ],
+            "catchClauses": [
+              {
+                "_type": "Catch",
+                "body": [
+                  {
+                    "_type": "Expr",
+                    "value": {
+                      "_type": "Call",
+                      "args": [],
+                      "func": {
+                        "_type": "Attribute",
+                        "attr": "printStackTrace",
+                        "value": {
+                          "_type": "Name",
+                          "id": "exception",
+                          "end_lineno": 51,
+                          "lineno": 51,
+                          "name": "exception"
+                        },
+                        "end_lineno": 51,
+                        "lineno": 51,
+                        "name": "exception.printStackTrace()"
+                      },
+                      "end_lineno": 51,
+                      "lineno": 51,
+                      "name": "exception.printStackTrace()"
+                    },
+                    "end_lineno": 51,
+                    "lineno": 51,
+                    "name": "exception.printStackTrace();"
+                  }
+                ],
+                "exception": {
+                  "_type": "arg",
+                  "isArray": false,
+                  "argClass": "IOException",
+                  "arg": "exception",
+                  "end_lineno": 49,
+                  "lineno": 49,
+                  "name": "exception"
+                },
+                "end_lineno": 52,
+                "lineno": 49,
+                "name": "catch (IOException exception) {exception.printStackTrace();}"
+              }
+            ],
+            "finallyBody": [],
+            "end_lineno": 52,
+            "lineno": 43,
+            "name": "try {String delcmd=\\\"rd /s /q result\\\";Runtime delrun=Runtime.getRuntime();Process delpro=delrun.exec(new String[]{\\\"cmd.exe\\\",\\\"/c\\\",delcmd});int delsta=delpro.waitFor();} catch (IOException exception) {exception.printStackTrace();}",
+            "try_end_lineno": 48,
+            "try_lineno": 43,
+            "finally_end_lineno": 0,
+            "finally_lineno": 0
+          }
+        ],
+        "end_lineno": 53,
+        "lineno": 41,
+        "name": "clean"
+      },
+      "end_lineno": 53,
+      "lineno": 41
+    },
+    {
+      "_type": "FuncStart",
+      "name": "export",
+      "FunctionDef": {
+        "_type": "FunctionDef",
+        "args": {
+          "_type": "arguments",
+          "args": [],
+          "end_lineno": 0,
+          "lineno": 0
+        },
+        "modifier": [
+          "public",
+          "static"
+        ],
+        "primitiveType": "boolean",
+        "body": [
+          {
+            "_type": "Try",
+            "tryBody": [
+              {
+                "_type": "Decl",
+                "targets": [
+                  {
+                    "_type": "Name",
+                    "type": "String",
+                    "id": "outcmd",
+                    "end_lineno": 58,
+                    "lineno": 58,
+                    "name": "outcmd"
+                  }
+                ],
+                "value": {
+                  "_type": "Constant",
+                  "value": "\\\".\\\\joern-cli\\\\joern-export --repr=all --format=neo4jcsv --out ./result\\\"",
+                  "end_lineno": 58,
+                  "lineno": 58,
+                  "name": "\\\".\\\\joern-cli\\\\joern-export --repr=all --format=neo4jcsv --out ./result\\\"",
+                  "isNull": false
+                },
+                "end_lineno": 58,
+                "lineno": 58,
+                "name": "String outcmd=\\\".\\\\joern-cli\\\\joern-export --repr=all --format=neo4jcsv --out ./result\\\";",
+                "type": "String"
+              },
+              {
+                "_type": "null",
+                "end_lineno": 59,
+                "lineno": 59,
+                "name": "Runtime outrun=Runtime.getRuntime();"
+              },
+              {
+                "_type": "null",
+                "end_lineno": 60,
+                "lineno": 60,
+                "name": "Process outpro=outrun.exec(new String[]{\\\"cmd.exe\\\",\\\"/c\\\",outcmd});"
+              },
+              {
+                "_type": "Decl",
+                "targets": [
+                  {
+                    "_type": "Name",
+                    "type": "int",
+                    "id": "status",
+                    "end_lineno": 61,
+                    "lineno": 61,
+                    "name": "status"
+                  }
+                ],
+                "value": {
+                  "_type": "Call",
+                  "args": [],
+                  "func": {
+                    "_type": "Attribute",
+                    "attr": "waitFor",
+                    "value": {
+                      "_type": "Name",
+                      "id": "outpro",
+                      "end_lineno": 61,
+                      "lineno": 61,
+                      "name": "outpro"
+                    },
+                    "end_lineno": 61,
+                    "lineno": 61,
+                    "name": "outpro.waitFor()"
+                  },
+                  "end_lineno": 61,
+                  "lineno": 61,
+                  "name": "outpro.waitFor()"
+                },
+                "end_lineno": 61,
+                "lineno": 61,
+                "name": "int status=outpro.waitFor();",
+                "type": "int"
+              },
+              {
+                "_type": "If",
+                "body": [
+                  {
+                    "_type": "null",
+                    "end_lineno": 68,
+                    "lineno": 68,
+                    "name": "return true;"
+                  }
+                ],
+                "test": {
+                  "_type": "BinOp",
+                  "left": {
+                    "_type": "Name",
+                    "id": "status",
+                    "end_lineno": 62,
+                    "lineno": 62,
+                    "name": "status"
+                  },
+                  "op": "!=",
+                  "right": {
+                    "_type": "Constant",
+                    "value": "0",
+                    "end_lineno": 62,
+                    "lineno": 62,
+                    "name": "0",
+                    "isNull": false
+                  },
+                  "end_lineno": 62,
+                  "lineno": 62,
+                  "name": "status != 0"
+                },
+                "end_lineno": 69,
+                "lineno": 62,
+                "name": "if (status != 0) {System.out.println(\\\"Failed to call shell's command\\\");return false;} else {return true;}"
+              }
+            ],
+            "catchClauses": [
+              {
+                "_type": "Catch",
+                "body": [
+                  {
+                    "_type": "Expr",
+                    "value": {
+                      "_type": "Call",
+                      "args": [],
+                      "func": {
+                        "_type": "Attribute",
+                        "attr": "printStackTrace",
+                        "value": {
+                          "_type": "Name",
+                          "id": "exception",
+                          "end_lineno": 73,
+                          "lineno": 73,
+                          "name": "exception"
+                        },
+                        "end_lineno": 73,
+                        "lineno": 73,
+                        "name": "exception.printStackTrace()"
+                      },
+                      "end_lineno": 73,
+                      "lineno": 73,
+                      "name": "exception.printStackTrace()"
+                    },
+                    "end_lineno": 73,
+                    "lineno": 73,
+                    "name": "exception.printStackTrace();"
+                  },
+                  {
+                    "_type": "null",
+                    "end_lineno": 74,
+                    "lineno": 74,
+                    "name": "return false;"
+                  }
+                ],
+                "exception": {
+                  "_type": "arg",
+                  "isArray": false,
+                  "argClass": "InterruptedException",
+                  "arg": "exception",
+                  "end_lineno": 71,
+                  "lineno": 71,
+                  "name": "exception"
+                },
+                "end_lineno": 75,
+                "lineno": 71,
+                "name": "catch (InterruptedException exception) {exception.printStackTrace();return false;}"
+              },
+              {
+                "_type": "Catch",
+                "body": [
+                  {
+                    "_type": "Expr",
+                    "value": {
+                      "_type": "Call",
+                      "args": [],
+                      "func": {
+                        "_type": "Attribute",
+                        "attr": "printStackTrace",
+                        "value": {
+                          "_type": "Name",
+                          "id": "ioException",
+                          "end_lineno": 78,
+                          "lineno": 78,
+                          "name": "ioException"
+                        },
+                        "end_lineno": 78,
+                        "lineno": 78,
+                        "name": "ioException.printStackTrace()"
+                      },
+                      "end_lineno": 78,
+                      "lineno": 78,
+                      "name": "ioException.printStackTrace()"
+                    },
+                    "end_lineno": 78,
+                    "lineno": 78,
+                    "name": "ioException.printStackTrace();"
+                  },
+                  {
+                    "_type": "null",
+                    "end_lineno": 79,
+                    "lineno": 79,
+                    "name": "return false;"
+                  }
+                ],
+                "exception": {
+                  "_type": "arg",
+                  "isArray": false,
+                  "argClass": "IOException",
+                  "arg": "ioException",
+                  "end_lineno": 76,
+                  "lineno": 76,
+                  "name": "ioException"
+                },
+                "end_lineno": 80,
+                "lineno": 76,
+                "name": "catch (IOException ioException) {ioException.printStackTrace();return false;}"
+              }
+            ],
+            "finallyBody": [],
+            "end_lineno": 80,
+            "lineno": 57,
+            "name": "try {String outcmd=\\\".\\\\joern-cli\\\\joern-export --repr=all --format=neo4jcsv --out ./result\\\";Runtime outrun=Runtime.getRuntime();Process outpro=outrun.exec(new String[]{\\\"cmd.exe\\\",\\\"/c\\\",outcmd});int status=outpro.waitFor();if (status != 0) {System.out.println(\\\"Failed to call shell's command\\\");return false;} else {return true;}} catch (InterruptedException exception) {exception.printStackTrace();return false;}catch (IOException ioException) {ioException.printStackTrace();return false;}",
+            "try_end_lineno": 70,
+            "try_lineno": 57,
+            "finally_end_lineno": 0,
+            "finally_lineno": 0
+          }
+        ],
+        "end_lineno": 81,
+        "lineno": 55,
+        "name": "export"
+      },
+      "end_lineno": 81,
+      "lineno": 55
+    },
+    {
+      "_type": "FuncStart",
+      "name": "main",
+      "FunctionDef": {
+        "_type": "FunctionDef",
+        "args": {
+          "_type": "arguments",
+          "args": [
+            {
+              "_type": "arg",
+              "isArray": true,
+              "argClass": "String",
+              "arg": "args",
+              "end_lineno": 83,
+              "lineno": 83,
+              "name": "args"
+            }
+          ],
+          "name": "String[] args",
+          "end_lineno": 83,
+          "lineno": 83
+        },
+        "modifier": [
+          "public",
+          "static"
+        ],
+        "primitiveType": "void",
+        "body": [
+          {
+            "_type": "Decl",
+            "targets": [
+              {
+                "_type": "Name",
+                "type": "BufferedReader",
+                "id": "reader",
+                "end_lineno": 84,
+                "lineno": 84,
+                "name": "reader"
+              }
+            ],
+            "value": {
+              "_type": "Constant",
+              "value": "null",
+              "end_lineno": 84,
+              "lineno": 84,
+              "name": "null",
+              "isNull": true
+            },
+            "end_lineno": 84,
+            "lineno": 84,
+            "name": "BufferedReader reader=null;",
+            "type": "BufferedReader"
+          },
+          {
+            "_type": "Try",
+            "tryBody": [
+              {
+                "_type": "Expr",
+                "value": {
+                  "_type": "Assign",
+                  "targets": [
+                    {
+                      "_type": "Name",
+                      "id": "reader",
+                      "end_lineno": 86,
+                      "lineno": 86,
+                      "name": "reader"
+                    }
+                  ],
+                  "value": {
+                    "_type": "null",
+                    "end_lineno": 0,
+                    "lineno": 0
+                  },
+                  "end_lineno": 86,
+                  "lineno": 86,
+                  "name": "reader=new BufferedReader(new InputStreamReader(System.in))"
+                },
+                "end_lineno": 86,
+                "lineno": 86,
+                "name": "reader=new BufferedReader(new InputStreamReader(System.in));"
+              },
+              {
+                "_type": "null",
+                "end_lineno": 87,
+                "lineno": 87,
+                "name": "System.out.println(\\\"ë`?ö®ž©??Öœ?Àò?»ô?Èä?:\\\");"
+              },
+              {
+                "_type": "null",
+                "end_lineno": 88,
+                "lineno": 88,
+                "name": "String filepath=reader.readLine();"
+              },
+              {
+                "_type": "If",
+                "body": [
+                  {
+                    "_type": "null",
+                    "end_lineno": 103,
+                    "lineno": 103,
+                    "name": "System.out.println(\\\"Scan Error!\\\");"
+                  }
+                ],
+                "test": {
+                  "_type": "Call",
+                  "args": [],
+                  "func": {
+                    "_type": "Attribute",
+                    "attr": "filepath",
+                    "value": {
+                      "_type": "Name",
+                      "id": "scan",
+                      "end_lineno": 89,
+                      "lineno": 89,
+                      "name": "scan"
+                    },
+                    "end_lineno": 89,
+                    "lineno": 89,
+                    "name": "scan(filepath)"
+                  },
+                  "end_lineno": 89,
+                  "lineno": 89,
+                  "name": "scan(filepath)"
+                },
+                "end_lineno": 104,
+                "lineno": 89,
+                "name": "if (scan(filepath)) {clean();if (export()) {System.out.println(\\\"Success\\\");} else {System.out.println(\\\"Export Error!\\\");}} else {System.out.println(\\\"Scan Error!\\\");}"
+              }
+            ],
+            "catchClauses": [
+              {
+                "_type": "Catch",
+                "body": [
+                  {
+                    "_type": "Expr",
+                    "value": {
+                      "_type": "Call",
+                      "args": [],
+                      "func": {
+                        "_type": "Attribute",
+                        "attr": "printStackTrace",
+                        "value": {
+                          "_type": "Name",
+                          "id": "ec",
+                          "end_lineno": 108,
+                          "lineno": 108,
+                          "name": "ec"
+                        },
+                        "end_lineno": 108,
+                        "lineno": 108,
+                        "name": "ec.printStackTrace()"
+                      },
+                      "end_lineno": 108,
+                      "lineno": 108,
+                      "name": "ec.printStackTrace()"
+                    },
+                    "end_lineno": 108,
+                    "lineno": 108,
+                    "name": "ec.printStackTrace();"
+                  }
+                ],
+                "exception": {
+                  "_type": "arg",
+                  "isArray": false,
+                  "argClass": "IOException",
+                  "arg": "ec",
+                  "end_lineno": 106,
+                  "lineno": 106,
+                  "name": "ec"
+                },
+                "end_lineno": 109,
+                "lineno": 106,
+                "name": "catch (IOException ec) {ec.printStackTrace();}"
+              }
+            ],
+            "finallyBody": [],
+            "end_lineno": 109,
+            "lineno": 85,
+            "name": "try {reader=new BufferedReader(new InputStreamReader(System.in));System.out.println(\\\"ë`?ö®ž©??Öœ?Àò?»ô?Èä?:\\\");String filepath=reader.readLine();if (scan(filepath)) {clean();if (export()) {System.out.println(\\\"Success\\\");} else {System.out.println(\\\"Export Error!\\\");}} else {System.out.println(\\\"Scan Error!\\\");}} catch (IOException ec) {ec.printStackTrace();}",
+            "try_end_lineno": 105,
+            "try_lineno": 85,
+            "finally_end_lineno": 0,
+            "finally_lineno": 0
+          }
+        ],
+        "end_lineno": 110,
+        "lineno": 83,
+        "name": "main"
+      },
+      "end_lineno": 110,
+      "lineno": 83
+    },
+    {
+      "_type": "FuncStart",
+      "name": "check",
+      "FunctionDef": {
+        "_type": "FunctionDef",
+        "args": {
+          "_type": "arguments",
+          "args": [],
+          "end_lineno": 0,
+          "lineno": 0
+        },
+        "modifier": [
+          "public",
+          "static"
+        ],
+        "primitiveType": "boolean",
+        "body": [
+          {
+            "_type": "Try",
+            "tryBody": [
+              {
+                "_type": "Decl",
+                "targets": [
+                  {
+                    "_type": "Name",
+                    "type": "String",
+                    "id": "filepath",
+                    "end_lineno": 115,
+                    "lineno": 115,
+                    "name": "filepath"
+                  }
+                ],
+                "value": {
+                  "_type": "Constant",
+                  "value": "\\\"target.c\\\"",
+                  "end_lineno": 115,
+                  "lineno": 115,
+                  "name": "\\\"target.c\\\"",
+                  "isNull": false
+                },
+                "end_lineno": 115,
+                "lineno": 115,
+                "name": "String filepath=\\\"target.c\\\";",
+                "type": "String"
+              },
+              {
+                "_type": "If",
+                "body": [
+                  {
+                    "_type": "null",
+                    "end_lineno": 132,
+                    "lineno": 132,
+                    "name": "System.out.println(\\\"Scan Error!\\\");"
+                  },
+                  {
+                    "_type": "null",
+                    "end_lineno": 133,
+                    "lineno": 133,
+                    "name": "return false;"
+                  }
+                ],
+                "test": {
+                  "_type": "Call",
+                  "args": [],
+                  "func": {
+                    "_type": "Attribute",
+                    "attr": "filepath",
+                    "value": {
+                      "_type": "Name",
+                      "id": "scan",
+                      "end_lineno": 116,
+                      "lineno": 116,
+                      "name": "scan"
+                    },
+                    "end_lineno": 116,
+                    "lineno": 116,
+                    "name": "scan(filepath)"
+                  },
+                  "end_lineno": 116,
+                  "lineno": 116,
+                  "name": "scan(filepath)"
+                },
+                "end_lineno": 134,
+                "lineno": 116,
+                "name": "if (scan(filepath)) {clean();if (export()) {System.out.println(\\\"Success\\\");return true;} else {System.out.println(\\\"Export Error!\\\");return false;}} else {System.out.println(\\\"Scan Error!\\\");return false;}"
+              }
+            ],
+            "catchClauses": [
+              {
+                "_type": "Catch",
+                "body": [
+                  {
+                    "_type": "Expr",
+                    "value": {
+                      "_type": "Call",
+                      "args": [],
+                      "func": {
+                        "_type": "Attribute",
+                        "attr": "printStackTrace",
+                        "value": {
+                          "_type": "Name",
+                          "id": "ec",
+                          "end_lineno": 138,
+                          "lineno": 138,
+                          "name": "ec"
+                        },
+                        "end_lineno": 138,
+                        "lineno": 138,
+                        "name": "ec.printStackTrace()"
+                      },
+                      "end_lineno": 138,
+                      "lineno": 138,
+                      "name": "ec.printStackTrace()"
+                    },
+                    "end_lineno": 138,
+                    "lineno": 138,
+                    "name": "ec.printStackTrace();"
+                  },
+                  {
+                    "_type": "null",
+                    "end_lineno": 139,
+                    "lineno": 139,
+                    "name": "return false;"
+                  }
+                ],
+                "exception": {
+                  "_type": "arg",
+                  "isArray": false,
+                  "argClass": "Exception",
+                  "arg": "ec",
+                  "end_lineno": 136,
+                  "lineno": 136,
+                  "name": "ec"
+                },
+                "end_lineno": 140,
+                "lineno": 136,
+                "name": "catch (Exception ec) {ec.printStackTrace();return false;}"
+              }
+            ],
+            "finallyBody": [],
+            "end_lineno": 140,
+            "lineno": 114,
+            "name": "try {String filepath=\\\"target.c\\\";if (scan(filepath)) {clean();if (export()) {System.out.println(\\\"Success\\\");return true;} else {System.out.println(\\\"Export Error!\\\");return false;}} else {System.out.println(\\\"Scan Error!\\\");return false;}} catch (Exception ec) {ec.printStackTrace();return false;}",
+            "try_end_lineno": 135,
+            "try_lineno": 114,
+            "finally_end_lineno": 0,
+            "finally_lineno": 0
+          }
+        ],
+        "end_lineno": 141,
+        "lineno": 112,
+        "name": "check"
+      },
+      "end_lineno": 141,
+      "lineno": 112
+    }
+  ],
+  "hashCode": "2095219287"
+}

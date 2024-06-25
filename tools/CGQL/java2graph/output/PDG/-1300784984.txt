@@ -1,0 +1,17 @@
+FilePath:E:\File\CGQL\java2graph\input\analysis.java
+FileName:analysis.java
+package:null
+import:com.intellij.openapi.actionSystem.AnAction
+import:com.intellij.openapi.actionSystem.AnActionEvent
+import:com.intellij.openapi.actionSystem.PlatformCoreDataKeys
+import:com.intellij.openapi.actionSystem.PlatformDataKeys
+{
+}
+class:analysis
+method:actionPerformed AnActionEvent:e 8:12
+{
+v: AnActionEvent e 9
+v: Enter Enter 8.12
+estart: Enter Enter
+eend: AnActionEvent e 8!9
+}

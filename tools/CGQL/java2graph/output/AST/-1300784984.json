@@ -1,0 +1,94 @@
+{
+  "path": "E:\\File\\CGQL\\java2graph\\input\\analysis.java",
+  "filename": "analysis.java",
+  "initialMethodList": [
+    {
+      "type": "FuncStart",
+      "label": "actionPerformed",
+      "startLine": 8,
+      "endLine": 12,
+      "className": "analysis",
+      "initialASTNode": {
+        "type": "MethodDeclaration",
+        "label": "@Override public void actionPerformed(AnActionEvent e){}",
+        "startLine": 8,
+        "endLine": 12,
+        "childNodeList": [
+          {
+            "type": "MarkerAnnotation",
+            "label": "@Override",
+            "startLine": 8,
+            "endLine": 8,
+            "childNodeList": [
+              {
+                "type": "SimpleName",
+                "label": "Override",
+                "startLine": 8,
+                "endLine": 8,
+                "childNodeList": []
+              }
+            ]
+          },
+          {
+            "type": "Modifier",
+            "label": "public",
+            "startLine": 9,
+            "endLine": 9,
+            "childNodeList": []
+          },
+          {
+            "type": "PrimitiveType",
+            "label": "void",
+            "startLine": 9,
+            "endLine": 9,
+            "childNodeList": []
+          },
+          {
+            "type": "SimpleName",
+            "label": "actionPerformed",
+            "startLine": 9,
+            "endLine": 9,
+            "childNodeList": []
+          },
+          {
+            "type": "SingleVariableDeclaration",
+            "label": "AnActionEvent e",
+            "startLine": 9,
+            "endLine": 9,
+            "childNodeList": [
+              {
+                "type": "SimpleType",
+                "label": "AnActionEvent",
+                "startLine": 9,
+                "endLine": 9,
+                "childNodeList": [
+                  {
+                    "type": "SimpleName",
+                    "label": "AnActionEvent",
+                    "startLine": 9,
+                    "endLine": 9,
+                    "childNodeList": []
+                  }
+                ]
+              },
+              {
+                "type": "SimpleName",
+                "label": "e",
+                "startLine": 9,
+                "endLine": 9,
+                "childNodeList": []
+              }
+            ]
+          },
+          {
+            "type": "Block",
+            "label": "{}",
+            "startLine": 9,
+            "endLine": 12,
+            "childNodeList": []
+          }
+        ]
+      }
+    }
+  ]
+}

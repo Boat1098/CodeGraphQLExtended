@@ -1,0 +1,190 @@
+FilePath:E:\File\CGQL\java2graph\input\Joern_check.java
+FileName:Joern_check.java
+package:null
+import:java.io.BufferedReader
+import:java.io.IOException
+import:java.io.InputStreamReader
+import:java.io.File
+import:java.text.SimpleDateFormat
+import:java.util.Date
+{
+}
+class:Joern_check
+method:scan String:filepath 10:39
+{
+v: String scancmd = \".\joern-cli\joern-parse \" + filepath; 13
+v: System.out.println(scancmd); 14
+v: Runtime scanrun = Runtime.getRuntime(); 15
+v: Process scanpro = scanrun.exec(new String[][]j2cpg.pe.ExpressionInfo@51f); 16
+v: int status = scanpro.waitFor(); 17
+v: status != 0 18
+v: System.out.println(\"Failed to call shell's command\"); 20
+v: return false; 21
+v: System.out.println(\"Scan Finished!\"); 25
+v: return true; 26
+v: InterruptedException exception 29
+v: exception.printStackTrace(); 31
+v: return false; 32
+v: IOException ioException 34
+v: ioException.printStackTrace(); 36
+v: return false; 37
+estart: String scancmd = \".\joern-cli\joern-parse \" + filepath;
+eend: System.out.println(scancmd); 13!14
+estart: System.out.println(scancmd);
+eend: Runtime scanrun = Runtime.getRuntime(); 14!15
+estart: Runtime scanrun = Runtime.getRuntime();
+eend: Process scanpro = scanrun.exec(new String[][]j2cpg.pe.ExpressionInfo@51f); 15!16
+estart: Process scanpro = scanrun.exec(new String[][]j2cpg.pe.ExpressionInfo@51f);
+eend: int status = scanpro.waitFor(); 16!17
+estart: int status = scanpro.waitFor();
+eend: status != 0 17!18
+estart: status != 0
+eend: System.out.println(\"Failed to call shell's command\"); 18!20
+estart: status != 0
+eend: System.out.println(\"Scan Finished!\"); 18!25
+estart: System.out.println(\"Failed to call shell's command\");
+eend: return false; 20!21
+estart: System.out.println(\"Scan Finished!\");
+eend: return true; 25!26
+estart: InterruptedException exception
+eend: exception.printStackTrace(); 29!31
+estart: exception.printStackTrace();
+eend: return false; 31!32
+estart: IOException ioException
+eend: ioException.printStackTrace(); 34!36
+estart: ioException.printStackTrace();
+eend: return false; 36!37
+}
+class:Joern_check
+method:clean 41:53
+{
+v: String delcmd = \"rd /s /q result\"; 44
+v: Runtime delrun = Runtime.getRuntime(); 45
+v: Process delpro = delrun.exec(new String[][]j2cpg.pe.ExpressionInfo@570); 46
+v: int delsta = delpro.waitFor(); 47
+v: IOException exception 49
+v: exception.printStackTrace(); 51
+estart: String delcmd = \"rd /s /q result\";
+eend: Runtime delrun = Runtime.getRuntime(); 44!45
+estart: Runtime delrun = Runtime.getRuntime();
+eend: Process delpro = delrun.exec(new String[][]j2cpg.pe.ExpressionInfo@570); 45!46
+estart: Process delpro = delrun.exec(new String[][]j2cpg.pe.ExpressionInfo@570);
+eend: int delsta = delpro.waitFor(); 46!47
+estart: IOException exception
+eend: exception.printStackTrace(); 49!51
+}
+class:Joern_check
+method:export 55:81
+{
+v: String outcmd = \".\joern-cli\joern-export --repr=all --format=neo4jcsv --out ./result\"; 58
+v: Runtime outrun = Runtime.getRuntime(); 59
+v: Process outpro = outrun.exec(new String[][]j2cpg.pe.ExpressionInfo@59c); 60
+v: int status = outpro.waitFor(); 61
+v: status != 0 62
+v: System.out.println(\"Failed to call shell's command\"); 64
+v: return false; 65
+v: return true; 68
+v: InterruptedException exception 71
+v: exception.printStackTrace(); 73
+v: return false; 74
+v: IOException ioException 76
+v: ioException.printStackTrace(); 78
+v: return false; 79
+estart: String outcmd = \".\joern-cli\joern-export --repr=all --format=neo4jcsv --out ./result\";
+eend: Runtime outrun = Runtime.getRuntime(); 58!59
+estart: Runtime outrun = Runtime.getRuntime();
+eend: Process outpro = outrun.exec(new String[][]j2cpg.pe.ExpressionInfo@59c); 59!60
+estart: Process outpro = outrun.exec(new String[][]j2cpg.pe.ExpressionInfo@59c);
+eend: int status = outpro.waitFor(); 60!61
+estart: int status = outpro.waitFor();
+eend: status != 0 61!62
+estart: status != 0
+eend: System.out.println(\"Failed to call shell's command\"); 62!64
+estart: status != 0
+eend: return true; 62!68
+estart: System.out.println(\"Failed to call shell's command\");
+eend: return false; 64!65
+estart: InterruptedException exception
+eend: exception.printStackTrace(); 71!73
+estart: exception.printStackTrace();
+eend: return false; 73!74
+estart: IOException ioException
+eend: ioException.printStackTrace(); 76!78
+estart: ioException.printStackTrace();
+eend: return false; 78!79
+}
+class:Joern_check
+method:main String[]:args 83:110
+{
+v: BufferedReader reader = null; 84
+v: reader = new BufferedReader(new InputStreamReader(System.in)); 86
+v: System.out.println(\"ë`?ö®ž©??Öœ?Àò?»ô?Èä?:\"); 87
+v: String filepath = reader.readLine(); 88
+v: scan(filepath) 89
+v: clean(); 91
+v: export() 92
+v: System.out.println(\"Success\"); 94
+v: System.out.println(\"Export Error!\"); 98
+v: System.out.println(\"Scan Error!\"); 103
+v: IOException ec 106
+v: ec.printStackTrace(); 108
+estart: BufferedReader reader = null;
+eend: reader = new BufferedReader(new InputStreamReader(System.in)); 84!86
+estart: reader = new BufferedReader(new InputStreamReader(System.in));
+eend: System.out.println(\"ë`?ö®ž©??Öœ?Àò?»ô?Èä?:\"); 86!87
+estart: System.out.println(\"ë`?ö®ž©??Öœ?Àò?»ô?Èä?:\");
+eend: String filepath = reader.readLine(); 87!88
+estart: String filepath = reader.readLine();
+eend: scan(filepath) 88!89
+estart: scan(filepath)
+eend: clean(); 89!91
+estart: scan(filepath)
+eend: System.out.println(\"Scan Error!\"); 89!103
+estart: clean();
+eend: export() 91!92
+estart: export()
+eend: System.out.println(\"Success\"); 92!94
+estart: export()
+eend: System.out.println(\"Export Error!\"); 92!98
+estart: IOException ec
+eend: ec.printStackTrace(); 106!108
+}
+class:Joern_check
+method:check 112:141
+{
+v: String filepath = \"target.c\"; 115
+v: scan(filepath) 116
+v: clean(); 118
+v: export() 119
+v: System.out.println(\"Success\"); 121
+v: return true; 122
+v: System.out.println(\"Export Error!\"); 126
+v: return false; 127
+v: System.out.println(\"Scan Error!\"); 132
+v: return false; 133
+v: Exception ec 136
+v: ec.printStackTrace(); 138
+v: return false; 139
+estart: String filepath = \"target.c\";
+eend: scan(filepath) 115!116
+estart: scan(filepath)
+eend: clean(); 116!118
+estart: scan(filepath)
+eend: System.out.println(\"Scan Error!\"); 116!132
+estart: clean();
+eend: export() 118!119
+estart: export()
+eend: System.out.println(\"Success\"); 119!121
+estart: export()
+eend: System.out.println(\"Export Error!\"); 119!126
+estart: System.out.println(\"Success\");
+eend: return true; 121!122
+estart: System.out.println(\"Export Error!\");
+eend: return false; 126!127
+estart: System.out.println(\"Scan Error!\");
+eend: return false; 132!133
+estart: Exception ec
+eend: ec.printStackTrace(); 136!138
+estart: ec.printStackTrace();
+eend: return false; 138!139
+}

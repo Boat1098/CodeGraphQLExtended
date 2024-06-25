@@ -1,0 +1,162 @@
+{
+  "_type": "FileStart",
+  "funcStartList": [
+    {
+      "_type": "FuncStart",
+      "name": "readFile",
+      "FunctionDef": {
+        "_type": "FunctionDef",
+        "args": {
+          "_type": "arguments",
+          "args": [
+            {
+              "_type": "arg",
+              "isArray": false,
+              "argClass": "String",
+              "arg": "filePath",
+              "end_lineno": 8,
+              "lineno": 8,
+              "name": "filePath"
+            }
+          ],
+          "name": "String filePath",
+          "end_lineno": 8,
+          "lineno": 8
+        },
+        "modifier": [
+          "public",
+          "static"
+        ],
+        "body": [
+          {
+            "_type": "Try",
+            "tryBody": [
+              {
+                "_type": "null",
+                "end_lineno": 20,
+                "lineno": 12,
+                "name": "if (!filePath.endsWith(\\\"txt\\\")) {return null;} else {List<String> file=Files.readAllLines(Paths.get(filePath));return file;}"
+              }
+            ],
+            "catchClauses": [
+              {
+                "_type": "Catch",
+                "body": [
+                  {
+                    "_type": "Expr",
+                    "value": {
+                      "_type": "Call",
+                      "args": [],
+                      "func": {
+                        "_type": "Attribute",
+                        "attr": "printStackTrace",
+                        "value": {
+                          "_type": "Name",
+                          "id": "error",
+                          "end_lineno": 24,
+                          "lineno": 24,
+                          "name": "error"
+                        },
+                        "end_lineno": 24,
+                        "lineno": 24,
+                        "name": "error.printStackTrace()"
+                      },
+                      "end_lineno": 24,
+                      "lineno": 24,
+                      "name": "error.printStackTrace()"
+                    },
+                    "end_lineno": 24,
+                    "lineno": 24,
+                    "name": "error.printStackTrace();"
+                  },
+                  {
+                    "_type": "null",
+                    "end_lineno": 25,
+                    "lineno": 25,
+                    "name": "return null;"
+                  }
+                ],
+                "exception": {
+                  "_type": "arg",
+                  "isArray": false,
+                  "argClass": "OutOfMemoryError",
+                  "arg": "error",
+                  "end_lineno": 22,
+                  "lineno": 22,
+                  "name": "error"
+                },
+                "end_lineno": 26,
+                "lineno": 22,
+                "name": "catch (OutOfMemoryError error) {error.printStackTrace();return null;}"
+              },
+              {
+                "_type": "Catch",
+                "body": [
+                  {
+                    "_type": "Expr",
+                    "value": {
+                      "_type": "Call",
+                      "args": [],
+                      "func": {
+                        "_type": "Attribute",
+                        "attr": "printStackTrace",
+                        "value": {
+                          "_type": "Name",
+                          "id": "exception",
+                          "end_lineno": 29,
+                          "lineno": 29,
+                          "name": "exception"
+                        },
+                        "end_lineno": 29,
+                        "lineno": 29,
+                        "name": "exception.printStackTrace()"
+                      },
+                      "end_lineno": 29,
+                      "lineno": 29,
+                      "name": "exception.printStackTrace()"
+                    },
+                    "end_lineno": 29,
+                    "lineno": 29,
+                    "name": "exception.printStackTrace();"
+                  },
+                  {
+                    "_type": "null",
+                    "end_lineno": 30,
+                    "lineno": 30,
+                    "name": "return null;"
+                  }
+                ],
+                "exception": {
+                  "_type": "arg",
+                  "isArray": false,
+                  "argClass": "IOException",
+                  "arg": "exception",
+                  "end_lineno": 27,
+                  "lineno": 27,
+                  "name": "exception"
+                },
+                "end_lineno": 31,
+                "lineno": 27,
+                "name": "catch (IOException exception) {exception.printStackTrace();return null;}"
+              }
+            ],
+            "finallyBody": [],
+            "end_lineno": 31,
+            "lineno": 10,
+            "name": "try {if (!filePath.endsWith(\\\"txt\\\")) {return null;} else {List<String> file=Files.readAllLines(Paths.get(filePath));return file;}} catch (OutOfMemoryError error) {error.printStackTrace();return null;}catch (IOException exception) {exception.printStackTrace();return null;}",
+            "try_end_lineno": 21,
+            "try_lineno": 11,
+            "finally_end_lineno": 0,
+            "finally_lineno": 0
+          }
+        ],
+        "end_lineno": 32,
+        "lineno": 8,
+        "name": "readFile"
+      },
+      "end_lineno": 32,
+      "lineno": 8
+    }
+  ],
+  "hashCode": "1797263398"
+}

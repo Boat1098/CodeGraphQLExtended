@@ -1,0 +1,37 @@
+FilePath:E:\File\CGQL\java2graph\input\DataProduce.java
+FileName:DataProduce.java
+package:null
+import:java.io.IOException
+import:java.nio.file.Files
+import:java.nio.file.Paths
+import:java.util.*
+{
+}
+class:DataProduce
+method:readFile String:filePath 8:32
+{
+v: !filePath.endsWith(\"txt\") 12
+v: return null; 14
+v: List<String> file = Files.readAllLines(Paths.get(filePath)); 18
+v: return file; 19
+v: OutOfMemoryError error 22
+v: error.printStackTrace(); 24
+v: return null; 25
+v: IOException exception 27
+v: exception.printStackTrace(); 29
+v: return null; 30
+estart: !filePath.endsWith(\"txt\")
+eend: return null; 12!14
+estart: !filePath.endsWith(\"txt\")
+eend: List<String> file = Files.readAllLines(Paths.get(filePath)); 12!18
+estart: List<String> file = Files.readAllLines(Paths.get(filePath));
+eend: return file; 18!19
+estart: OutOfMemoryError error
+eend: error.printStackTrace(); 22!24
+estart: error.printStackTrace();
+eend: return null; 24!25
+estart: IOException exception
+eend: exception.printStackTrace(); 27!29
+estart: exception.printStackTrace();
+eend: return null; 29!30
+}

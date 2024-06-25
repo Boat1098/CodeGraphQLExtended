@@ -1,0 +1,1531 @@
+{
+  "_type": "FileStart",
+  "funcStartList": [
+    {
+      "_type": "FuncStart",
+      "name": "read",
+      "FunctionDef": {
+        "_type": "FunctionDef",
+        "args": {
+          "_type": "arguments",
+          "args": [
+            {
+              "_type": "arg",
+              "isArray": false,
+              "argClass": "String",
+              "arg": "filename",
+              "end_lineno": 16,
+              "lineno": 16,
+              "name": "filename"
+            }
+          ],
+          "name": "String filename",
+          "end_lineno": 16,
+          "lineno": 16
+        },
+        "modifier": [
+          "public",
+          "static"
+        ],
+        "body": [
+          {
+            "_type": "Try",
+            "tryBody": [
+              {
+                "_type": "null",
+                "end_lineno": 19,
+                "lineno": 19,
+                "name": "List<List<String>> list=new ArrayList<>();"
+              },
+              {
+                "_type": "Decl",
+                "targets": [
+                  {
+                    "_type": "Name",
+                    "type": "FileReader",
+                    "id": "fileReader",
+                    "end_lineno": 20,
+                    "lineno": 20,
+                    "name": "fileReader"
+                  }
+                ],
+                "value": {
+                  "_type": "ClassInstanceCreation",
+                  "className": "FileReader",
+                  "args": {
+                    "_type": "arguments",
+                    "args": [
+                      {
+                        "_type": "arg",
+                        "isArray": false,
+                        "end_lineno": 0,
+                        "lineno": 0
+                      }
+                    ],
+                    "end_lineno": 20,
+                    "lineno": 20
+                  },
+                  "end_lineno": 20,
+                  "lineno": 20,
+                  "name": "new FileReader(filename)"
+                },
+                "end_lineno": 20,
+                "lineno": 20,
+                "name": "FileReader fileReader=new FileReader(filename);",
+                "type": "FileReader"
+              },
+              {
+                "_type": "Decl",
+                "targets": [
+                  {
+                    "_type": "Name",
+                    "type": "CSVReader",
+                    "id": "csvReader",
+                    "end_lineno": 21,
+                    "lineno": 21,
+                    "name": "csvReader"
+                  }
+                ],
+                "value": {
+                  "_type": "ClassInstanceCreation",
+                  "className": "CSVReader",
+                  "args": {
+                    "_type": "arguments",
+                    "args": [
+                      {
+                        "_type": "arg",
+                        "isArray": false,
+                        "end_lineno": 0,
+                        "lineno": 0
+                      }
+                    ],
+                    "end_lineno": 21,
+                    "lineno": 21
+                  },
+                  "end_lineno": 21,
+                  "lineno": 21,
+                  "name": "new CSVReader(fileReader)"
+                },
+                "end_lineno": 21,
+                "lineno": 21,
+                "name": "CSVReader csvReader=new CSVReader(fileReader);",
+                "type": "CSVReader"
+              },
+              {
+                "_type": "null",
+                "end_lineno": 22,
+                "lineno": 22,
+                "name": "String[] line=csvReader.readNext();"
+              },
+              {
+                "_type": "null",
+                "end_lineno": 27,
+                "lineno": 23,
+                "name": "while (line != null) {list.add(Arrays.asList(line));line=csvReader.readNext();}"
+              },
+              {
+                "_type": "Expr",
+                "value": {
+                  "_type": "Call",
+                  "args": [],
+                  "func": {
+                    "_type": "Attribute",
+                    "attr": "close",
+                    "value": {
+                      "_type": "Name",
+                      "id": "csvReader",
+                      "end_lineno": 29,
+                      "lineno": 29,
+                      "name": "csvReader"
+                    },
+                    "end_lineno": 29,
+                    "lineno": 29,
+                    "name": "csvReader.close()"
+                  },
+                  "end_lineno": 29,
+                  "lineno": 29,
+                  "name": "csvReader.close()"
+                },
+                "end_lineno": 29,
+                "lineno": 29,
+                "name": "csvReader.close();"
+              },
+              {
+                "_type": "null",
+                "end_lineno": 30,
+                "lineno": 30,
+                "name": "return list;"
+              }
+            ],
+            "catchClauses": [
+              {
+                "_type": "Catch",
+                "body": [
+                  {
+                    "_type": "null",
+                    "end_lineno": 34,
+                    "lineno": 34,
+                    "name": "System.out.println(exception);"
+                  },
+                  {
+                    "_type": "null",
+                    "end_lineno": 35,
+                    "lineno": 35,
+                    "name": "return null;"
+                  }
+                ],
+                "exception": {
+                  "_type": "arg",
+                  "isArray": false,
+                  "argClass": "Exception",
+                  "arg": "exception",
+                  "end_lineno": 32,
+                  "lineno": 32,
+                  "name": "exception"
+                },
+                "end_lineno": 36,
+                "lineno": 32,
+                "name": "catch (Exception exception) {System.out.println(exception);return null;}"
+              }
+            ],
+            "finallyBody": [],
+            "end_lineno": 36,
+            "lineno": 18,
+            "name": "try {List<List<String>> list=new ArrayList<>();FileReader fileReader=new FileReader(filename);CSVReader csvReader=new CSVReader(fileReader);String[] line=csvReader.readNext();while (line != null) {list.add(Arrays.asList(line));line=csvReader.readNext();}csvReader.close();return list;} catch (Exception exception) {System.out.println(exception);return null;}",
+            "try_end_lineno": 31,
+            "try_lineno": 18,
+            "finally_end_lineno": 0,
+            "finally_lineno": 0
+          }
+        ],
+        "end_lineno": 37,
+        "lineno": 16,
+        "name": "read"
+      },
+      "end_lineno": 37,
+      "lineno": 16
+    },
+    {
+      "_type": "FuncStart",
+      "name": "getPointerNode",
+      "FunctionDef": {
+        "_type": "FunctionDef",
+        "args": {
+          "_type": "arguments",
+          "args": [
+            {
+              "_type": "arg",
+              "isArray": false,
+              "arg": "lines",
+              "end_lineno": 58,
+              "lineno": 58,
+              "name": "lines"
+            }
+          ],
+          "name": "List<String> lines",
+          "end_lineno": 58,
+          "lineno": 58
+        },
+        "modifier": [
+          "public",
+          "static"
+        ],
+        "body": [
+          {
+            "_type": "Decl",
+            "targets": [
+              {
+                "_type": "Name",
+                "type": "String",
+                "id": "identiferFile",
+                "end_lineno": 60,
+                "lineno": 60,
+                "name": "identiferFile"
+              }
+            ],
+            "value": {
+              "_type": "Constant",
+              "value": "\\\"./result/nodes_IDENTIFIER_data.csv\\\"",
+              "end_lineno": 60,
+              "lineno": 60,
+              "name": "\\\"./result/nodes_IDENTIFIER_data.csv\\\"",
+              "isNull": false
+            },
+            "end_lineno": 60,
+            "lineno": 60,
+            "name": "String identiferFile=\\\"./result/nodes_IDENTIFIER_data.csv\\\";",
+            "type": "String"
+          },
+          {
+            "_type": "null",
+            "end_lineno": 61,
+            "lineno": 61,
+            "name": "List<List<String>> identifierNode=read(identiferFile);"
+          },
+          {
+            "_type": "null",
+            "end_lineno": 62,
+            "lineno": 62,
+            "name": "List<String> node=null;"
+          },
+          {
+            "_type": "Decl",
+            "targets": [
+              {
+                "_type": "Name",
+                "type": "String",
+                "id": "fullName",
+                "end_lineno": 63,
+                "lineno": 63,
+                "name": "fullName"
+              }
+            ],
+            "value": {
+              "_type": "Constant",
+              "value": "null",
+              "end_lineno": 63,
+              "lineno": 63,
+              "name": "null",
+              "isNull": true
+            },
+            "end_lineno": 63,
+            "lineno": 63,
+            "name": "String fullName=null;",
+            "type": "String"
+          },
+          {
+            "_type": "Decl",
+            "targets": [
+              {
+                "_type": "Name",
+                "type": "String",
+                "id": "line",
+                "end_lineno": 64,
+                "lineno": 64,
+                "name": "line"
+              }
+            ],
+            "value": {
+              "_type": "Constant",
+              "value": "null",
+              "end_lineno": 64,
+              "lineno": 64,
+              "name": "null",
+              "isNull": true
+            },
+            "end_lineno": 64,
+            "lineno": 64,
+            "name": "String line=null;",
+            "type": "String"
+          },
+          {
+            "_type": "null",
+            "end_lineno": 65,
+            "lineno": 65,
+            "name": "List<List<String>> pointerNode=new ArrayList<>();"
+          },
+          {
+            "_type": "null",
+            "end_lineno": 66,
+            "lineno": 66,
+            "name": "List<String> fullNames=new ArrayList<>();"
+          },
+          {
+            "_type": "Decl",
+            "targets": [
+              {
+                "_type": "Name",
+                "type": "int",
+                "id": "i",
+                "end_lineno": 67,
+                "lineno": 67,
+                "name": "i"
+              }
+            ],
+            "value": {
+              "_type": "Constant",
+              "value": "0",
+              "end_lineno": 67,
+              "lineno": 67,
+              "name": "0",
+              "isNull": false
+            },
+            "end_lineno": 67,
+            "lineno": 67,
+            "name": "int i=0;",
+            "type": "int"
+          },
+          {
+            "_type": "null",
+            "end_lineno": 109,
+            "lineno": 68,
+            "name": "for (i=0; i < identifierNode.size(); i++) {node=identifierNode.get(i);fullName=node.get(11);line=lines.get(Integer.parseInt(node.get(7)) - 1);if (fullName.contains(\\\"*\\\")) {pointerNode.add(node);fullNames.add(fullName);continue;}if (fullName.contains(\\\"[\\\")) {pointerNode.add(node);fullNames.add(fullName);continue;}if (line.contains(\\\"fork\\\")) {pointerNode.add(node);fullNames.add(fullName);continue;}if (line.contains(\\\"malloc\\\")) {pointerNode.add(node);fullNames.add(fullName);continue;}if (line.contains(\\\"realloc\\\")) {pointerNode.add(node);fullNames.add(fullName);continue;}if (line.contains(\\\"calloc\\\")) {pointerNode.add(node);fullNames.add(fullName);continue;}}"
+          },
+          {
+            "_type": "Decl",
+            "targets": [
+              {
+                "_type": "Name",
+                "type": "String",
+                "id": "paramterFile",
+                "end_lineno": 110,
+                "lineno": 110,
+                "name": "paramterFile"
+              }
+            ],
+            "value": {
+              "_type": "Constant",
+              "value": "\\\"./result/nodes_METHOD_PARAMETER_IN_data.csv\\\"",
+              "end_lineno": 110,
+              "lineno": 110,
+              "name": "\\\"./result/nodes_METHOD_PARAMETER_IN_data.csv\\\"",
+              "isNull": false
+            },
+            "end_lineno": 110,
+            "lineno": 110,
+            "name": "String paramterFile=\\\"./result/nodes_METHOD_PARAMETER_IN_data.csv\\\";",
+            "type": "String"
+          },
+          {
+            "_type": "null",
+            "end_lineno": 111,
+            "lineno": 111,
+            "name": "List<List<String>> paramterNode=read(paramterFile);"
+          },
+          {
+            "_type": "null",
+            "end_lineno": 131,
+            "lineno": 112,
+            "name": "for (i=0; i < paramterNode.size(); i++) {node=paramterNode.get(i);fullName=node.get(13);if (fullName.contains(\\\"*\\\")) {pointerNode.add(node);continue;}if (fullName.contains(\\\"[\\\")) {pointerNode.add(node);continue;}if (fullNames.contains(fullName)) {pointerNode.add(node);continue;}}"
+          },
+          {
+            "_type": "null",
+            "end_lineno": 132,
+            "lineno": 132,
+            "name": "return pointerNode;"
+          }
+        ],
+        "end_lineno": 133,
+        "lineno": 58,
+        "name": "getPointerNode"
+      },
+      "end_lineno": 133,
+      "lineno": 58
+    },
+    {
+      "_type": "FuncStart",
+      "name": "getCallNode",
+      "FunctionDef": {
+        "_type": "FunctionDef",
+        "args": {
+          "_type": "arguments",
+          "args": [
+            {
+              "_type": "arg",
+              "isArray": false,
+              "argClass": "List",
+              "arg": "pointerId",
+              "end_lineno": 142,
+              "lineno": 142,
+              "name": "pointerId"
+            }
+          ],
+          "name": "List pointerId",
+          "end_lineno": 142,
+          "lineno": 142
+        },
+        "modifier": [
+          "public",
+          "static"
+        ],
+        "body": [
+          {
+            "_type": "Decl",
+            "targets": [
+              {
+                "_type": "Name",
+                "type": "String",
+                "id": "callNodePath",
+                "end_lineno": 144,
+                "lineno": 144,
+                "name": "callNodePath"
+              }
+            ],
+            "value": {
+              "_type": "Constant",
+              "value": "\\\"./result/nodes_CALL_data.csv\\\"",
+              "end_lineno": 144,
+              "lineno": 144,
+              "name": "\\\"./result/nodes_CALL_data.csv\\\"",
+              "isNull": false
+            },
+            "end_lineno": 144,
+            "lineno": 144,
+            "name": "String callNodePath=\\\"./result/nodes_CALL_data.csv\\\";",
+            "type": "String"
+          },
+          {
+            "_type": "null",
+            "end_lineno": 145,
+            "lineno": 145,
+            "name": "List<List<String>> callNode=read(callNodePath);"
+          },
+          {
+            "_type": "null",
+            "end_lineno": 146,
+            "lineno": 146,
+            "name": "List<String> callID=new ArrayList<>();"
+          },
+          {
+            "_type": "Decl",
+            "targets": [
+              {
+                "_type": "Name",
+                "type": "int",
+                "id": "i",
+                "end_lineno": 147,
+                "lineno": 147,
+                "name": "i"
+              }
+            ],
+            "value": {
+              "_type": "Constant",
+              "value": "0",
+              "end_lineno": 147,
+              "lineno": 147,
+              "name": "0",
+              "isNull": false
+            },
+            "end_lineno": 147,
+            "lineno": 147,
+            "name": "int i=0;",
+            "type": "int"
+          },
+          {
+            "_type": "null",
+            "end_lineno": 151,
+            "lineno": 148,
+            "name": "for (i=0; i < callNode.size(); i++) {callID.add(callNode.get(i).get(0));}"
+          },
+          {
+            "_type": "Decl",
+            "targets": [
+              {
+                "_type": "Name",
+                "type": "String",
+                "id": "edgesCDGPath",
+                "end_lineno": 152,
+                "lineno": 152,
+                "name": "edgesCDGPath"
+              }
+            ],
+            "value": {
+              "_type": "Constant",
+              "value": "\\\"./result/edges_CDG_data.csv\\\"",
+              "end_lineno": 152,
+              "lineno": 152,
+              "name": "\\\"./result/edges_CDG_data.csv\\\"",
+              "isNull": false
+            },
+            "end_lineno": 152,
+            "lineno": 152,
+            "name": "String edgesCDGPath=\\\"./result/edges_CDG_data.csv\\\";",
+            "type": "String"
+          },
+          {
+            "_type": "null",
+            "end_lineno": 153,
+            "lineno": 153,
+            "name": "List<List<String>> edgesCDG=read(edgesCDGPath);"
+          },
+          {
+            "_type": "null",
+            "end_lineno": 154,
+            "lineno": 154,
+            "name": "List<List<String>> node=new ArrayList<>();"
+          },
+          {
+            "_type": "null",
+            "end_lineno": 155,
+            "lineno": 155,
+            "name": "List<String> id=new ArrayList<>();"
+          },
+          {
+            "_type": "null",
+            "end_lineno": 173,
+            "lineno": 156,
+            "name": "for (i=0; i < edgesCDG.size(); i++) {List<String> edge=edgesCDG.get(i);if (callID.contains(edge.get(0))) {if (pointerId.contains(edge.get(1))) {if (id.contains(edge.get(0))) {continue;} else {id.add(edge.get(0));}}}}"
+          },
+          {
+            "_type": "Decl",
+            "targets": [
+              {
+                "_type": "Name",
+                "type": "String",
+                "id": "edgesAstPath",
+                "end_lineno": 174,
+                "lineno": 174,
+                "name": "edgesAstPath"
+              }
+            ],
+            "value": {
+              "_type": "Constant",
+              "value": "\\\"./result/edges_AST_data.csv\\\"",
+              "end_lineno": 174,
+              "lineno": 174,
+              "name": "\\\"./result/edges_AST_data.csv\\\"",
+              "isNull": false
+            },
+            "end_lineno": 174,
+            "lineno": 174,
+            "name": "String edgesAstPath=\\\"./result/edges_AST_data.csv\\\";",
+            "type": "String"
+          },
+          {
+            "_type": "null",
+            "end_lineno": 175,
+            "lineno": 175,
+            "name": "List<List<String>> edgesAst=read(edgesAstPath);"
+          },
+          {
+            "_type": "null",
+            "end_lineno": 193,
+            "lineno": 176,
+            "name": "for (i=0; i < edgesAst.size(); i++) {List<String> edge=edgesAst.get(i);if (callID.contains(edge.get(0))) {if (pointerId.contains(edge.get(1))) {if (id.contains(edge.get(0))) {continue;} else {id.add(edge.get(0));}}}}"
+          },
+          {
+            "_type": "null",
+            "end_lineno": 198,
+            "lineno": 195,
+            "name": "for (i=0; i < id.size(); i++) {node.add(callNode.get(callID.indexOf(id.get(i))));}"
+          },
+          {
+            "_type": "null",
+            "end_lineno": 199,
+            "lineno": 199,
+            "name": "return node;"
+          }
+        ],
+        "end_lineno": 200,
+        "lineno": 142,
+        "name": "getCallNode"
+      },
+      "end_lineno": 200,
+      "lineno": 142
+    },
+    {
+      "_type": "FuncStart",
+      "name": "getLinesNumber",
+      "FunctionDef": {
+        "_type": "FunctionDef",
+        "args": {
+          "_type": "arguments",
+          "args": [
+            {
+              "_type": "arg",
+              "isArray": false,
+              "arg": "pointerNode",
+              "end_lineno": 224,
+              "lineno": 224,
+              "name": "pointerNode"
+            },
+            {
+              "_type": "arg",
+              "isArray": false,
+              "arg": "callNode",
+              "end_lineno": 224,
+              "lineno": 224,
+              "name": "callNode"
+            }
+          ],
+          "name": "List<List<String>> callNode",
+          "end_lineno": 224,
+          "lineno": 224
+        },
+        "modifier": [
+          "public",
+          "static"
+        ],
+        "body": [
+          {
+            "_type": "Decl",
+            "targets": [
+              {
+                "_type": "Name",
+                "type": "int",
+                "id": "i",
+                "end_lineno": 226,
+                "lineno": 226,
+                "name": "i"
+              }
+            ],
+            "value": {
+              "_type": "Constant",
+              "value": "0",
+              "end_lineno": 226,
+              "lineno": 226,
+              "name": "0",
+              "isNull": false
+            },
+            "end_lineno": 226,
+            "lineno": 226,
+            "name": "int i=0;",
+            "type": "int"
+          },
+          {
+            "_type": "null",
+            "end_lineno": 227,
+            "lineno": 227,
+            "name": "List<Integer> linesNumber=new ArrayList<>();"
+          },
+          {
+            "_type": "null",
+            "end_lineno": 245,
+            "lineno": 228,
+            "name": "for (i=0; i < pointerNode.size(); i++) {List<String> pointer=pointerNode.get(i);if (pointer.size() == 12) {if (!linesNumber.contains(Integer.parseInt(pointer.get(7)))) {linesNumber.add(Integer.parseInt(pointer.get(7)));}} else {if (!linesNumber.contains(Integer.parseInt(pointer.get(9)))) {linesNumber.add(Integer.parseInt(pointer.get(9)));}}}"
+          },
+          {
+            "_type": "null",
+            "end_lineno": 253,
+            "lineno": 246,
+            "name": "for (i=0; i < callNode.size(); i++) {List<String> call=callNode.get(i);if (!linesNumber.contains(Integer.parseInt(call.get(8)))) {linesNumber.add(Integer.parseInt(call.get(8)));}}"
+          },
+          {
+            "_type": "null",
+            "end_lineno": 254,
+            "lineno": 254,
+            "name": "Comparator<Integer> comparator=Comparator.comparingInt(null);"
+          },
+          {
+            "_type": "Expr",
+            "value": {
+              "_type": "Call",
+              "args": [],
+              "func": {
+                "_type": "Attribute",
+                "attr": "comparator",
+                "value": {
+                  "_type": "Name",
+                  "id": "linesNumber",
+                  "end_lineno": 255,
+                  "lineno": 255,
+                  "name": "linesNumber"
+                },
+                "end_lineno": 255,
+                "lineno": 255,
+                "name": "linesNumber.sort(comparator)"
+              },
+              "end_lineno": 255,
+              "lineno": 255,
+              "name": "linesNumber.sort(comparator)"
+            },
+            "end_lineno": 255,
+            "lineno": 255,
+            "name": "linesNumber.sort(comparator);"
+          },
+          {
+            "_type": "null",
+            "end_lineno": 256,
+            "lineno": 256,
+            "name": "return linesNumber;"
+          }
+        ],
+        "end_lineno": 257,
+        "lineno": 224,
+        "name": "getLinesNumber"
+      },
+      "end_lineno": 257,
+      "lineno": 224
+    },
+    {
+      "_type": "FuncStart",
+      "name": "clean",
+      "FunctionDef": {
+        "_type": "FunctionDef",
+        "args": {
+          "_type": "arguments",
+          "args": [],
+          "end_lineno": 0,
+          "lineno": 0
+        },
+        "modifier": [
+          "public",
+          "static"
+        ],
+        "primitiveType": "void",
+        "body": [
+          {
+            "_type": "Try",
+            "tryBody": [
+              {
+                "_type": "Decl",
+                "targets": [
+                  {
+                    "_type": "Name",
+                    "type": "String",
+                    "id": "delcmd",
+                    "end_lineno": 262,
+                    "lineno": 262,
+                    "name": "delcmd"
+                  }
+                ],
+                "value": {
+                  "_type": "Constant",
+                  "value": "\\\"del /q /f result.txt\\\"",
+                  "end_lineno": 262,
+                  "lineno": 262,
+                  "name": "\\\"del /q /f result.txt\\\"",
+                  "isNull": false
+                },
+                "end_lineno": 262,
+                "lineno": 262,
+                "name": "String delcmd=\\\"del /q /f result.txt\\\";",
+                "type": "String"
+              },
+              {
+                "_type": "null",
+                "end_lineno": 263,
+                "lineno": 263,
+                "name": "Runtime delrun=Runtime.getRuntime();"
+              },
+              {
+                "_type": "null",
+                "end_lineno": 264,
+                "lineno": 264,
+                "name": "Process delpro=delrun.exec(new String[]{\\\"cmd.exe\\\",\\\"/c\\\",delcmd});"
+              }
+            ],
+            "catchClauses": [
+              {
+                "_type": "Catch",
+                "body": [
+                  {
+                    "_type": "Expr",
+                    "value": {
+                      "_type": "Call",
+                      "args": [],
+                      "func": {
+                        "_type": "Attribute",
+                        "attr": "printStackTrace",
+                        "value": {
+                          "_type": "Name",
+                          "id": "exception",
+                          "end_lineno": 268,
+                          "lineno": 268,
+                          "name": "exception"
+                        },
+                        "end_lineno": 268,
+                        "lineno": 268,
+                        "name": "exception.printStackTrace()"
+                      },
+                      "end_lineno": 268,
+                      "lineno": 268,
+                      "name": "exception.printStackTrace()"
+                    },
+                    "end_lineno": 268,
+                    "lineno": 268,
+                    "name": "exception.printStackTrace();"
+                  }
+                ],
+                "exception": {
+                  "_type": "arg",
+                  "isArray": false,
+                  "argClass": "IOException",
+                  "arg": "exception",
+                  "end_lineno": 266,
+                  "lineno": 266,
+                  "name": "exception"
+                },
+                "end_lineno": 269,
+                "lineno": 266,
+                "name": "catch (IOException exception) {exception.printStackTrace();}"
+              }
+            ],
+            "finallyBody": [],
+            "end_lineno": 269,
+            "lineno": 261,
+            "name": "try {String delcmd=\\\"del /q /f result.txt\\\";Runtime delrun=Runtime.getRuntime();Process delpro=delrun.exec(new String[]{\\\"cmd.exe\\\",\\\"/c\\\",delcmd});} catch (IOException exception) {exception.printStackTrace();}",
+            "try_end_lineno": 265,
+            "try_lineno": 261,
+            "finally_end_lineno": 0,
+            "finally_lineno": 0
+          }
+        ],
+        "end_lineno": 270,
+        "lineno": 259,
+        "name": "clean"
+      },
+      "end_lineno": 270,
+      "lineno": 259
+    },
+    {
+      "_type": "FuncStart",
+      "name": "export",
+      "FunctionDef": {
+        "_type": "FunctionDef",
+        "args": {
+          "_type": "arguments",
+          "args": [
+            {
+              "_type": "arg",
+              "isArray": false,
+              "arg": "lines",
+              "end_lineno": 272,
+              "lineno": 272,
+              "name": "lines"
+            },
+            {
+              "_type": "arg",
+              "isArray": false,
+              "arg": "file",
+              "end_lineno": 272,
+              "lineno": 272,
+              "name": "file"
+            }
+          ],
+          "name": "List<String> file",
+          "end_lineno": 272,
+          "lineno": 272
+        },
+        "modifier": [
+          "public",
+          "static"
+        ],
+        "primitiveType": "void",
+        "body": [
+          {
+            "_type": "Try",
+            "tryBody": [
+              {
+                "_type": "Decl",
+                "targets": [
+                  {
+                    "_type": "Name",
+                    "type": "int",
+                    "id": "i",
+                    "end_lineno": 275,
+                    "lineno": 275,
+                    "name": "i"
+                  }
+                ],
+                "value": {
+                  "_type": "Constant",
+                  "value": "0",
+                  "end_lineno": 275,
+                  "lineno": 275,
+                  "name": "0",
+                  "isNull": false
+                },
+                "end_lineno": 275,
+                "lineno": 275,
+                "name": "int i=0;",
+                "type": "int"
+              },
+              {
+                "_type": "Decl",
+                "targets": [
+                  {
+                    "_type": "Name",
+                    "type": "String",
+                    "id": "outFile",
+                    "end_lineno": 276,
+                    "lineno": 276,
+                    "name": "outFile"
+                  }
+                ],
+                "value": {
+                  "_type": "Constant",
+                  "value": "\\\"result.txt\\\"",
+                  "end_lineno": 276,
+                  "lineno": 276,
+                  "name": "\\\"result.txt\\\"",
+                  "isNull": false
+                },
+                "end_lineno": 276,
+                "lineno": 276,
+                "name": "String outFile=\\\"result.txt\\\";",
+                "type": "String"
+              },
+              {
+                "_type": "Decl",
+                "targets": [
+                  {
+                    "_type": "Name",
+                    "type": "File",
+                    "id": "out",
+                    "end_lineno": 277,
+                    "lineno": 277,
+                    "name": "out"
+                  }
+                ],
+                "value": {
+                  "_type": "ClassInstanceCreation",
+                  "className": "File",
+                  "args": {
+                    "_type": "arguments",
+                    "args": [
+                      {
+                        "_type": "arg",
+                        "isArray": false,
+                        "end_lineno": 0,
+                        "lineno": 0
+                      }
+                    ],
+                    "end_lineno": 277,
+                    "lineno": 277
+                  },
+                  "end_lineno": 277,
+                  "lineno": 277,
+                  "name": "new File(outFile)"
+                },
+                "end_lineno": 277,
+                "lineno": 277,
+                "name": "File out=new File(outFile);",
+                "type": "File"
+              },
+              {
+                "_type": "Decl",
+                "targets": [
+                  {
+                    "_type": "Name",
+                    "type": "FileWriter",
+                    "id": "fileWriter",
+                    "end_lineno": 278,
+                    "lineno": 278,
+                    "name": "fileWriter"
+                  }
+                ],
+                "value": {
+                  "_type": "ClassInstanceCreation",
+                  "className": "FileWriter",
+                  "args": {
+                    "_type": "arguments",
+                    "args": [
+                      {
+                        "_type": "arg",
+                        "isArray": false,
+                        "end_lineno": 0,
+                        "lineno": 0
+                      }
+                    ],
+                    "end_lineno": 278,
+                    "lineno": 278
+                  },
+                  "end_lineno": 278,
+                  "lineno": 278,
+                  "name": "new FileWriter(out)"
+                },
+                "end_lineno": 278,
+                "lineno": 278,
+                "name": "FileWriter fileWriter=new FileWriter(out);",
+                "type": "FileWriter"
+              },
+              {
+                "_type": "null",
+                "end_lineno": 284,
+                "lineno": 279,
+                "name": "for (i=0; i < lines.size(); i++) {String line=file.get(lines.get(i) - 1);fileWriter.write(line);fileWriter.write(\\\"\\n\\\");}"
+              },
+              {
+                "_type": "Expr",
+                "value": {
+                  "_type": "Call",
+                  "args": [],
+                  "func": {
+                    "_type": "Attribute",
+                    "attr": "flush",
+                    "value": {
+                      "_type": "Name",
+                      "id": "fileWriter",
+                      "end_lineno": 285,
+                      "lineno": 285,
+                      "name": "fileWriter"
+                    },
+                    "end_lineno": 285,
+                    "lineno": 285,
+                    "name": "fileWriter.flush()"
+                  },
+                  "end_lineno": 285,
+                  "lineno": 285,
+                  "name": "fileWriter.flush()"
+                },
+                "end_lineno": 285,
+                "lineno": 285,
+                "name": "fileWriter.flush();"
+              },
+              {
+                "_type": "Expr",
+                "value": {
+                  "_type": "Call",
+                  "args": [],
+                  "func": {
+                    "_type": "Attribute",
+                    "attr": "close",
+                    "value": {
+                      "_type": "Name",
+                      "id": "fileWriter",
+                      "end_lineno": 286,
+                      "lineno": 286,
+                      "name": "fileWriter"
+                    },
+                    "end_lineno": 286,
+                    "lineno": 286,
+                    "name": "fileWriter.close()"
+                  },
+                  "end_lineno": 286,
+                  "lineno": 286,
+                  "name": "fileWriter.close()"
+                },
+                "end_lineno": 286,
+                "lineno": 286,
+                "name": "fileWriter.close();"
+              }
+            ],
+            "catchClauses": [
+              {
+                "_type": "Catch",
+                "body": [
+                  {
+                    "_type": "Expr",
+                    "value": {
+                      "_type": "Call",
+                      "args": [],
+                      "func": {
+                        "_type": "Attribute",
+                        "attr": "printStackTrace",
+                        "value": {
+                          "_type": "Name",
+                          "id": "exception",
+                          "end_lineno": 290,
+                          "lineno": 290,
+                          "name": "exception"
+                        },
+                        "end_lineno": 290,
+                        "lineno": 290,
+                        "name": "exception.printStackTrace()"
+                      },
+                      "end_lineno": 290,
+                      "lineno": 290,
+                      "name": "exception.printStackTrace()"
+                    },
+                    "end_lineno": 290,
+                    "lineno": 290,
+                    "name": "exception.printStackTrace();"
+                  }
+                ],
+                "exception": {
+                  "_type": "arg",
+                  "isArray": false,
+                  "argClass": "Exception",
+                  "arg": "exception",
+                  "end_lineno": 288,
+                  "lineno": 288,
+                  "name": "exception"
+                },
+                "end_lineno": 291,
+                "lineno": 288,
+                "name": "catch (Exception exception) {exception.printStackTrace();}"
+              },
+              {
+                "_type": "Catch",
+                "body": [
+                  {
+                    "_type": "Expr",
+                    "value": {
+                      "_type": "Call",
+                      "args": [],
+                      "func": {
+                        "_type": "Attribute",
+                        "attr": "printStackTrace",
+                        "value": {
+                          "_type": "Name",
+                          "id": "error",
+                          "end_lineno": 294,
+                          "lineno": 294,
+                          "name": "error"
+                        },
+                        "end_lineno": 294,
+                        "lineno": 294,
+                        "name": "error.printStackTrace()"
+                      },
+                      "end_lineno": 294,
+                      "lineno": 294,
+                      "name": "error.printStackTrace()"
+                    },
+                    "end_lineno": 294,
+                    "lineno": 294,
+                    "name": "error.printStackTrace();"
+                  }
+                ],
+                "exception": {
+                  "_type": "arg",
+                  "isArray": false,
+                  "argClass": "OutOfMemoryError",
+                  "arg": "error",
+                  "end_lineno": 292,
+                  "lineno": 292,
+                  "name": "error"
+                },
+                "end_lineno": 295,
+                "lineno": 292,
+                "name": "catch (OutOfMemoryError error) {error.printStackTrace();}"
+              }
+            ],
+            "finallyBody": [],
+            "end_lineno": 295,
+            "lineno": 274,
+            "name": "try {int i=0;String outFile=\\\"result.txt\\\";File out=new File(outFile);FileWriter fileWriter=new FileWriter(out);for (i=0; i < lines.size(); i++) {String line=file.get(lines.get(i) - 1);fileWriter.write(line);fileWriter.write(\\\"\\n\\\");}fileWriter.flush();fileWriter.close();} catch (Exception exception) {exception.printStackTrace();}catch (OutOfMemoryError error) {error.printStackTrace();}",
+            "try_end_lineno": 287,
+            "try_lineno": 274,
+            "finally_end_lineno": 0,
+            "finally_lineno": 0
+          }
+        ],
+        "end_lineno": 296,
+        "lineno": 272,
+        "name": "export"
+      },
+      "end_lineno": 296,
+      "lineno": 272
+    },
+    {
+      "_type": "FuncStart",
+      "name": "readFile",
+      "FunctionDef": {
+        "_type": "FunctionDef",
+        "args": {
+          "_type": "arguments",
+          "args": [
+            {
+              "_type": "arg",
+              "isArray": false,
+              "argClass": "String",
+              "arg": "filePath",
+              "end_lineno": 298,
+              "lineno": 298,
+              "name": "filePath"
+            }
+          ],
+          "name": "String filePath",
+          "end_lineno": 298,
+          "lineno": 298
+        },
+        "modifier": [
+          "public",
+          "static"
+        ],
+        "body": [
+          {
+            "_type": "Try",
+            "tryBody": [
+              {
+                "_type": "null",
+                "end_lineno": 301,
+                "lineno": 301,
+                "name": "List<String> file=Files.readAllLines(Paths.get(filePath));"
+              },
+              {
+                "_type": "null",
+                "end_lineno": 302,
+                "lineno": 302,
+                "name": "return file;"
+              }
+            ],
+            "catchClauses": [
+              {
+                "_type": "Catch",
+                "body": [
+                  {
+                    "_type": "Expr",
+                    "value": {
+                      "_type": "Call",
+                      "args": [],
+                      "func": {
+                        "_type": "Attribute",
+                        "attr": "printStackTrace",
+                        "value": {
+                          "_type": "Name",
+                          "id": "error",
+                          "end_lineno": 306,
+                          "lineno": 306,
+                          "name": "error"
+                        },
+                        "end_lineno": 306,
+                        "lineno": 306,
+                        "name": "error.printStackTrace()"
+                      },
+                      "end_lineno": 306,
+                      "lineno": 306,
+                      "name": "error.printStackTrace()"
+                    },
+                    "end_lineno": 306,
+                    "lineno": 306,
+                    "name": "error.printStackTrace();"
+                  },
+                  {
+                    "_type": "null",
+                    "end_lineno": 307,
+                    "lineno": 307,
+                    "name": "return null;"
+                  }
+                ],
+                "exception": {
+                  "_type": "arg",
+                  "isArray": false,
+                  "argClass": "OutOfMemoryError",
+                  "arg": "error",
+                  "end_lineno": 304,
+                  "lineno": 304,
+                  "name": "error"
+                },
+                "end_lineno": 308,
+                "lineno": 304,
+                "name": "catch (OutOfMemoryError error) {error.printStackTrace();return null;}"
+              },
+              {
+                "_type": "Catch",
+                "body": [
+                  {
+                    "_type": "Expr",
+                    "value": {
+                      "_type": "Call",
+                      "args": [],
+                      "func": {
+                        "_type": "Attribute",
+                        "attr": "printStackTrace",
+                        "value": {
+                          "_type": "Name",
+                          "id": "exception",
+                          "end_lineno": 311,
+                          "lineno": 311,
+                          "name": "exception"
+                        },
+                        "end_lineno": 311,
+                        "lineno": 311,
+                        "name": "exception.printStackTrace()"
+                      },
+                      "end_lineno": 311,
+                      "lineno": 311,
+                      "name": "exception.printStackTrace()"
+                    },
+                    "end_lineno": 311,
+                    "lineno": 311,
+                    "name": "exception.printStackTrace();"
+                  },
+                  {
+                    "_type": "null",
+                    "end_lineno": 312,
+                    "lineno": 312,
+                    "name": "return null;"
+                  }
+                ],
+                "exception": {
+                  "_type": "arg",
+                  "isArray": false,
+                  "argClass": "IOException",
+                  "arg": "exception",
+                  "end_lineno": 309,
+                  "lineno": 309,
+                  "name": "exception"
+                },
+                "end_lineno": 313,
+                "lineno": 309,
+                "name": "catch (IOException exception) {exception.printStackTrace();return null;}"
+              }
+            ],
+            "finallyBody": [],
+            "end_lineno": 313,
+            "lineno": 300,
+            "name": "try {List<String> file=Files.readAllLines(Paths.get(filePath));return file;} catch (OutOfMemoryError error) {error.printStackTrace();return null;}catch (IOException exception) {exception.printStackTrace();return null;}",
+            "try_end_lineno": 303,
+            "try_lineno": 300,
+            "finally_end_lineno": 0,
+            "finally_lineno": 0
+          }
+        ],
+        "end_lineno": 314,
+        "lineno": 298,
+        "name": "readFile"
+      },
+      "end_lineno": 314,
+      "lineno": 298
+    },
+    {
+      "_type": "FuncStart",
+      "name": "main",
+      "FunctionDef": {
+        "_type": "FunctionDef",
+        "args": {
+          "_type": "arguments",
+          "args": [
+            {
+              "_type": "arg",
+              "isArray": true,
+              "argClass": "String",
+              "arg": "args",
+              "end_lineno": 316,
+              "lineno": 316,
+              "name": "args"
+            }
+          ],
+          "name": "String[] args",
+          "end_lineno": 316,
+          "lineno": 316
+        },
+        "modifier": [
+          "public",
+          "static"
+        ],
+        "primitiveType": "void",
+        "body": [
+          {
+            "_type": "null",
+            "end_lineno": 318,
+            "lineno": 318,
+            "name": "List<String> file=readFile(\\\"target.c\\\");"
+          },
+          {
+            "_type": "If",
+            "body": [
+              {
+                "_type": "null",
+                "end_lineno": 321,
+                "lineno": 321,
+                "name": "return;"
+              }
+            ],
+            "test": {
+              "_type": "BinOp",
+              "left": {
+                "_type": "Name",
+                "id": "file",
+                "end_lineno": 319,
+                "lineno": 319,
+                "name": "file"
+              },
+              "op": "==",
+              "right": {
+                "_type": "null",
+                "end_lineno": 0,
+                "lineno": 0
+              },
+              "end_lineno": 319,
+              "lineno": 319,
+              "name": "file == null"
+            },
+            "end_lineno": 322,
+            "lineno": 319,
+            "name": "if (file == null) {return;}"
+          },
+          {
+            "_type": "null",
+            "end_lineno": 323,
+            "lineno": 323,
+            "name": "List<List<String>> pointerIdentifierNode=getPointerNode(file);"
+          },
+          {
+            "_type": "null",
+            "end_lineno": 324,
+            "lineno": 324,
+            "name": "List<String> pointerId=new ArrayList<>();"
+          },
+          {
+            "_type": "Decl",
+            "targets": [
+              {
+                "_type": "Name",
+                "type": "int",
+                "id": "i",
+                "end_lineno": 325,
+                "lineno": 325,
+                "name": "i"
+              }
+            ],
+            "value": {
+              "_type": "Constant",
+              "value": "0",
+              "end_lineno": 325,
+              "lineno": 325,
+              "name": "0",
+              "isNull": false
+            },
+            "end_lineno": 325,
+            "lineno": 325,
+            "name": "int i=0;",
+            "type": "int"
+          },
+          {
+            "_type": "null",
+            "end_lineno": 329,
+            "lineno": 326,
+            "name": "for (i=0; i < pointerIdentifierNode.size(); i++) {pointerId.add(pointerIdentifierNode.get(i).get(0));}"
+          },
+          {
+            "_type": "null",
+            "end_lineno": 330,
+            "lineno": 330,
+            "name": "List<List<String>> callNode=getCallNode(pointerId);"
+          },
+          {
+            "_type": "null",
+            "end_lineno": 331,
+            "lineno": 331,
+            "name": "List<Integer> lineNumber=getLinesNumber(pointerIdentifierNode,callNode);"
+          },
+          {
+            "_type": "Expr",
+            "value": {
+              "_type": "Call",
+              "args": [],
+              "end_lineno": 332,
+              "lineno": 332,
+              "name": "clean()"
+            },
+            "end_lineno": 332,
+            "lineno": 332,
+            "name": "clean();"
+          },
+          {
+            "_type": "Expr",
+            "value": {
+              "_type": "Call",
+              "args": [],
+              "func": {
+                "_type": "Attribute",
+                "attr": "file",
+                "value": {
+                  "_type": "Name",
+                  "id": "export",
+                  "end_lineno": 333,
+                  "lineno": 333,
+                  "name": "export"
+                },
+                "end_lineno": 333,
+                "lineno": 333,
+                "name": "export(lineNumber,file)"
+              },
+              "end_lineno": 333,
+              "lineno": 333,
+              "name": "export(lineNumber,file)"
+            },
+            "end_lineno": 333,
+            "lineno": 333,
+            "name": "export(lineNumber,file);"
+          },
+          {
+            "_type": "null",
+            "end_lineno": 335,
+            "lineno": 335,
+            "name": "return;"
+          }
+        ],
+        "end_lineno": 336,
+        "lineno": 316,
+        "name": "main"
+      },
+      "end_lineno": 336,
+      "lineno": 316
+    }
+  ],
+  "hashCode": "-907415579"
+}

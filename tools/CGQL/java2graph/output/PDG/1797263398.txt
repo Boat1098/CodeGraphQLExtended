@@ -1,0 +1,33 @@
+FilePath:E:\File\CGQL\java2graph\input\DataProduce.java
+FileName:DataProduce.java
+package:null
+import:java.io.IOException
+import:java.nio.file.Files
+import:java.nio.file.Paths
+import:java.util.*
+{
+}
+class:DataProduce
+method:readFile String:filePath 8:32
+{
+v: !filePath.endsWith(\"txt\") 12
+v: return null; 14
+v: return file; 19
+v: String filePath 8
+v: List<String> file = Files.readAllLines(Paths.get(filePath)); 18
+v: Enter Enter 8.32
+estart: String filePath
+eend: List<String> file = Files.readAllLines(Paths.get(filePath)); 8!18
+estart: !filePath.endsWith(\"txt\")
+eend: return null; 12!14
+estart: !filePath.endsWith(\"txt\")
+eend: List<String> file = Files.readAllLines(Paths.get(filePath)); 12!18
+estart: !filePath.endsWith(\"txt\")
+eend: return file; 12!19
+estart: List<String> file = Files.readAllLines(Paths.get(filePath));
+eend: return file; 18!19
+estart: Enter Enter
+eend: String filePath 8!8
+estart: Enter Enter
+eend: !filePath.endsWith(\"txt\") 8!12
+}

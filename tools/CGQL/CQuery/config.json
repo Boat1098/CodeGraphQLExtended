@@ -1,0 +1,22 @@
+{
+  "gremlin": {
+    "host": "211.71.15.39",
+    "port": 20010
+  },
+  "cache": {
+    "type": "none",
+    "redis": {
+      "host": "<redis host ip>",
+      "port": 6379,
+      "password": "<password>",
+      "db": 2,
+      "shard": 10240
+    }
+  },
+  "learning": {
+    "enabled": false,
+    "host": "<ip>",
+    "port": 1234,
+    "baseUrl": "<http://ip:port>"
+  }
+}

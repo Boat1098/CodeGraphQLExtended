@@ -1,0 +1,519 @@
+{
+  "path": "E:\\File\\CGQL\\java2graph\\input\\DataProduce.java",
+  "filename": "DataProduce.java",
+  "initialMethodList": [
+    {
+      "type": "FuncStart",
+      "label": "readFile",
+      "startLine": 8,
+      "endLine": 32,
+      "className": "DataProduce",
+      "initialASTNode": {
+        "type": "MethodDeclaration",
+        "label": "public static List<String> readFile(String filePath){try {if (!filePath.endsWith(\\\"txt\\\")) {return null;} else {List<String> file=Files.readAllLines(Paths.get(filePath));return file;}} catch (OutOfMemoryError error) {error.printStackTrace();return null;}catch (IOException exception) {exception.printStackTrace();return null;}}",
+        "startLine": 8,
+        "endLine": 32,
+        "childNodeList": [
+          {
+            "type": "Modifier",
+            "label": "public",
+            "startLine": 8,
+            "endLine": 8,
+            "childNodeList": []
+          },
+          {
+            "type": "Modifier",
+            "label": "static",
+            "startLine": 8,
+            "endLine": 8,
+            "childNodeList": []
+          },
+          {
+            "type": "ParameterizedType",
+            "label": "List<String>",
+            "startLine": 8,
+            "endLine": 8,
+            "childNodeList": [
+              {
+                "type": "SimpleType",
+                "label": "List",
+                "startLine": 8,
+                "endLine": 8,
+                "childNodeList": [
+                  {
+                    "type": "SimpleName",
+                    "label": "List",
+                    "startLine": 8,
+                    "endLine": 8,
+                    "childNodeList": []
+                  }
+                ]
+              },
+              {
+                "type": "SimpleType",
+                "label": "String",
+                "startLine": 8,
+                "endLine": 8,
+                "childNodeList": [
+                  {
+                    "type": "SimpleName",
+                    "label": "String",
+                    "startLine": 8,
+                    "endLine": 8,
+                    "childNodeList": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "SimpleName",
+            "label": "readFile",
+            "startLine": 8,
+            "endLine": 8,
+            "childNodeList": []
+          },
+          {
+            "type": "SingleVariableDeclaration",
+            "label": "String filePath",
+            "startLine": 8,
+            "endLine": 8,
+            "childNodeList": [
+              {
+                "type": "SimpleType",
+                "label": "String",
+                "startLine": 8,
+                "endLine": 8,
+                "childNodeList": [
+                  {
+                    "type": "SimpleName",
+                    "label": "String",
+                    "startLine": 8,
+                    "endLine": 8,
+                    "childNodeList": []
+                  }
+                ]
+              },
+              {
+                "type": "SimpleName",
+                "label": "filePath",
+                "startLine": 8,
+                "endLine": 8,
+                "childNodeList": []
+              }
+            ]
+          },
+          {
+            "type": "Block",
+            "label": "{try {if (!filePath.endsWith(\\\"txt\\\")) {return null;} else {List<String> file=Files.readAllLines(Paths.get(filePath));return file;}} catch (OutOfMemoryError error) {error.printStackTrace();return null;}catch (IOException exception) {exception.printStackTrace();return null;}}",
+            "startLine": 9,
+            "endLine": 32,
+            "childNodeList": [
+              {
+                "type": "TryStatement",
+                "label": "try {if (!filePath.endsWith(\\\"txt\\\")) {return null;} else {List<String> file=Files.readAllLines(Paths.get(filePath));return file;}} catch (OutOfMemoryError error) {error.printStackTrace();return null;}catch (IOException exception) {exception.printStackTrace();return null;}",
+                "startLine": 10,
+                "endLine": 31,
+                "childNodeList": [
+                  {
+                    "type": "Block",
+                    "label": "{if (!filePath.endsWith(\\\"txt\\\")) {return null;} else {List<String> file=Files.readAllLines(Paths.get(filePath));return file;}}",
+                    "startLine": 11,
+                    "endLine": 21,
+                    "childNodeList": [
+                      {
+                        "type": "IfStatement",
+                        "label": "if (!filePath.endsWith(\\\"txt\\\")) {return null;} else {List<String> file=Files.readAllLines(Paths.get(filePath));return file;}",
+                        "startLine": 12,
+                        "endLine": 20,
+                        "childNodeList": [
+                          {
+                            "type": "PrefixExpression",
+                            "label": "!filePath.endsWith(\\\"txt\\\")",
+                            "startLine": 12,
+                            "endLine": 12,
+                            "childNodeList": [
+                              {
+                                "type": "MethodInvocation",
+                                "label": "filePath.endsWith(\\\"txt\\\")",
+                                "startLine": 12,
+                                "endLine": 12,
+                                "childNodeList": [
+                                  {
+                                    "type": "SimpleName",
+                                    "label": "filePath",
+                                    "startLine": 12,
+                                    "endLine": 12,
+                                    "childNodeList": []
+                                  },
+                                  {
+                                    "type": "SimpleName",
+                                    "label": "endsWith",
+                                    "startLine": 12,
+                                    "endLine": 12,
+                                    "childNodeList": []
+                                  },
+                                  {
+                                    "type": "StringLiteral",
+                                    "label": "\\\"txt\\\"",
+                                    "startLine": 12,
+                                    "endLine": 12,
+                                    "childNodeList": []
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "Block",
+                            "label": "{return null;}",
+                            "startLine": 13,
+                            "endLine": 15,
+                            "childNodeList": [
+                              {
+                                "type": "ReturnStatement",
+                                "label": "return null;",
+                                "startLine": 14,
+                                "endLine": 14,
+                                "childNodeList": [
+                                  {
+                                    "type": "NullLiteral",
+                                    "label": "null",
+                                    "startLine": 14,
+                                    "endLine": 14,
+                                    "childNodeList": []
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "Block",
+                            "label": "{List<String> file=Files.readAllLines(Paths.get(filePath));return file;}",
+                            "startLine": 17,
+                            "endLine": 20,
+                            "childNodeList": [
+                              {
+                                "type": "VariableDeclarationStatement",
+                                "label": "List<String> file=Files.readAllLines(Paths.get(filePath));",
+                                "startLine": 18,
+                                "endLine": 18,
+                                "childNodeList": [
+                                  {
+                                    "type": "ParameterizedType",
+                                    "label": "List<String>",
+                                    "startLine": 18,
+                                    "endLine": 18,
+                                    "childNodeList": [
+                                      {
+                                        "type": "SimpleType",
+                                        "label": "List",
+                                        "startLine": 18,
+                                        "endLine": 18,
+                                        "childNodeList": [
+                                          {
+                                            "type": "SimpleName",
+                                            "label": "List",
+                                            "startLine": 18,
+                                            "endLine": 18,
+                                            "childNodeList": []
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "type": "SimpleType",
+                                        "label": "String",
+                                        "startLine": 18,
+                                        "endLine": 18,
+                                        "childNodeList": [
+                                          {
+                                            "type": "SimpleName",
+                                            "label": "String",
+                                            "startLine": 18,
+                                            "endLine": 18,
+                                            "childNodeList": []
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "VariableDeclarationFragment",
+                                    "label": "file=Files.readAllLines(Paths.get(filePath))",
+                                    "startLine": 18,
+                                    "endLine": 18,
+                                    "childNodeList": [
+                                      {
+                                        "type": "SimpleName",
+                                        "label": "file",
+                                        "startLine": 18,
+                                        "endLine": 18,
+                                        "childNodeList": []
+                                      },
+                                      {
+                                        "type": "MethodInvocation",
+                                        "label": "Files.readAllLines(Paths.get(filePath))",
+                                        "startLine": 18,
+                                        "endLine": 18,
+                                        "childNodeList": [
+                                          {
+                                            "type": "SimpleName",
+                                            "label": "Files",
+                                            "startLine": 18,
+                                            "endLine": 18,
+                                            "childNodeList": []
+                                          },
+                                          {
+                                            "type": "SimpleName",
+                                            "label": "readAllLines",
+                                            "startLine": 18,
+                                            "endLine": 18,
+                                            "childNodeList": []
+                                          },
+                                          {
+                                            "type": "MethodInvocation",
+                                            "label": "Paths.get(filePath)",
+                                            "startLine": 18,
+                                            "endLine": 18,
+                                            "childNodeList": [
+                                              {
+                                                "type": "SimpleName",
+                                                "label": "Paths",
+                                                "startLine": 18,
+                                                "endLine": 18,
+                                                "childNodeList": []
+                                              },
+                                              {
+                                                "type": "SimpleName",
+                                                "label": "get",
+                                                "startLine": 18,
+                                                "endLine": 18,
+                                                "childNodeList": []
+                                              },
+                                              {
+                                                "type": "SimpleName",
+                                                "label": "filePath",
+                                                "startLine": 18,
+                                                "endLine": 18,
+                                                "childNodeList": []
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "ReturnStatement",
+                                "label": "return file;",
+                                "startLine": 19,
+                                "endLine": 19,
+                                "childNodeList": [
+                                  {
+                                    "type": "SimpleName",
+                                    "label": "file",
+                                    "startLine": 19,
+                                    "endLine": 19,
+                                    "childNodeList": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "CatchClause",
+                    "label": "catch (OutOfMemoryError error) {error.printStackTrace();return null;}",
+                    "startLine": 22,
+                    "endLine": 26,
+                    "childNodeList": [
+                      {
+                        "type": "SingleVariableDeclaration",
+                        "label": "OutOfMemoryError error",
+                        "startLine": 22,
+                        "endLine": 22,
+                        "childNodeList": [
+                          {
+                            "type": "SimpleType",
+                            "label": "OutOfMemoryError",
+                            "startLine": 22,
+                            "endLine": 22,
+                            "childNodeList": [
+                              {
+                                "type": "SimpleName",
+                                "label": "OutOfMemoryError",
+                                "startLine": 22,
+                                "endLine": 22,
+                                "childNodeList": []
+                              }
+                            ]
+                          },
+                          {
+                            "type": "SimpleName",
+                            "label": "error",
+                            "startLine": 22,
+                            "endLine": 22,
+                            "childNodeList": []
+                          }
+                        ]
+                      },
+                      {
+                        "type": "Block",
+                        "label": "{error.printStackTrace();return null;}",
+                        "startLine": 23,
+                        "endLine": 26,
+                        "childNodeList": [
+                          {
+                            "type": "ExpressionStatement",
+                            "label": "error.printStackTrace();",
+                            "startLine": 24,
+                            "endLine": 24,
+                            "childNodeList": [
+                              {
+                                "type": "MethodInvocation",
+                                "label": "error.printStackTrace()",
+                                "startLine": 24,
+                                "endLine": 24,
+                                "childNodeList": [
+                                  {
+                                    "type": "SimpleName",
+                                    "label": "error",
+                                    "startLine": 24,
+                                    "endLine": 24,
+                                    "childNodeList": []
+                                  },
+                                  {
+                                    "type": "SimpleName",
+                                    "label": "printStackTrace",
+                                    "startLine": 24,
+                                    "endLine": 24,
+                                    "childNodeList": []
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "ReturnStatement",
+                            "label": "return null;",
+                            "startLine": 25,
+                            "endLine": 25,
+                            "childNodeList": [
+                              {
+                                "type": "NullLiteral",
+                                "label": "null",
+                                "startLine": 25,
+                                "endLine": 25,
+                                "childNodeList": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "CatchClause",
+                    "label": "catch (IOException exception) {exception.printStackTrace();return null;}",
+                    "startLine": 27,
+                    "endLine": 31,
+                    "childNodeList": [
+                      {
+                        "type": "SingleVariableDeclaration",
+                        "label": "IOException exception",
+                        "startLine": 27,
+                        "endLine": 27,
+                        "childNodeList": [
+                          {
+                            "type": "SimpleType",
+                            "label": "IOException",
+                            "startLine": 27,
+                            "endLine": 27,
+                            "childNodeList": [
+                              {
+                                "type": "SimpleName",
+                                "label": "IOException",
+                                "startLine": 27,
+                                "endLine": 27,
+                                "childNodeList": []
+                              }
+                            ]
+                          },
+                          {
+                            "type": "SimpleName",
+                            "label": "exception",
+                            "startLine": 27,
+                            "endLine": 27,
+                            "childNodeList": []
+                          }
+                        ]
+                      },
+                      {
+                        "type": "Block",
+                        "label": "{exception.printStackTrace();return null;}",
+                        "startLine": 28,
+                        "endLine": 31,
+                        "childNodeList": [
+                          {
+                            "type": "ExpressionStatement",
+                            "label": "exception.printStackTrace();",
+                            "startLine": 29,
+                            "endLine": 29,
+                            "childNodeList": [
+                              {
+                                "type": "MethodInvocation",
+                                "label": "exception.printStackTrace()",
+                                "startLine": 29,
+                                "endLine": 29,
+                                "childNodeList": [
+                                  {
+                                    "type": "SimpleName",
+                                    "label": "exception",
+                                    "startLine": 29,
+                                    "endLine": 29,
+                                    "childNodeList": []
+                                  },
+                                  {
+                                    "type": "SimpleName",
+                                    "label": "printStackTrace",
+                                    "startLine": 29,
+                                    "endLine": 29,
+                                    "childNodeList": []
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "ReturnStatement",
+                            "label": "return null;",
+                            "startLine": 30,
+                            "endLine": 30,
+                            "childNodeList": [
+                              {
+                                "type": "NullLiteral",
+                                "label": "null",
+                                "startLine": 30,
+                                "endLine": 30,
+                                "childNodeList": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

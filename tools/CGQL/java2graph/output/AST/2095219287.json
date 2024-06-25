@@ -1,0 +1,3088 @@
+{
+  "path": "E:\\File\\CGQL\\java2graph\\input\\Joern_check.java",
+  "filename": "Joern_check.java",
+  "initialMethodList": [
+    {
+      "type": "FuncStart",
+      "label": "scan",
+      "startLine": 10,
+      "endLine": 39,
+      "className": "Joern_check",
+      "initialASTNode": {
+        "type": "MethodDeclaration",
+        "label": "public static boolean scan(String filepath){try {String scancmd=\\\".\\\\joern-cli\\\\joern-parse \\\" + filepath;System.out.println(scancmd);Runtime scanrun=Runtime.getRuntime();Process scanpro=scanrun.exec(new String[]{\\\"cmd.exe\\\",\\\"/c\\\",scancmd});int status=scanpro.waitFor();if (status != 0) {System.out.println(\\\"Failed to call shell's command\\\");return false;} else {System.out.println(\\\"Scan Finished!\\\");return true;}} catch (InterruptedException exception) {exception.printStackTrace();return false;}catch (IOException ioException) {ioException.printStackTrace();return false;}}",
+        "startLine": 10,
+        "endLine": 39,
+        "childNodeList": [
+          {
+            "type": "Modifier",
+            "label": "public",
+            "startLine": 10,
+            "endLine": 10,
+            "childNodeList": []
+          },
+          {
+            "type": "Modifier",
+            "label": "static",
+            "startLine": 10,
+            "endLine": 10,
+            "childNodeList": []
+          },
+          {
+            "type": "PrimitiveType",
+            "label": "boolean",
+            "startLine": 10,
+            "endLine": 10,
+            "childNodeList": []
+          },
+          {
+            "type": "SimpleName",
+            "label": "scan",
+            "startLine": 10,
+            "endLine": 10,
+            "childNodeList": []
+          },
+          {
+            "type": "SingleVariableDeclaration",
+            "label": "String filepath",
+            "startLine": 10,
+            "endLine": 10,
+            "childNodeList": [
+              {
+                "type": "SimpleType",
+                "label": "String",
+                "startLine": 10,
+                "endLine": 10,
+                "childNodeList": [
+                  {
+                    "type": "SimpleName",
+                    "label": "String",
+                    "startLine": 10,
+                    "endLine": 10,
+                    "childNodeList": []
+                  }
+                ]
+              },
+              {
+                "type": "SimpleName",
+                "label": "filepath",
+                "startLine": 10,
+                "endLine": 10,
+                "childNodeList": []
+              }
+            ]
+          },
+          {
+            "type": "Block",
+            "label": "{try {String scancmd=\\\".\\\\joern-cli\\\\joern-parse \\\" + filepath;System.out.println(scancmd);Runtime scanrun=Runtime.getRuntime();Process scanpro=scanrun.exec(new String[]{\\\"cmd.exe\\\",\\\"/c\\\",scancmd});int status=scanpro.waitFor();if (status != 0) {System.out.println(\\\"Failed to call shell's command\\\");return false;} else {System.out.println(\\\"Scan Finished!\\\");return true;}} catch (InterruptedException exception) {exception.printStackTrace();return false;}catch (IOException ioException) {ioException.printStackTrace();return false;}}",
+            "startLine": 11,
+            "endLine": 39,
+            "childNodeList": [
+              {
+                "type": "TryStatement",
+                "label": "try {String scancmd=\\\".\\\\joern-cli\\\\joern-parse \\\" + filepath;System.out.println(scancmd);Runtime scanrun=Runtime.getRuntime();Process scanpro=scanrun.exec(new String[]{\\\"cmd.exe\\\",\\\"/c\\\",scancmd});int status=scanpro.waitFor();if (status != 0) {System.out.println(\\\"Failed to call shell's command\\\");return false;} else {System.out.println(\\\"Scan Finished!\\\");return true;}} catch (InterruptedException exception) {exception.printStackTrace();return false;}catch (IOException ioException) {ioException.printStackTrace();return false;}",
+                "startLine": 12,
+                "endLine": 38,
+                "childNodeList": [
+                  {
+                    "type": "Block",
+                    "label": "{String scancmd=\\\".\\\\joern-cli\\\\joern-parse \\\" + filepath;System.out.println(scancmd);Runtime scanrun=Runtime.getRuntime();Process scanpro=scanrun.exec(new String[]{\\\"cmd.exe\\\",\\\"/c\\\",scancmd});int status=scanpro.waitFor();if (status != 0) {System.out.println(\\\"Failed to call shell's command\\\");return false;} else {System.out.println(\\\"Scan Finished!\\\");return true;}}",
+                    "startLine": 12,
+                    "endLine": 28,
+                    "childNodeList": [
+                      {
+                        "type": "VariableDeclarationStatement",
+                        "label": "String scancmd=\\\".\\\\joern-cli\\\\joern-parse \\\" + filepath;",
+                        "startLine": 13,
+                        "endLine": 13,
+                        "childNodeList": [
+                          {
+                            "type": "SimpleType",
+                            "label": "String",
+                            "startLine": 13,
+                            "endLine": 13,
+                            "childNodeList": [
+                              {
+                                "type": "SimpleName",
+                                "label": "String",
+                                "startLine": 13,
+                                "endLine": 13,
+                                "childNodeList": []
+                              }
+                            ]
+                          },
+                          {
+                            "type": "VariableDeclarationFragment",
+                            "label": "scancmd=\\\".\\\\joern-cli\\\\joern-parse \\\" + filepath",
+                            "startLine": 13,
+                            "endLine": 13,
+                            "childNodeList": [
+                              {
+                                "type": "SimpleName",
+                                "label": "scancmd",
+                                "startLine": 13,
+                                "endLine": 13,
+                                "childNodeList": []
+                              },
+                              {
+                                "type": "InfixExpression",
+                                "label": "\\\".\\\\joern-cli\\\\joern-parse \\\" + filepath",
+                                "startLine": 13,
+                                "endLine": 13,
+                                "childNodeList": [
+                                  {
+                                    "type": "StringLiteral",
+                                    "label": "\\\".\\\\joern-cli\\\\joern-parse \\\"",
+                                    "startLine": 13,
+                                    "endLine": 13,
+                                    "childNodeList": []
+                                  },
+                                  {
+                                    "type": "SimpleName",
+                                    "label": "filepath",
+                                    "startLine": 13,
+                                    "endLine": 13,
+                                    "childNodeList": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "ExpressionStatement",
+                        "label": "System.out.println(scancmd);",
+                        "startLine": 14,
+                        "endLine": 14,
+                        "childNodeList": [
+                          {
+                            "type": "MethodInvocation",
+                            "label": "System.out.println(scancmd)",
+                            "startLine": 14,
+                            "endLine": 14,
+                            "childNodeList": [
+                              {
+                                "type": "QualifiedName",
+                                "label": "System.out",
+                                "startLine": 14,
+                                "endLine": 14,
+                                "childNodeList": [
+                                  {
+                                    "type": "SimpleName",
+                                    "label": "System",
+                                    "startLine": 14,
+                                    "endLine": 14,
+                                    "childNodeList": []
+                                  },
+                                  {
+                                    "type": "SimpleName",
+                                    "label": "out",
+                                    "startLine": 14,
+                                    "endLine": 14,
+                                    "childNodeList": []
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "SimpleName",
+                                "label": "println",
+                                "startLine": 14,
+                                "endLine": 14,
+                                "childNodeList": []
+                              },
+                              {
+                                "type": "SimpleName",
+                                "label": "scancmd",
+                                "startLine": 14,
+                                "endLine": 14,
+                                "childNodeList": []
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "VariableDeclarationStatement",
+                        "label": "Runtime scanrun=Runtime.getRuntime();",
+                        "startLine": 15,
+                        "endLine": 15,
+                        "childNodeList": [
+                          {
+                            "type": "SimpleType",
+                            "label": "Runtime",
+                            "startLine": 15,
+                            "endLine": 15,
+                            "childNodeList": [
+                              {
+                                "type": "SimpleName",
+                                "label": "Runtime",
+                                "startLine": 15,
+                                "endLine": 15,
+                                "childNodeList": []
+                              }
+                            ]
+                          },
+                          {
+                            "type": "VariableDeclarationFragment",
+                            "label": "scanrun=Runtime.getRuntime()",
+                            "startLine": 15,
+                            "endLine": 15,
+                            "childNodeList": [
+                              {
+                                "type": "SimpleName",
+                                "label": "scanrun",
+                                "startLine": 15,
+                                "endLine": 15,
+                                "childNodeList": []
+                              },
+                              {
+                                "type": "MethodInvocation",
+                                "label": "Runtime.getRuntime()",
+                                "startLine": 15,
+                                "endLine": 15,
+                                "childNodeList": [
+                                  {
+                                    "type": "SimpleName",
+                                    "label": "Runtime",
+                                    "startLine": 15,
+                                    "endLine": 15,
+                                    "childNodeList": []
+                                  },
+                                  {
+                                    "type": "SimpleName",
+                                    "label": "getRuntime",
+                                    "startLine": 15,
+                                    "endLine": 15,
+                                    "childNodeList": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "VariableDeclarationStatement",
+                        "label": "Process scanpro=scanrun.exec(new String[]{\\\"cmd.exe\\\",\\\"/c\\\",scancmd});",
+                        "startLine": 16,
+                        "endLine": 16,
+                        "childNodeList": [
+                          {
+                            "type": "SimpleType",
+                            "label": "Process",
+                            "startLine": 16,
+                            "endLine": 16,
+                            "childNodeList": [
+                              {
+                                "type": "SimpleName",
+                                "label": "Process",
+                                "startLine": 16,
+                                "endLine": 16,
+                                "childNodeList": []
+                              }
+                            ]
+                          },
+                          {
+                            "type": "VariableDeclarationFragment",
+                            "label": "scanpro=scanrun.exec(new String[]{\\\"cmd.exe\\\",\\\"/c\\\",scancmd})",
+                            "startLine": 16,
+                            "endLine": 16,
+                            "childNodeList": [
+                              {
+                                "type": "SimpleName",
+                                "label": "scanpro",
+                                "startLine": 16,
+                                "endLine": 16,
+                                "childNodeList": []
+                              },
+                              {
+                                "type": "MethodInvocation",
+                                "label": "scanrun.exec(new String[]{\\\"cmd.exe\\\",\\\"/c\\\",scancmd})",
+                                "startLine": 16,
+                                "endLine": 16,
+                                "childNodeList": [
+                                  {
+                                    "type": "SimpleName",
+                                    "label": "scanrun",
+                                    "startLine": 16,
+                                    "endLine": 16,
+                                    "childNodeList": []
+                                  },
+                                  {
+                                    "type": "SimpleName",
+                                    "label": "exec",
+                                    "startLine": 16,
+                                    "endLine": 16,
+                                    "childNodeList": []
+                                  },
+                                  {
+                                    "type": "ArrayCreation",
+                                    "label": "new String[]{\\\"cmd.exe\\\",\\\"/c\\\",scancmd}",
+                                    "startLine": 16,
+                                    "endLine": 16,
+                                    "childNodeList": [
+                                      {
+                                        "type": "ArrayType",
+                                        "label": "String[]",
+                                        "startLine": 16,
+                                        "endLine": 16,
+                                        "childNodeList": [
+                                          {
+                                            "type": "SimpleType",
+                                            "label": "String",
+                                            "startLine": 16,
+                                            "endLine": 16,
+                                            "childNodeList": [
+                                              {
+                                                "type": "SimpleName",
+                                                "label": "String",
+                                                "startLine": 16,
+                                                "endLine": 16,
+                                                "childNodeList": []
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "type": "ArrayInitializer",
+                                        "label": "{\\\"cmd.exe\\\",\\\"/c\\\",scancmd}",
+                                        "startLine": 16,
+                                        "endLine": 16,
+                                        "childNodeList": [
+                                          {
+                                            "type": "StringLiteral",
+                                            "label": "\\\"cmd.exe\\\"",
+                                            "startLine": 16,
+                                            "endLine": 16,
+                                            "childNodeList": []
+                                          },
+                                          {
+                                            "type": "StringLiteral",
+                                            "label": "\\\"/c\\\"",
+                                            "startLine": 16,
+                                            "endLine": 16,
+                                            "childNodeList": []
+                                          },
+                                          {
+                                            "type": "SimpleName",
+                                            "label": "scancmd",
+                                            "startLine": 16,
+                                            "endLine": 16,
+                                            "childNodeList": []
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "VariableDeclarationStatement",
+                        "label": "int status=scanpro.waitFor();",
+                        "startLine": 17,
+                        "endLine": 17,
+                        "childNodeList": [
+                          {
+                            "type": "PrimitiveType",
+                            "label": "int",
+                            "startLine": 17,
+                            "endLine": 17,
+                            "childNodeList": []
+                          },
+                          {
+                            "type": "VariableDeclarationFragment",
+                            "label": "status=scanpro.waitFor()",
+                            "startLine": 17,
+                            "endLine": 17,
+                            "childNodeList": [
+                              {
+                                "type": "SimpleName",
+                                "label": "status",
+                                "startLine": 17,
+                                "endLine": 17,
+                                "childNodeList": []
+                              },
+                              {
+                                "type": "MethodInvocation",
+                                "label": "scanpro.waitFor()",
+                                "startLine": 17,
+                                "endLine": 17,
+                                "childNodeList": [
+                                  {
+                                    "type": "SimpleName",
+                                    "label": "scanpro",
+                                    "startLine": 17,
+                                    "endLine": 17,
+                                    "childNodeList": []
+                                  },
+                                  {
+                                    "type": "SimpleName",
+                                    "label": "waitFor",
+                                    "startLine": 17,
+                                    "endLine": 17,
+                                    "childNodeList": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "IfStatement",
+                        "label": "if (status != 0) {System.out.println(\\\"Failed to call shell's command\\\");return false;} else {System.out.println(\\\"Scan Finished!\\\");return true;}",
+                        "startLine": 18,
+                        "endLine": 27,
+                        "childNodeList": [
+                          {
+                            "type": "InfixExpression",
+                            "label": "status != 0",
+                            "startLine": 18,
+                            "endLine": 18,
+                            "childNodeList": [
+                              {
+                                "type": "SimpleName",
+                                "label": "status",
+                                "startLine": 18,
+                                "endLine": 18,
+                                "childNodeList": []
+                              },
+                              {
+                                "type": "NumberLiteral",
+                                "label": "0",
+                                "startLine": 18,
+                                "endLine": 18,
+                                "childNodeList": []
+                              }
+                            ]
+                          },
+                          {
+                            "type": "Block",
+                            "label": "{System.out.println(\\\"Failed to call shell's command\\\");return false;}",
+                            "startLine": 19,
+                            "endLine": 22,
+                            "childNodeList": [
+                              {
+                                "type": "ExpressionStatement",
+                                "label": "System.out.println(\\\"Failed to call shell's command\\\");",
+                                "startLine": 20,
+                                "endLine": 20,
+                                "childNodeList": [
+                                  {
+                                    "type": "MethodInvocation",
+                                    "label": "System.out.println(\\\"Failed to call shell's command\\\")",
+                                    "startLine": 20,
+                                    "endLine": 20,
+                                    "childNodeList": [
+                                      {
+                                        "type": "QualifiedName",
+                                        "label": "System.out",
+                                        "startLine": 20,
+                                        "endLine": 20,
+                                        "childNodeList": [
+                                          {
+                                            "type": "SimpleName",
+                                            "label": "System",
+                                            "startLine": 20,
+                                            "endLine": 20,
+                                            "childNodeList": []
+                                          },
+                                          {
+                                            "type": "SimpleName",
+                                            "label": "out",
+                                            "startLine": 20,
+                                            "endLine": 20,
+                                            "childNodeList": []
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "type": "SimpleName",
+                                        "label": "println",
+                                        "startLine": 20,
+                                        "endLine": 20,
+                                        "childNodeList": []
+                                      },
+                                      {
+                                        "type": "StringLiteral",
+                                        "label": "\\\"Failed to call shell's command\\\"",
+                                        "startLine": 20,
+                                        "endLine": 20,
+                                        "childNodeList": []
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "ReturnStatement",
+                                "label": "return false;",
+                                "startLine": 21,
+                                "endLine": 21,
+                                "childNodeList": [
+                                  {
+                                    "type": "BooleanLiteral",
+                                    "label": "false",
+                                    "startLine": 21,
+                                    "endLine": 21,
+                                    "childNodeList": []
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "Block",
+                            "label": "{System.out.println(\\\"Scan Finished!\\\");return true;}",
+                            "startLine": 24,
+                            "endLine": 27,
+                            "childNodeList": [
+                              {
+                                "type": "ExpressionStatement",
+                                "label": "System.out.println(\\\"Scan Finished!\\\");",
+                                "startLine": 25,
+                                "endLine": 25,
+                                "childNodeList": [
+                                  {
+                                    "type": "MethodInvocation",
+                                    "label": "System.out.println(\\\"Scan Finished!\\\")",
+                                    "startLine": 25,
+                                    "endLine": 25,
+                                    "childNodeList": [
+                                      {
+                                        "type": "QualifiedName",
+                                        "label": "System.out",
+                                        "startLine": 25,
+                                        "endLine": 25,
+                                        "childNodeList": [
+                                          {
+                                            "type": "SimpleName",
+                                            "label": "System",
+                                            "startLine": 25,
+                                            "endLine": 25,
+                                            "childNodeList": []
+                                          },
+                                          {
+                                            "type": "SimpleName",
+                                            "label": "out",
+                                            "startLine": 25,
+                                            "endLine": 25,
+                                            "childNodeList": []
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "type": "SimpleName",
+                                        "label": "println",
+                                        "startLine": 25,
+                                        "endLine": 25,
+                                        "childNodeList": []
+                                      },
+                                      {
+                                        "type": "StringLiteral",
+                                        "label": "\\\"Scan Finished!\\\"",
+                                        "startLine": 25,
+                                        "endLine": 25,
+                                        "childNodeList": []
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "ReturnStatement",
+                                "label": "return true;",
+                                "startLine": 26,
+                                "endLine": 26,
+                                "childNodeList": [
+                                  {
+                                    "type": "BooleanLiteral",
+                                    "label": "true",
+                                    "startLine": 26,
+                                    "endLine": 26,
+                                    "childNodeList": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "CatchClause",
+                    "label": "catch (InterruptedException exception) {exception.printStackTrace();return false;}",
+                    "startLine": 29,
+                    "endLine": 33,
+                    "childNodeList": [
+                      {
+                        "type": "SingleVariableDeclaration",
+                        "label": "InterruptedException exception",
+                        "startLine": 29,
+                        "endLine": 29,
+                        "childNodeList": [
+                          {
+                            "type": "SimpleType",
+                            "label": "InterruptedException",
+                            "startLine": 29,
+                            "endLine": 29,
+                            "childNodeList": [
+                              {
+                                "type": "SimpleName",
+                                "label": "InterruptedException",
+                                "startLine": 29,
+                                "endLine": 29,
+                                "childNodeList": []
+                              }
+                            ]
+                          },
+                          {
+                            "type": "SimpleName",
+                            "label": "exception",
+                            "startLine": 29,
+                            "endLine": 29,
+                            "childNodeList": []
+                          }
+                        ]
+                      },
+                      {
+                        "type": "Block",
+                        "label": "{exception.printStackTrace();return false;}",
+                        "startLine": 30,
+                        "endLine": 33,
+                        "childNodeList": [
+                          {
+                            "type": "ExpressionStatement",
+                            "label": "exception.printStackTrace();",
+                            "startLine": 31,
+                            "endLine": 31,
+                            "childNodeList": [
+                              {
+                                "type": "MethodInvocation",
+                                "label": "exception.printStackTrace()",
+                                "startLine": 31,
+                                "endLine": 31,
+                                "childNodeList": [
+                                  {
+                                    "type": "SimpleName",
+                                    "label": "exception",
+                                    "startLine": 31,
+                                    "endLine": 31,
+                                    "childNodeList": []
+                                  },
+                                  {
+                                    "type": "SimpleName",
+                                    "label": "printStackTrace",
+                                    "startLine": 31,
+                                    "endLine": 31,
+                                    "childNodeList": []
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "ReturnStatement",
+                            "label": "return false;",
+                            "startLine": 32,
+                            "endLine": 32,
+                            "childNodeList": [
+                              {
+                                "type": "BooleanLiteral",
+                                "label": "false",
+                                "startLine": 32,
+                                "endLine": 32,
+                                "childNodeList": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "CatchClause",
+                    "label": "catch (IOException ioException) {ioException.printStackTrace();return false;}",
+                    "startLine": 34,
+                    "endLine": 38,
+                    "childNodeList": [
+                      {
+                        "type": "SingleVariableDeclaration",
+                        "label": "IOException ioException",
+                        "startLine": 34,
+                        "endLine": 34,
+                        "childNodeList": [
+                          {
+                            "type": "SimpleType",
+                            "label": "IOException",
+                            "startLine": 34,
+                            "endLine": 34,
+                            "childNodeList": [
+                              {
+                                "type": "SimpleName",
+                                "label": "IOException",
+                                "startLine": 34,
+                                "endLine": 34,
+                                "childNodeList": []
+                              }
+                            ]
+                          },
+                          {
+                            "type": "SimpleName",
+                            "label": "ioException",
+                            "startLine": 34,
+                            "endLine": 34,
+                            "childNodeList": []
+                          }
+                        ]
+                      },
+                      {
+                        "type": "Block",
+                        "label": "{ioException.printStackTrace();return false;}",
+                        "startLine": 35,
+                        "endLine": 38,
+                        "childNodeList": [
+                          {
+                            "type": "ExpressionStatement",
+                            "label": "ioException.printStackTrace();",
+                            "startLine": 36,
+                            "endLine": 36,
+                            "childNodeList": [
+                              {
+                                "type": "MethodInvocation",
+                                "label": "ioException.printStackTrace()",
+                                "startLine": 36,
+                                "endLine": 36,
+                                "childNodeList": [
+                                  {
+                                    "type": "SimpleName",
+                                    "label": "ioException",
+                                    "startLine": 36,
+                                    "endLine": 36,
+                                    "childNodeList": []
+                                  },
+                                  {
+                                    "type": "SimpleName",
+                                    "label": "printStackTrace",
+                                    "startLine": 36,
+                                    "endLine": 36,
+                                    "childNodeList": []
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "ReturnStatement",
+                            "label": "return false;",
+                            "startLine": 37,
+                            "endLine": 37,
+                            "childNodeList": [
+                              {
+                                "type": "BooleanLiteral",
+                                "label": "false",
+                                "startLine": 37,
+                                "endLine": 37,
+                                "childNodeList": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "FuncStart",
+      "label": "clean",
+      "startLine": 41,
+      "endLine": 53,
+      "className": "Joern_check",
+      "initialASTNode": {
+        "type": "MethodDeclaration",
+        "label": "public static void clean(){try {String delcmd=\\\"rd /s /q result\\\";Runtime delrun=Runtime.getRuntime();Process delpro=delrun.exec(new String[]{\\\"cmd.exe\\\",\\\"/c\\\",delcmd});int delsta=delpro.waitFor();} catch (IOException exception) {exception.printStackTrace();}}",
+        "startLine": 41,
+        "endLine": 53,
+        "childNodeList": [
+          {
+            "type": "Modifier",
+            "label": "public",
+            "startLine": 41,
+            "endLine": 41,
+            "childNodeList": []
+          },
+          {
+            "type": "Modifier",
+            "label": "static",
+            "startLine": 41,
+            "endLine": 41,
+            "childNodeList": []
+          },
+          {
+            "type": "PrimitiveType",
+            "label": "void",
+            "startLine": 41,
+            "endLine": 41,
+            "childNodeList": []
+          },
+          {
+            "type": "SimpleName",
+            "label": "clean",
+            "startLine": 41,
+            "endLine": 41,
+            "childNodeList": []
+          },
+          {
+            "type": "Block",
+            "label": "{try {String delcmd=\\\"rd /s /q result\\\";Runtime delrun=Runtime.getRuntime();Process delpro=delrun.exec(new String[]{\\\"cmd.exe\\\",\\\"/c\\\",delcmd});int delsta=delpro.waitFor();} catch (IOException exception) {exception.printStackTrace();}}",
+            "startLine": 42,
+            "endLine": 53,
+            "childNodeList": [
+              {
+                "type": "TryStatement",
+                "label": "try {String delcmd=\\\"rd /s /q result\\\";Runtime delrun=Runtime.getRuntime();Process delpro=delrun.exec(new String[]{\\\"cmd.exe\\\",\\\"/c\\\",delcmd});int delsta=delpro.waitFor();} catch (IOException exception) {exception.printStackTrace();}",
+                "startLine": 43,
+                "endLine": 52,
+                "childNodeList": [
+                  {
+                    "type": "Block",
+                    "label": "{String delcmd=\\\"rd /s /q result\\\";Runtime delrun=Runtime.getRuntime();Process delpro=delrun.exec(new String[]{\\\"cmd.exe\\\",\\\"/c\\\",delcmd});int delsta=delpro.waitFor();}",
+                    "startLine": 43,
+                    "endLine": 48,
+                    "childNodeList": [
+                      {
+                        "type": "VariableDeclarationStatement",
+                        "label": "String delcmd=\\\"rd /s /q result\\\";",
+                        "startLine": 44,
+                        "endLine": 44,
+                        "childNodeList": [
+                          {
+                            "type": "SimpleType",
+                            "label": "String",
+                            "startLine": 44,
+                            "endLine": 44,
+                            "childNodeList": [
+                              {
+                                "type": "SimpleName",
+                                "label": "String",
+                                "startLine": 44,
+                                "endLine": 44,
+                                "childNodeList": []
+                              }
+                            ]
+                          },
+                          {
+                            "type": "VariableDeclarationFragment",
+                            "label": "delcmd=\\\"rd /s /q result\\\"",
+                            "startLine": 44,
+                            "endLine": 44,
+                            "childNodeList": [
+                              {
+                                "type": "SimpleName",
+                                "label": "delcmd",
+                                "startLine": 44,
+                                "endLine": 44,
+                                "childNodeList": []
+                              },
+                              {
+                                "type": "StringLiteral",
+                                "label": "\\\"rd /s /q result\\\"",
+                                "startLine": 44,
+                                "endLine": 44,
+                                "childNodeList": []
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "VariableDeclarationStatement",
+                        "label": "Runtime delrun=Runtime.getRuntime();",
+                        "startLine": 45,
+                        "endLine": 45,
+                        "childNodeList": [
+                          {
+                            "type": "SimpleType",
+                            "label": "Runtime",
+                            "startLine": 45,
+                            "endLine": 45,
+                            "childNodeList": [
+                              {
+                                "type": "SimpleName",
+                                "label": "Runtime",
+                                "startLine": 45,
+                                "endLine": 45,
+                                "childNodeList": []
+                              }
+                            ]
+                          },
+                          {
+                            "type": "VariableDeclarationFragment",
+                            "label": "delrun=Runtime.getRuntime()",
+                            "startLine": 45,
+                            "endLine": 45,
+                            "childNodeList": [
+                              {
+                                "type": "SimpleName",
+                                "label": "delrun",
+                                "startLine": 45,
+                                "endLine": 45,
+                                "childNodeList": []
+                              },
+                              {
+                                "type": "MethodInvocation",
+                                "label": "Runtime.getRuntime()",
+                                "startLine": 45,
+                                "endLine": 45,
+                                "childNodeList": [
+                                  {
+                                    "type": "SimpleName",
+                                    "label": "Runtime",
+                                    "startLine": 45,
+                                    "endLine": 45,
+                                    "childNodeList": []
+                                  },
+                                  {
+                                    "type": "SimpleName",
+                                    "label": "getRuntime",
+                                    "startLine": 45,
+                                    "endLine": 45,
+                                    "childNodeList": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "VariableDeclarationStatement",
+                        "label": "Process delpro=delrun.exec(new String[]{\\\"cmd.exe\\\",\\\"/c\\\",delcmd});",
+                        "startLine": 46,
+                        "endLine": 46,
+                        "childNodeList": [
+                          {
+                            "type": "SimpleType",
+                            "label": "Process",
+                            "startLine": 46,
+                            "endLine": 46,
+                            "childNodeList": [
+                              {
+                                "type": "SimpleName",
+                                "label": "Process",
+                                "startLine": 46,
+                                "endLine": 46,
+                                "childNodeList": []
+                              }
+                            ]
+                          },
+                          {
+                            "type": "VariableDeclarationFragment",
+                            "label": "delpro=delrun.exec(new String[]{\\\"cmd.exe\\\",\\\"/c\\\",delcmd})",
+                            "startLine": 46,
+                            "endLine": 46,
+                            "childNodeList": [
+                              {
+                                "type": "SimpleName",
+                                "label": "delpro",
+                                "startLine": 46,
+                                "endLine": 46,
+                                "childNodeList": []
+                              },
+                              {
+                                "type": "MethodInvocation",
+                                "label": "delrun.exec(new String[]{\\\"cmd.exe\\\",\\\"/c\\\",delcmd})",
+                                "startLine": 46,
+                                "endLine": 46,
+                                "childNodeList": [
+                                  {
+                                    "type": "SimpleName",
+                                    "label": "delrun",
+                                    "startLine": 46,
+                                    "endLine": 46,
+                                    "childNodeList": []
+                                  },
+                                  {
+                                    "type": "SimpleName",
+                                    "label": "exec",
+                                    "startLine": 46,
+                                    "endLine": 46,
+                                    "childNodeList": []
+                                  },
+                                  {
+                                    "type": "ArrayCreation",
+                                    "label": "new String[]{\\\"cmd.exe\\\",\\\"/c\\\",delcmd}",
+                                    "startLine": 46,
+                                    "endLine": 46,
+                                    "childNodeList": [
+                                      {
+                                        "type": "ArrayType",
+                                        "label": "String[]",
+                                        "startLine": 46,
+                                        "endLine": 46,
+                                        "childNodeList": [
+                                          {
+                                            "type": "SimpleType",
+                                            "label": "String",
+                                            "startLine": 46,
+                                            "endLine": 46,
+                                            "childNodeList": [
+                                              {
+                                                "type": "SimpleName",
+                                                "label": "String",
+                                                "startLine": 46,
+                                                "endLine": 46,
+                                                "childNodeList": []
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "type": "ArrayInitializer",
+                                        "label": "{\\\"cmd.exe\\\",\\\"/c\\\",delcmd}",
+                                        "startLine": 46,
+                                        "endLine": 46,
+                                        "childNodeList": [
+                                          {
+                                            "type": "StringLiteral",
+                                            "label": "\\\"cmd.exe\\\"",
+                                            "startLine": 46,
+                                            "endLine": 46,
+                                            "childNodeList": []
+                                          },
+                                          {
+                                            "type": "StringLiteral",
+                                            "label": "\\\"/c\\\"",
+                                            "startLine": 46,
+                                            "endLine": 46,
+                                            "childNodeList": []
+                                          },
+                                          {
+                                            "type": "SimpleName",
+                                            "label": "delcmd",
+                                            "startLine": 46,
+                                            "endLine": 46,
+                                            "childNodeList": []
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "VariableDeclarationStatement",
+                        "label": "int delsta=delpro.waitFor();",
+                        "startLine": 47,
+                        "endLine": 47,
+                        "childNodeList": [
+                          {
+                            "type": "PrimitiveType",
+                            "label": "int",
+                            "startLine": 47,
+                            "endLine": 47,
+                            "childNodeList": []
+                          },
+                          {
+                            "type": "VariableDeclarationFragment",
+                            "label": "delsta=delpro.waitFor()",
+                            "startLine": 47,
+                            "endLine": 47,
+                            "childNodeList": [
+                              {
+                                "type": "SimpleName",
+                                "label": "delsta",
+                                "startLine": 47,
+                                "endLine": 47,
+                                "childNodeList": []
+                              },
+                              {
+                                "type": "MethodInvocation",
+                                "label": "delpro.waitFor()",
+                                "startLine": 47,
+                                "endLine": 47,
+                                "childNodeList": [
+                                  {
+                                    "type": "SimpleName",
+                                    "label": "delpro",
+                                    "startLine": 47,
+                                    "endLine": 47,
+                                    "childNodeList": []
+                                  },
+                                  {
+                                    "type": "SimpleName",
+                                    "label": "waitFor",
+                                    "startLine": 47,
+                                    "endLine": 47,
+                                    "childNodeList": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "CatchClause",
+                    "label": "catch (IOException exception) {exception.printStackTrace();}",
+                    "startLine": 49,
+                    "endLine": 52,
+                    "childNodeList": [
+                      {
+                        "type": "SingleVariableDeclaration",
+                        "label": "IOException exception",
+                        "startLine": 49,
+                        "endLine": 49,
+                        "childNodeList": [
+                          {
+                            "type": "SimpleType",
+                            "label": "IOException",
+                            "startLine": 49,
+                            "endLine": 49,
+                            "childNodeList": [
+                              {
+                                "type": "SimpleName",
+                                "label": "IOException",
+                                "startLine": 49,
+                                "endLine": 49,
+                                "childNodeList": []
+                              }
+                            ]
+                          },
+                          {
+                            "type": "SimpleName",
+                            "label": "exception",
+                            "startLine": 49,
+                            "endLine": 49,
+                            "childNodeList": []
+                          }
+                        ]
+                      },
+                      {
+                        "type": "Block",
+                        "label": "{exception.printStackTrace();}",
+                        "startLine": 50,
+                        "endLine": 52,
+                        "childNodeList": [
+                          {
+                            "type": "ExpressionStatement",
+                            "label": "exception.printStackTrace();",
+                            "startLine": 51,
+                            "endLine": 51,
+                            "childNodeList": [
+                              {
+                                "type": "MethodInvocation",
+                                "label": "exception.printStackTrace()",
+                                "startLine": 51,
+                                "endLine": 51,
+                                "childNodeList": [
+                                  {
+                                    "type": "SimpleName",
+                                    "label": "exception",
+                                    "startLine": 51,
+                                    "endLine": 51,
+                                    "childNodeList": []
+                                  },
+                                  {
+                                    "type": "SimpleName",
+                                    "label": "printStackTrace",
+                                    "startLine": 51,
+                                    "endLine": 51,
+                                    "childNodeList": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "FuncStart",
+      "label": "export",
+      "startLine": 55,
+      "endLine": 81,
+      "className": "Joern_check",
+      "initialASTNode": {
+        "type": "MethodDeclaration",
+        "label": "public static boolean export(){try {String outcmd=\\\".\\\\joern-cli\\\\joern-export --repr=all --format=neo4jcsv --out ./result\\\";Runtime outrun=Runtime.getRuntime();Process outpro=outrun.exec(new String[]{\\\"cmd.exe\\\",\\\"/c\\\",outcmd});int status=outpro.waitFor();if (status != 0) {System.out.println(\\\"Failed to call shell's command\\\");return false;} else {return true;}} catch (InterruptedException exception) {exception.printStackTrace();return false;}catch (IOException ioException) {ioException.printStackTrace();return false;}}",
+        "startLine": 55,
+        "endLine": 81,
+        "childNodeList": [
+          {
+            "type": "Modifier",
+            "label": "public",
+            "startLine": 55,
+            "endLine": 55,
+            "childNodeList": []
+          },
+          {
+            "type": "Modifier",
+            "label": "static",
+            "startLine": 55,
+            "endLine": 55,
+            "childNodeList": []
+          },
+          {
+            "type": "PrimitiveType",
+            "label": "boolean",
+            "startLine": 55,
+            "endLine": 55,
+            "childNodeList": []
+          },
+          {
+            "type": "SimpleName",
+            "label": "export",
+            "startLine": 55,
+            "endLine": 55,
+            "childNodeList": []
+          },
+          {
+            "type": "Block",
+            "label": "{try {String outcmd=\\\".\\\\joern-cli\\\\joern-export --repr=all --format=neo4jcsv --out ./result\\\";Runtime outrun=Runtime.getRuntime();Process outpro=outrun.exec(new String[]{\\\"cmd.exe\\\",\\\"/c\\\",outcmd});int status=outpro.waitFor();if (status != 0) {System.out.println(\\\"Failed to call shell's command\\\");return false;} else {return true;}} catch (InterruptedException exception) {exception.printStackTrace();return false;}catch (IOException ioException) {ioException.printStackTrace();return false;}}",
+            "startLine": 56,
+            "endLine": 81,
+            "childNodeList": [
+              {
+                "type": "TryStatement",
+                "label": "try {String outcmd=\\\".\\\\joern-cli\\\\joern-export --repr=all --format=neo4jcsv --out ./result\\\";Runtime outrun=Runtime.getRuntime();Process outpro=outrun.exec(new String[]{\\\"cmd.exe\\\",\\\"/c\\\",outcmd});int status=outpro.waitFor();if (status != 0) {System.out.println(\\\"Failed to call shell's command\\\");return false;} else {return true;}} catch (InterruptedException exception) {exception.printStackTrace();return false;}catch (IOException ioException) {ioException.printStackTrace();return false;}",
+                "startLine": 57,
+                "endLine": 80,
+                "childNodeList": [
+                  {
+                    "type": "Block",
+                    "label": "{String outcmd=\\\".\\\\joern-cli\\\\joern-export --repr=all --format=neo4jcsv --out ./result\\\";Runtime outrun=Runtime.getRuntime();Process outpro=outrun.exec(new String[]{\\\"cmd.exe\\\",\\\"/c\\\",outcmd});int status=outpro.waitFor();if (status != 0) {System.out.println(\\\"Failed to call shell's command\\\");return false;} else {return true;}}",
+                    "startLine": 57,
+                    "endLine": 70,
+                    "childNodeList": [
+                      {
+                        "type": "VariableDeclarationStatement",
+                        "label": "String outcmd=\\\".\\\\joern-cli\\\\joern-export --repr=all --format=neo4jcsv --out ./result\\\";",
+                        "startLine": 58,
+                        "endLine": 58,
+                        "childNodeList": [
+                          {
+                            "type": "SimpleType",
+                            "label": "String",
+                            "startLine": 58,
+                            "endLine": 58,
+                            "childNodeList": [
+                              {
+                                "type": "SimpleName",
+                                "label": "String",
+                                "startLine": 58,
+                                "endLine": 58,
+                                "childNodeList": []
+                              }
+                            ]
+                          },
+                          {
+                            "type": "VariableDeclarationFragment",
+                            "label": "outcmd=\\\".\\\\joern-cli\\\\joern-export --repr=all --format=neo4jcsv --out ./result\\\"",
+                            "startLine": 58,
+                            "endLine": 58,
+                            "childNodeList": [
+                              {
+                                "type": "SimpleName",
+                                "label": "outcmd",
+                                "startLine": 58,
+                                "endLine": 58,
+                                "childNodeList": []
+                              },
+                              {
+                                "type": "StringLiteral",
+                                "label": "\\\".\\\\joern-cli\\\\joern-export --repr=all --format=neo4jcsv --out ./result\\\"",
+                                "startLine": 58,
+                                "endLine": 58,
+                                "childNodeList": []
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "VariableDeclarationStatement",
+                        "label": "Runtime outrun=Runtime.getRuntime();",
+                        "startLine": 59,
+                        "endLine": 59,
+                        "childNodeList": [
+                          {
+                            "type": "SimpleType",
+                            "label": "Runtime",
+                            "startLine": 59,
+                            "endLine": 59,
+                            "childNodeList": [
+                              {
+                                "type": "SimpleName",
+                                "label": "Runtime",
+                                "startLine": 59,
+                                "endLine": 59,
+                                "childNodeList": []
+                              }
+                            ]
+                          },
+                          {
+                            "type": "VariableDeclarationFragment",
+                            "label": "outrun=Runtime.getRuntime()",
+                            "startLine": 59,
+                            "endLine": 59,
+                            "childNodeList": [
+                              {
+                                "type": "SimpleName",
+                                "label": "outrun",
+                                "startLine": 59,
+                                "endLine": 59,
+                                "childNodeList": []
+                              },
+                              {
+                                "type": "MethodInvocation",
+                                "label": "Runtime.getRuntime()",
+                                "startLine": 59,
+                                "endLine": 59,
+                                "childNodeList": [
+                                  {
+                                    "type": "SimpleName",
+                                    "label": "Runtime",
+                                    "startLine": 59,
+                                    "endLine": 59,
+                                    "childNodeList": []
+                                  },
+                                  {
+                                    "type": "SimpleName",
+                                    "label": "getRuntime",
+                                    "startLine": 59,
+                                    "endLine": 59,
+                                    "childNodeList": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "VariableDeclarationStatement",
+                        "label": "Process outpro=outrun.exec(new String[]{\\\"cmd.exe\\\",\\\"/c\\\",outcmd});",
+                        "startLine": 60,
+                        "endLine": 60,
+                        "childNodeList": [
+                          {
+                            "type": "SimpleType",
+                            "label": "Process",
+                            "startLine": 60,
+                            "endLine": 60,
+                            "childNodeList": [
+                              {
+                                "type": "SimpleName",
+                                "label": "Process",
+                                "startLine": 60,
+                                "endLine": 60,
+                                "childNodeList": []
+                              }
+                            ]
+                          },
+                          {
+                            "type": "VariableDeclarationFragment",
+                            "label": "outpro=outrun.exec(new String[]{\\\"cmd.exe\\\",\\\"/c\\\",outcmd})",
+                            "startLine": 60,
+                            "endLine": 60,
+                            "childNodeList": [
+                              {
+                                "type": "SimpleName",
+                                "label": "outpro",
+                                "startLine": 60,
+                                "endLine": 60,
+                                "childNodeList": []
+                              },
+                              {
+                                "type": "MethodInvocation",
+                                "label": "outrun.exec(new String[]{\\\"cmd.exe\\\",\\\"/c\\\",outcmd})",
+                                "startLine": 60,
+                                "endLine": 60,
+                                "childNodeList": [
+                                  {
+                                    "type": "SimpleName",
+                                    "label": "outrun",
+                                    "startLine": 60,
+                                    "endLine": 60,
+                                    "childNodeList": []
+                                  },
+                                  {
+                                    "type": "SimpleName",
+                                    "label": "exec",
+                                    "startLine": 60,
+                                    "endLine": 60,
+                                    "childNodeList": []
+                                  },
+                                  {
+                                    "type": "ArrayCreation",
+                                    "label": "new String[]{\\\"cmd.exe\\\",\\\"/c\\\",outcmd}",
+                                    "startLine": 60,
+                                    "endLine": 60,
+                                    "childNodeList": [
+                                      {
+                                        "type": "ArrayType",
+                                        "label": "String[]",
+                                        "startLine": 60,
+                                        "endLine": 60,
+                                        "childNodeList": [
+                                          {
+                                            "type": "SimpleType",
+                                            "label": "String",
+                                            "startLine": 60,
+                                            "endLine": 60,
+                                            "childNodeList": [
+                                              {
+                                                "type": "SimpleName",
+                                                "label": "String",
+                                                "startLine": 60,
+                                                "endLine": 60,
+                                                "childNodeList": []
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "type": "ArrayInitializer",
+                                        "label": "{\\\"cmd.exe\\\",\\\"/c\\\",outcmd}",
+                                        "startLine": 60,
+                                        "endLine": 60,
+                                        "childNodeList": [
+                                          {
+                                            "type": "StringLiteral",
+                                            "label": "\\\"cmd.exe\\\"",
+                                            "startLine": 60,
+                                            "endLine": 60,
+                                            "childNodeList": []
+                                          },
+                                          {
+                                            "type": "StringLiteral",
+                                            "label": "\\\"/c\\\"",
+                                            "startLine": 60,
+                                            "endLine": 60,
+                                            "childNodeList": []
+                                          },
+                                          {
+                                            "type": "SimpleName",
+                                            "label": "outcmd",
+                                            "startLine": 60,
+                                            "endLine": 60,
+                                            "childNodeList": []
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "VariableDeclarationStatement",
+                        "label": "int status=outpro.waitFor();",
+                        "startLine": 61,
+                        "endLine": 61,
+                        "childNodeList": [
+                          {
+                            "type": "PrimitiveType",
+                            "label": "int",
+                            "startLine": 61,
+                            "endLine": 61,
+                            "childNodeList": []
+                          },
+                          {
+                            "type": "VariableDeclarationFragment",
+                            "label": "status=outpro.waitFor()",
+                            "startLine": 61,
+                            "endLine": 61,
+                            "childNodeList": [
+                              {
+                                "type": "SimpleName",
+                                "label": "status",
+                                "startLine": 61,
+                                "endLine": 61,
+                                "childNodeList": []
+                              },
+                              {
+                                "type": "MethodInvocation",
+                                "label": "outpro.waitFor()",
+                                "startLine": 61,
+                                "endLine": 61,
+                                "childNodeList": [
+                                  {
+                                    "type": "SimpleName",
+                                    "label": "outpro",
+                                    "startLine": 61,
+                                    "endLine": 61,
+                                    "childNodeList": []
+                                  },
+                                  {
+                                    "type": "SimpleName",
+                                    "label": "waitFor",
+                                    "startLine": 61,
+                                    "endLine": 61,
+                                    "childNodeList": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "IfStatement",
+                        "label": "if (status != 0) {System.out.println(\\\"Failed to call shell's command\\\");return false;} else {return true;}",
+                        "startLine": 62,
+                        "endLine": 69,
+                        "childNodeList": [
+                          {
+                            "type": "InfixExpression",
+                            "label": "status != 0",
+                            "startLine": 62,
+                            "endLine": 62,
+                            "childNodeList": [
+                              {
+                                "type": "SimpleName",
+                                "label": "status",
+                                "startLine": 62,
+                                "endLine": 62,
+                                "childNodeList": []
+                              },
+                              {
+                                "type": "NumberLiteral",
+                                "label": "0",
+                                "startLine": 62,
+                                "endLine": 62,
+                                "childNodeList": []
+                              }
+                            ]
+                          },
+                          {
+                            "type": "Block",
+                            "label": "{System.out.println(\\\"Failed to call shell's command\\\");return false;}",
+                            "startLine": 63,
+                            "endLine": 66,
+                            "childNodeList": [
+                              {
+                                "type": "ExpressionStatement",
+                                "label": "System.out.println(\\\"Failed to call shell's command\\\");",
+                                "startLine": 64,
+                                "endLine": 64,
+                                "childNodeList": [
+                                  {
+                                    "type": "MethodInvocation",
+                                    "label": "System.out.println(\\\"Failed to call shell's command\\\")",
+                                    "startLine": 64,
+                                    "endLine": 64,
+                                    "childNodeList": [
+                                      {
+                                        "type": "QualifiedName",
+                                        "label": "System.out",
+                                        "startLine": 64,
+                                        "endLine": 64,
+                                        "childNodeList": [
+                                          {
+                                            "type": "SimpleName",
+                                            "label": "System",
+                                            "startLine": 64,
+                                            "endLine": 64,
+                                            "childNodeList": []
+                                          },
+                                          {
+                                            "type": "SimpleName",
+                                            "label": "out",
+                                            "startLine": 64,
+                                            "endLine": 64,
+                                            "childNodeList": []
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "type": "SimpleName",
+                                        "label": "println",
+                                        "startLine": 64,
+                                        "endLine": 64,
+                                        "childNodeList": []
+                                      },
+                                      {
+                                        "type": "StringLiteral",
+                                        "label": "\\\"Failed to call shell's command\\\"",
+                                        "startLine": 64,
+                                        "endLine": 64,
+                                        "childNodeList": []
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "ReturnStatement",
+                                "label": "return false;",
+                                "startLine": 65,
+                                "endLine": 65,
+                                "childNodeList": [
+                                  {
+                                    "type": "BooleanLiteral",
+                                    "label": "false",
+                                    "startLine": 65,
+                                    "endLine": 65,
+                                    "childNodeList": []
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "Block",
+                            "label": "{return true;}",
+                            "startLine": 67,
+                            "endLine": 69,
+                            "childNodeList": [
+                              {
+                                "type": "ReturnStatement",
+                                "label": "return true;",
+                                "startLine": 68,
+                                "endLine": 68,
+                                "childNodeList": [
+                                  {
+                                    "type": "BooleanLiteral",
+                                    "label": "true",
+                                    "startLine": 68,
+                                    "endLine": 68,
+                                    "childNodeList": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "CatchClause",
+                    "label": "catch (InterruptedException exception) {exception.printStackTrace();return false;}",
+                    "startLine": 71,
+                    "endLine": 75,
+                    "childNodeList": [
+                      {
+                        "type": "SingleVariableDeclaration",
+                        "label": "InterruptedException exception",
+                        "startLine": 71,
+                        "endLine": 71,
+                        "childNodeList": [
+                          {
+                            "type": "SimpleType",
+                            "label": "InterruptedException",
+                            "startLine": 71,
+                            "endLine": 71,
+                            "childNodeList": [
+                              {
+                                "type": "SimpleName",
+                                "label": "InterruptedException",
+                                "startLine": 71,
+                                "endLine": 71,
+                                "childNodeList": []
+                              }
+                            ]
+                          },
+                          {
+                            "type": "SimpleName",
+                            "label": "exception",
+                            "startLine": 71,
+                            "endLine": 71,
+                            "childNodeList": []
+                          }
+                        ]
+                      },
+                      {
+                        "type": "Block",
+                        "label": "{exception.printStackTrace();return false;}",
+                        "startLine": 72,
+                        "endLine": 75,
+                        "childNodeList": [
+                          {
+                            "type": "ExpressionStatement",
+                            "label": "exception.printStackTrace();",
+                            "startLine": 73,
+                            "endLine": 73,
+                            "childNodeList": [
+                              {
+                                "type": "MethodInvocation",
+                                "label": "exception.printStackTrace()",
+                                "startLine": 73,
+                                "endLine": 73,
+                                "childNodeList": [
+                                  {
+                                    "type": "SimpleName",
+                                    "label": "exception",
+                                    "startLine": 73,
+                                    "endLine": 73,
+                                    "childNodeList": []
+                                  },
+                                  {
+                                    "type": "SimpleName",
+                                    "label": "printStackTrace",
+                                    "startLine": 73,
+                                    "endLine": 73,
+                                    "childNodeList": []
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "ReturnStatement",
+                            "label": "return false;",
+                            "startLine": 74,
+                            "endLine": 74,
+                            "childNodeList": [
+                              {
+                                "type": "BooleanLiteral",
+                                "label": "false",
+                                "startLine": 74,
+                                "endLine": 74,
+                                "childNodeList": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "CatchClause",
+                    "label": "catch (IOException ioException) {ioException.printStackTrace();return false;}",
+                    "startLine": 76,
+                    "endLine": 80,
+                    "childNodeList": [
+                      {
+                        "type": "SingleVariableDeclaration",
+                        "label": "IOException ioException",
+                        "startLine": 76,
+                        "endLine": 76,
+                        "childNodeList": [
+                          {
+                            "type": "SimpleType",
+                            "label": "IOException",
+                            "startLine": 76,
+                            "endLine": 76,
+                            "childNodeList": [
+                              {
+                                "type": "SimpleName",
+                                "label": "IOException",
+                                "startLine": 76,
+                                "endLine": 76,
+                                "childNodeList": []
+                              }
+                            ]
+                          },
+                          {
+                            "type": "SimpleName",
+                            "label": "ioException",
+                            "startLine": 76,
+                            "endLine": 76,
+                            "childNodeList": []
+                          }
+                        ]
+                      },
+                      {
+                        "type": "Block",
+                        "label": "{ioException.printStackTrace();return false;}",
+                        "startLine": 77,
+                        "endLine": 80,
+                        "childNodeList": [
+                          {
+                            "type": "ExpressionStatement",
+                            "label": "ioException.printStackTrace();",
+                            "startLine": 78,
+                            "endLine": 78,
+                            "childNodeList": [
+                              {
+                                "type": "MethodInvocation",
+                                "label": "ioException.printStackTrace()",
+                                "startLine": 78,
+                                "endLine": 78,
+                                "childNodeList": [
+                                  {
+                                    "type": "SimpleName",
+                                    "label": "ioException",
+                                    "startLine": 78,
+                                    "endLine": 78,
+                                    "childNodeList": []
+                                  },
+                                  {
+                                    "type": "SimpleName",
+                                    "label": "printStackTrace",
+                                    "startLine": 78,
+                                    "endLine": 78,
+                                    "childNodeList": []
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "ReturnStatement",
+                            "label": "return false;",
+                            "startLine": 79,
+                            "endLine": 79,
+                            "childNodeList": [
+                              {
+                                "type": "BooleanLiteral",
+                                "label": "false",
+                                "startLine": 79,
+                                "endLine": 79,
+                                "childNodeList": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "FuncStart",
+      "label": "main",
+      "startLine": 83,
+      "endLine": 110,
+      "className": "Joern_check",
+      "initialASTNode": {
+        "type": "MethodDeclaration",
+        "label": "public static void main(String[] args){BufferedReader reader=null;try {reader=new BufferedReader(new InputStreamReader(System.in));System.out.println(\\\"ë`?ö®ž©??Öœ?Àò?»ô?Èä?:\\\");String filepath=reader.readLine();if (scan(filepath)) {clean();if (export()) {System.out.println(\\\"Success\\\");} else {System.out.println(\\\"Export Error!\\\");}} else {System.out.println(\\\"Scan Error!\\\");}} catch (IOException ec) {ec.printStackTrace();}}",
+        "startLine": 83,
+        "endLine": 110,
+        "childNodeList": [
+          {
+            "type": "Modifier",
+            "label": "public",
+            "startLine": 83,
+            "endLine": 83,
+            "childNodeList": []
+          },
+          {
+            "type": "Modifier",
+            "label": "static",
+            "startLine": 83,
+            "endLine": 83,
+            "childNodeList": []
+          },
+          {
+            "type": "PrimitiveType",
+            "label": "void",
+            "startLine": 83,
+            "endLine": 83,
+            "childNodeList": []
+          },
+          {
+            "type": "SimpleName",
+            "label": "main",
+            "startLine": 83,
+            "endLine": 83,
+            "childNodeList": []
+          },
+          {
+            "type": "SingleVariableDeclaration",
+            "label": "String[] args",
+            "startLine": 83,
+            "endLine": 83,
+            "childNodeList": [
+              {
+                "type": "ArrayType",
+                "label": "String[]",
+                "startLine": 83,
+                "endLine": 83,
+                "childNodeList": [
+                  {
+                    "type": "SimpleType",
+                    "label": "String",
+                    "startLine": 83,
+                    "endLine": 83,
+                    "childNodeList": [
+                      {
+                        "type": "SimpleName",
+                        "label": "String",
+                        "startLine": 83,
+                        "endLine": 83,
+                        "childNodeList": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "SimpleName",
+                "label": "args",
+                "startLine": 83,
+                "endLine": 83,
+                "childNodeList": []
+              }
+            ]
+          },
+          {
+            "type": "Block",
+            "label": "{BufferedReader reader=null;try {reader=new BufferedReader(new InputStreamReader(System.in));System.out.println(\\\"ë`?ö®ž©??Öœ?Àò?»ô?Èä?:\\\");String filepath=reader.readLine();if (scan(filepath)) {clean();if (export()) {System.out.println(\\\"Success\\\");} else {System.out.println(\\\"Export Error!\\\");}} else {System.out.println(\\\"Scan Error!\\\");}} catch (IOException ec) {ec.printStackTrace();}}",
+            "startLine": 83,
+            "endLine": 110,
+            "childNodeList": [
+              {
+                "type": "VariableDeclarationStatement",
+                "label": "BufferedReader reader=null;",
+                "startLine": 84,
+                "endLine": 84,
+                "childNodeList": [
+                  {
+                    "type": "SimpleType",
+                    "label": "BufferedReader",
+                    "startLine": 84,
+                    "endLine": 84,
+                    "childNodeList": [
+                      {
+                        "type": "SimpleName",
+                        "label": "BufferedReader",
+                        "startLine": 84,
+                        "endLine": 84,
+                        "childNodeList": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "VariableDeclarationFragment",
+                    "label": "reader=null",
+                    "startLine": 84,
+                    "endLine": 84,
+                    "childNodeList": [
+                      {
+                        "type": "SimpleName",
+                        "label": "reader",
+                        "startLine": 84,
+                        "endLine": 84,
+                        "childNodeList": []
+                      },
+                      {
+                        "type": "NullLiteral",
+                        "label": "null",
+                        "startLine": 84,
+                        "endLine": 84,
+                        "childNodeList": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "TryStatement",
+                "label": "try {reader=new BufferedReader(new InputStreamReader(System.in));System.out.println(\\\"ë`?ö®ž©??Öœ?Àò?»ô?Èä?:\\\");String filepath=reader.readLine();if (scan(filepath)) {clean();if (export()) {System.out.println(\\\"Success\\\");} else {System.out.println(\\\"Export Error!\\\");}} else {System.out.println(\\\"Scan Error!\\\");}} catch (IOException ec) {ec.printStackTrace();}",
+                "startLine": 85,
+                "endLine": 109,
+                "childNodeList": [
+                  {
+                    "type": "Block",
+                    "label": "{reader=new BufferedReader(new InputStreamReader(System.in));System.out.println(\\\"ë`?ö®ž©??Öœ?Àò?»ô?Èä?:\\\");String filepath=reader.readLine();if (scan(filepath)) {clean();if (export()) {System.out.println(\\\"Success\\\");} else {System.out.println(\\\"Export Error!\\\");}} else {System.out.println(\\\"Scan Error!\\\");}}",
+                    "startLine": 85,
+                    "endLine": 105,
+                    "childNodeList": [
+                      {
+                        "type": "ExpressionStatement",
+                        "label": "reader=new BufferedReader(new InputStreamReader(System.in));",
+                        "startLine": 86,
+                        "endLine": 86,
+                        "childNodeList": [
+                          {
+                            "type": "Assignment",
+                            "label": "reader=new BufferedReader(new InputStreamReader(System.in))",
+                            "startLine": 86,
+                            "endLine": 86,
+                            "childNodeList": [
+                              {
+                                "type": "SimpleName",
+                                "label": "reader",
+                                "startLine": 86,
+                                "endLine": 86,
+                                "childNodeList": []
+                              },
+                              {
+                                "type": "ClassInstanceCreation",
+                                "label": "new BufferedReader(new InputStreamReader(System.in))",
+                                "startLine": 86,
+                                "endLine": 86,
+                                "childNodeList": [
+                                  {
+                                    "type": "SimpleType",
+                                    "label": "BufferedReader",
+                                    "startLine": 86,
+                                    "endLine": 86,
+                                    "childNodeList": [
+                                      {
+                                        "type": "SimpleName",
+                                        "label": "BufferedReader",
+                                        "startLine": 86,
+                                        "endLine": 86,
+                                        "childNodeList": []
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "ClassInstanceCreation",
+                                    "label": "new InputStreamReader(System.in)",
+                                    "startLine": 86,
+                                    "endLine": 86,
+                                    "childNodeList": [
+                                      {
+                                        "type": "SimpleType",
+                                        "label": "InputStreamReader",
+                                        "startLine": 86,
+                                        "endLine": 86,
+                                        "childNodeList": [
+                                          {
+                                            "type": "SimpleName",
+                                            "label": "InputStreamReader",
+                                            "startLine": 86,
+                                            "endLine": 86,
+                                            "childNodeList": []
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "type": "QualifiedName",
+                                        "label": "System.in",
+                                        "startLine": 86,
+                                        "endLine": 86,
+                                        "childNodeList": [
+                                          {
+                                            "type": "SimpleName",
+                                            "label": "System",
+                                            "startLine": 86,
+                                            "endLine": 86,
+                                            "childNodeList": []
+                                          },
+                                          {
+                                            "type": "SimpleName",
+                                            "label": "in",
+                                            "startLine": 86,
+                                            "endLine": 86,
+                                            "childNodeList": []
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "ExpressionStatement",
+                        "label": "System.out.println(\\\"ë`?ö®ž©??Öœ?Àò?»ô?Èä?:\\\");",
+                        "startLine": 87,
+                        "endLine": 87,
+                        "childNodeList": [
+                          {
+                            "type": "MethodInvocation",
+                            "label": "System.out.println(\\\"ë`?ö®ž©??Öœ?Àò?»ô?Èä?:\\\")",
+                            "startLine": 87,
+                            "endLine": 87,
+                            "childNodeList": [
+                              {
+                                "type": "QualifiedName",
+                                "label": "System.out",
+                                "startLine": 87,
+                                "endLine": 87,
+                                "childNodeList": [
+                                  {
+                                    "type": "SimpleName",
+                                    "label": "System",
+                                    "startLine": 87,
+                                    "endLine": 87,
+                                    "childNodeList": []
+                                  },
+                                  {
+                                    "type": "SimpleName",
+                                    "label": "out",
+                                    "startLine": 87,
+                                    "endLine": 87,
+                                    "childNodeList": []
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "SimpleName",
+                                "label": "println",
+                                "startLine": 87,
+                                "endLine": 87,
+                                "childNodeList": []
+                              },
+                              {
+                                "type": "StringLiteral",
+                                "label": "\\\"ë`?ö®ž©??Öœ?Àò?»ô?Èä?:\\\"",
+                                "startLine": 87,
+                                "endLine": 87,
+                                "childNodeList": []
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "VariableDeclarationStatement",
+                        "label": "String filepath=reader.readLine();",
+                        "startLine": 88,
+                        "endLine": 88,
+                        "childNodeList": [
+                          {
+                            "type": "SimpleType",
+                            "label": "String",
+                            "startLine": 88,
+                            "endLine": 88,
+                            "childNodeList": [
+                              {
+                                "type": "SimpleName",
+                                "label": "String",
+                                "startLine": 88,
+                                "endLine": 88,
+                                "childNodeList": []
+                              }
+                            ]
+                          },
+                          {
+                            "type": "VariableDeclarationFragment",
+                            "label": "filepath=reader.readLine()",
+                            "startLine": 88,
+                            "endLine": 88,
+                            "childNodeList": [
+                              {
+                                "type": "SimpleName",
+                                "label": "filepath",
+                                "startLine": 88,
+                                "endLine": 88,
+                                "childNodeList": []
+                              },
+                              {
+                                "type": "MethodInvocation",
+                                "label": "reader.readLine()",
+                                "startLine": 88,
+                                "endLine": 88,
+                                "childNodeList": [
+                                  {
+                                    "type": "SimpleName",
+                                    "label": "reader",
+                                    "startLine": 88,
+                                    "endLine": 88,
+                                    "childNodeList": []
+                                  },
+                                  {
+                                    "type": "SimpleName",
+                                    "label": "readLine",
+                                    "startLine": 88,
+                                    "endLine": 88,
+                                    "childNodeList": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "IfStatement",
+                        "label": "if (scan(filepath)) {clean();if (export()) {System.out.println(\\\"Success\\\");} else {System.out.println(\\\"Export Error!\\\");}} else {System.out.println(\\\"Scan Error!\\\");}",
+                        "startLine": 89,
+                        "endLine": 104,
+                        "childNodeList": [
+                          {
+                            "type": "MethodInvocation",
+                            "label": "scan(filepath)",
+                            "startLine": 89,
+                            "endLine": 89,
+                            "childNodeList": [
+                              {
+                                "type": "SimpleName",
+                                "label": "scan",
+                                "startLine": 89,
+                                "endLine": 89,
+                                "childNodeList": []
+                              },
+                              {
+                                "type": "SimpleName",
+                                "label": "filepath",
+                                "startLine": 89,
+                                "endLine": 89,
+                                "childNodeList": []
+                              }
+                            ]
+                          },
+                          {
+                            "type": "Block",
+                            "label": "{clean();if (export()) {System.out.println(\\\"Success\\\");} else {System.out.println(\\\"Export Error!\\\");}}",
+                            "startLine": 90,
+                            "endLine": 100,
+                            "childNodeList": [
+                              {
+                                "type": "ExpressionStatement",
+                                "label": "clean();",
+                                "startLine": 91,
+                                "endLine": 91,
+                                "childNodeList": [
+                                  {
+                                    "type": "MethodInvocation",
+                                    "label": "clean()",
+                                    "startLine": 91,
+                                    "endLine": 91,
+                                    "childNodeList": [
+                                      {
+                                        "type": "SimpleName",
+                                        "label": "clean",
+                                        "startLine": 91,
+                                        "endLine": 91,
+                                        "childNodeList": []
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "IfStatement",
+                                "label": "if (export()) {System.out.println(\\\"Success\\\");} else {System.out.println(\\\"Export Error!\\\");}",
+                                "startLine": 92,
+                                "endLine": 99,
+                                "childNodeList": [
+                                  {
+                                    "type": "MethodInvocation",
+                                    "label": "export()",
+                                    "startLine": 92,
+                                    "endLine": 92,
+                                    "childNodeList": [
+                                      {
+                                        "type": "SimpleName",
+                                        "label": "export",
+                                        "startLine": 92,
+                                        "endLine": 92,
+                                        "childNodeList": []
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "Block",
+                                    "label": "{System.out.println(\\\"Success\\\");}",
+                                    "startLine": 93,
+                                    "endLine": 95,
+                                    "childNodeList": [
+                                      {
+                                        "type": "ExpressionStatement",
+                                        "label": "System.out.println(\\\"Success\\\");",
+                                        "startLine": 94,
+                                        "endLine": 94,
+                                        "childNodeList": [
+                                          {
+                                            "type": "MethodInvocation",
+                                            "label": "System.out.println(\\\"Success\\\")",
+                                            "startLine": 94,
+                                            "endLine": 94,
+                                            "childNodeList": [
+                                              {
+                                                "type": "QualifiedName",
+                                                "label": "System.out",
+                                                "startLine": 94,
+                                                "endLine": 94,
+                                                "childNodeList": [
+                                                  {
+                                                    "type": "SimpleName",
+                                                    "label": "System",
+                                                    "startLine": 94,
+                                                    "endLine": 94,
+                                                    "childNodeList": []
+                                                  },
+                                                  {
+                                                    "type": "SimpleName",
+                                                    "label": "out",
+                                                    "startLine": 94,
+                                                    "endLine": 94,
+                                                    "childNodeList": []
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "type": "SimpleName",
+                                                "label": "println",
+                                                "startLine": 94,
+                                                "endLine": 94,
+                                                "childNodeList": []
+                                              },
+                                              {
+                                                "type": "StringLiteral",
+                                                "label": "\\\"Success\\\"",
+                                                "startLine": 94,
+                                                "endLine": 94,
+                                                "childNodeList": []
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "Block",
+                                    "label": "{System.out.println(\\\"Export Error!\\\");}",
+                                    "startLine": 97,
+                                    "endLine": 99,
+                                    "childNodeList": [
+                                      {
+                                        "type": "ExpressionStatement",
+                                        "label": "System.out.println(\\\"Export Error!\\\");",
+                                        "startLine": 98,
+                                        "endLine": 98,
+                                        "childNodeList": [
+                                          {
+                                            "type": "MethodInvocation",
+                                            "label": "System.out.println(\\\"Export Error!\\\")",
+                                            "startLine": 98,
+                                            "endLine": 98,
+                                            "childNodeList": [
+                                              {
+                                                "type": "QualifiedName",
+                                                "label": "System.out",
+                                                "startLine": 98,
+                                                "endLine": 98,
+                                                "childNodeList": [
+                                                  {
+                                                    "type": "SimpleName",
+                                                    "label": "System",
+                                                    "startLine": 98,
+                                                    "endLine": 98,
+                                                    "childNodeList": []
+                                                  },
+                                                  {
+                                                    "type": "SimpleName",
+                                                    "label": "out",
+                                                    "startLine": 98,
+                                                    "endLine": 98,
+                                                    "childNodeList": []
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "type": "SimpleName",
+                                                "label": "println",
+                                                "startLine": 98,
+                                                "endLine": 98,
+                                                "childNodeList": []
+                                              },
+                                              {
+                                                "type": "StringLiteral",
+                                                "label": "\\\"Export Error!\\\"",
+                                                "startLine": 98,
+                                                "endLine": 98,
+                                                "childNodeList": []
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "Block",
+                            "label": "{System.out.println(\\\"Scan Error!\\\");}",
+                            "startLine": 102,
+                            "endLine": 104,
+                            "childNodeList": [
+                              {
+                                "type": "ExpressionStatement",
+                                "label": "System.out.println(\\\"Scan Error!\\\");",
+                                "startLine": 103,
+                                "endLine": 103,
+                                "childNodeList": [
+                                  {
+                                    "type": "MethodInvocation",
+                                    "label": "System.out.println(\\\"Scan Error!\\\")",
+                                    "startLine": 103,
+                                    "endLine": 103,
+                                    "childNodeList": [
+                                      {
+                                        "type": "QualifiedName",
+                                        "label": "System.out",
+                                        "startLine": 103,
+                                        "endLine": 103,
+                                        "childNodeList": [
+                                          {
+                                            "type": "SimpleName",
+                                            "label": "System",
+                                            "startLine": 103,
+                                            "endLine": 103,
+                                            "childNodeList": []
+                                          },
+                                          {
+                                            "type": "SimpleName",
+                                            "label": "out",
+                                            "startLine": 103,
+                                            "endLine": 103,
+                                            "childNodeList": []
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "type": "SimpleName",
+                                        "label": "println",
+                                        "startLine": 103,
+                                        "endLine": 103,
+                                        "childNodeList": []
+                                      },
+                                      {
+                                        "type": "StringLiteral",
+                                        "label": "\\\"Scan Error!\\\"",
+                                        "startLine": 103,
+                                        "endLine": 103,
+                                        "childNodeList": []
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "CatchClause",
+                    "label": "catch (IOException ec) {ec.printStackTrace();}",
+                    "startLine": 106,
+                    "endLine": 109,
+                    "childNodeList": [
+                      {
+                        "type": "SingleVariableDeclaration",
+                        "label": "IOException ec",
+                        "startLine": 106,
+                        "endLine": 106,
+                        "childNodeList": [
+                          {
+                            "type": "SimpleType",
+                            "label": "IOException",
+                            "startLine": 106,
+                            "endLine": 106,
+                            "childNodeList": [
+                              {
+                                "type": "SimpleName",
+                                "label": "IOException",
+                                "startLine": 106,
+                                "endLine": 106,
+                                "childNodeList": []
+                              }
+                            ]
+                          },
+                          {
+                            "type": "SimpleName",
+                            "label": "ec",
+                            "startLine": 106,
+                            "endLine": 106,
+                            "childNodeList": []
+                          }
+                        ]
+                      },
+                      {
+                        "type": "Block",
+                        "label": "{ec.printStackTrace();}",
+                        "startLine": 107,
+                        "endLine": 109,
+                        "childNodeList": [
+                          {
+                            "type": "ExpressionStatement",
+                            "label": "ec.printStackTrace();",
+                            "startLine": 108,
+                            "endLine": 108,
+                            "childNodeList": [
+                              {
+                                "type": "MethodInvocation",
+                                "label": "ec.printStackTrace()",
+                                "startLine": 108,
+                                "endLine": 108,
+                                "childNodeList": [
+                                  {
+                                    "type": "SimpleName",
+                                    "label": "ec",
+                                    "startLine": 108,
+                                    "endLine": 108,
+                                    "childNodeList": []
+                                  },
+                                  {
+                                    "type": "SimpleName",
+                                    "label": "printStackTrace",
+                                    "startLine": 108,
+                                    "endLine": 108,
+                                    "childNodeList": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "FuncStart",
+      "label": "check",
+      "startLine": 112,
+      "endLine": 141,
+      "className": "Joern_check",
+      "initialASTNode": {
+        "type": "MethodDeclaration",
+        "label": "public static boolean check(){try {String filepath=\\\"target.c\\\";if (scan(filepath)) {clean();if (export()) {System.out.println(\\\"Success\\\");return true;} else {System.out.println(\\\"Export Error!\\\");return false;}} else {System.out.println(\\\"Scan Error!\\\");return false;}} catch (Exception ec) {ec.printStackTrace();return false;}}",
+        "startLine": 112,
+        "endLine": 141,
+        "childNodeList": [
+          {
+            "type": "Modifier",
+            "label": "public",
+            "startLine": 112,
+            "endLine": 112,
+            "childNodeList": []
+          },
+          {
+            "type": "Modifier",
+            "label": "static",
+            "startLine": 112,
+            "endLine": 112,
+            "childNodeList": []
+          },
+          {
+            "type": "PrimitiveType",
+            "label": "boolean",
+            "startLine": 112,
+            "endLine": 112,
+            "childNodeList": []
+          },
+          {
+            "type": "SimpleName",
+            "label": "check",
+            "startLine": 112,
+            "endLine": 112,
+            "childNodeList": []
+          },
+          {
+            "type": "Block",
+            "label": "{try {String filepath=\\\"target.c\\\";if (scan(filepath)) {clean();if (export()) {System.out.println(\\\"Success\\\");return true;} else {System.out.println(\\\"Export Error!\\\");return false;}} else {System.out.println(\\\"Scan Error!\\\");return false;}} catch (Exception ec) {ec.printStackTrace();return false;}}",
+            "startLine": 113,
+            "endLine": 141,
+            "childNodeList": [
+              {
+                "type": "TryStatement",
+                "label": "try {String filepath=\\\"target.c\\\";if (scan(filepath)) {clean();if (export()) {System.out.println(\\\"Success\\\");return true;} else {System.out.println(\\\"Export Error!\\\");return false;}} else {System.out.println(\\\"Scan Error!\\\");return false;}} catch (Exception ec) {ec.printStackTrace();return false;}",
+                "startLine": 114,
+                "endLine": 140,
+                "childNodeList": [
+                  {
+                    "type": "Block",
+                    "label": "{String filepath=\\\"target.c\\\";if (scan(filepath)) {clean();if (export()) {System.out.println(\\\"Success\\\");return true;} else {System.out.println(\\\"Export Error!\\\");return false;}} else {System.out.println(\\\"Scan Error!\\\");return false;}}",
+                    "startLine": 114,
+                    "endLine": 135,
+                    "childNodeList": [
+                      {
+                        "type": "VariableDeclarationStatement",
+                        "label": "String filepath=\\\"target.c\\\";",
+                        "startLine": 115,
+                        "endLine": 115,
+                        "childNodeList": [
+                          {
+                            "type": "SimpleType",
+                            "label": "String",
+                            "startLine": 115,
+                            "endLine": 115,
+                            "childNodeList": [
+                              {
+                                "type": "SimpleName",
+                                "label": "String",
+                                "startLine": 115,
+                                "endLine": 115,
+                                "childNodeList": []
+                              }
+                            ]
+                          },
+                          {
+                            "type": "VariableDeclarationFragment",
+                            "label": "filepath=\\\"target.c\\\"",
+                            "startLine": 115,
+                            "endLine": 115,
+                            "childNodeList": [
+                              {
+                                "type": "SimpleName",
+                                "label": "filepath",
+                                "startLine": 115,
+                                "endLine": 115,
+                                "childNodeList": []
+                              },
+                              {
+                                "type": "StringLiteral",
+                                "label": "\\\"target.c\\\"",
+                                "startLine": 115,
+                                "endLine": 115,
+                                "childNodeList": []
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "IfStatement",
+                        "label": "if (scan(filepath)) {clean();if (export()) {System.out.println(\\\"Success\\\");return true;} else {System.out.println(\\\"Export Error!\\\");return false;}} else {System.out.println(\\\"Scan Error!\\\");return false;}",
+                        "startLine": 116,
+                        "endLine": 134,
+                        "childNodeList": [
+                          {
+                            "type": "MethodInvocation",
+                            "label": "scan(filepath)",
+                            "startLine": 116,
+                            "endLine": 116,
+                            "childNodeList": [
+                              {
+                                "type": "SimpleName",
+                                "label": "scan",
+                                "startLine": 116,
+                                "endLine": 116,
+                                "childNodeList": []
+                              },
+                              {
+                                "type": "SimpleName",
+                                "label": "filepath",
+                                "startLine": 116,
+                                "endLine": 116,
+                                "childNodeList": []
+                              }
+                            ]
+                          },
+                          {
+                            "type": "Block",
+                            "label": "{clean();if (export()) {System.out.println(\\\"Success\\\");return true;} else {System.out.println(\\\"Export Error!\\\");return false;}}",
+                            "startLine": 117,
+                            "endLine": 129,
+                            "childNodeList": [
+                              {
+                                "type": "ExpressionStatement",
+                                "label": "clean();",
+                                "startLine": 118,
+                                "endLine": 118,
+                                "childNodeList": [
+                                  {
+                                    "type": "MethodInvocation",
+                                    "label": "clean()",
+                                    "startLine": 118,
+                                    "endLine": 118,
+                                    "childNodeList": [
+                                      {
+                                        "type": "SimpleName",
+                                        "label": "clean",
+                                        "startLine": 118,
+                                        "endLine": 118,
+                                        "childNodeList": []
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "IfStatement",
+                                "label": "if (export()) {System.out.println(\\\"Success\\\");return true;} else {System.out.println(\\\"Export Error!\\\");return false;}",
+                                "startLine": 119,
+                                "endLine": 128,
+                                "childNodeList": [
+                                  {
+                                    "type": "MethodInvocation",
+                                    "label": "export()",
+                                    "startLine": 119,
+                                    "endLine": 119,
+                                    "childNodeList": [
+                                      {
+                                        "type": "SimpleName",
+                                        "label": "export",
+                                        "startLine": 119,
+                                        "endLine": 119,
+                                        "childNodeList": []
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "Block",
+                                    "label": "{System.out.println(\\\"Success\\\");return true;}",
+                                    "startLine": 120,
+                                    "endLine": 123,
+                                    "childNodeList": [
+                                      {
+                                        "type": "ExpressionStatement",
+                                        "label": "System.out.println(\\\"Success\\\");",
+                                        "startLine": 121,
+                                        "endLine": 121,
+                                        "childNodeList": [
+                                          {
+                                            "type": "MethodInvocation",
+                                            "label": "System.out.println(\\\"Success\\\")",
+                                            "startLine": 121,
+                                            "endLine": 121,
+                                            "childNodeList": [
+                                              {
+                                                "type": "QualifiedName",
+                                                "label": "System.out",
+                                                "startLine": 121,
+                                                "endLine": 121,
+                                                "childNodeList": [
+                                                  {
+                                                    "type": "SimpleName",
+                                                    "label": "System",
+                                                    "startLine": 121,
+                                                    "endLine": 121,
+                                                    "childNodeList": []
+                                                  },
+                                                  {
+                                                    "type": "SimpleName",
+                                                    "label": "out",
+                                                    "startLine": 121,
+                                                    "endLine": 121,
+                                                    "childNodeList": []
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "type": "SimpleName",
+                                                "label": "println",
+                                                "startLine": 121,
+                                                "endLine": 121,
+                                                "childNodeList": []
+                                              },
+                                              {
+                                                "type": "StringLiteral",
+                                                "label": "\\\"Success\\\"",
+                                                "startLine": 121,
+                                                "endLine": 121,
+                                                "childNodeList": []
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "type": "ReturnStatement",
+                                        "label": "return true;",
+                                        "startLine": 122,
+                                        "endLine": 122,
+                                        "childNodeList": [
+                                          {
+                                            "type": "BooleanLiteral",
+                                            "label": "true",
+                                            "startLine": 122,
+                                            "endLine": 122,
+                                            "childNodeList": []
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "Block",
+                                    "label": "{System.out.println(\\\"Export Error!\\\");return false;}",
+                                    "startLine": 125,
+                                    "endLine": 128,
+                                    "childNodeList": [
+                                      {
+                                        "type": "ExpressionStatement",
+                                        "label": "System.out.println(\\\"Export Error!\\\");",
+                                        "startLine": 126,
+                                        "endLine": 126,
+                                        "childNodeList": [
+                                          {
+                                            "type": "MethodInvocation",
+                                            "label": "System.out.println(\\\"Export Error!\\\")",
+                                            "startLine": 126,
+                                            "endLine": 126,
+                                            "childNodeList": [
+                                              {
+                                                "type": "QualifiedName",
+                                                "label": "System.out",
+                                                "startLine": 126,
+                                                "endLine": 126,
+                                                "childNodeList": [
+                                                  {
+                                                    "type": "SimpleName",
+                                                    "label": "System",
+                                                    "startLine": 126,
+                                                    "endLine": 126,
+                                                    "childNodeList": []
+                                                  },
+                                                  {
+                                                    "type": "SimpleName",
+                                                    "label": "out",
+                                                    "startLine": 126,
+                                                    "endLine": 126,
+                                                    "childNodeList": []
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "type": "SimpleName",
+                                                "label": "println",
+                                                "startLine": 126,
+                                                "endLine": 126,
+                                                "childNodeList": []
+                                              },
+                                              {
+                                                "type": "StringLiteral",
+                                                "label": "\\\"Export Error!\\\"",
+                                                "startLine": 126,
+                                                "endLine": 126,
+                                                "childNodeList": []
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "type": "ReturnStatement",
+                                        "label": "return false;",
+                                        "startLine": 127,
+                                        "endLine": 127,
+                                        "childNodeList": [
+                                          {
+                                            "type": "BooleanLiteral",
+                                            "label": "false",
+                                            "startLine": 127,
+                                            "endLine": 127,
+                                            "childNodeList": []
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "Block",
+                            "label": "{System.out.println(\\\"Scan Error!\\\");return false;}",
+                            "startLine": 131,
+                            "endLine": 134,
+                            "childNodeList": [
+                              {
+                                "type": "ExpressionStatement",
+                                "label": "System.out.println(\\\"Scan Error!\\\");",
+                                "startLine": 132,
+                                "endLine": 132,
+                                "childNodeList": [
+                                  {
+                                    "type": "MethodInvocation",
+                                    "label": "System.out.println(\\\"Scan Error!\\\")",
+                                    "startLine": 132,
+                                    "endLine": 132,
+                                    "childNodeList": [
+                                      {
+                                        "type": "QualifiedName",
+                                        "label": "System.out",
+                                        "startLine": 132,
+                                        "endLine": 132,
+                                        "childNodeList": [
+                                          {
+                                            "type": "SimpleName",
+                                            "label": "System",
+                                            "startLine": 132,
+                                            "endLine": 132,
+                                            "childNodeList": []
+                                          },
+                                          {
+                                            "type": "SimpleName",
+                                            "label": "out",
+                                            "startLine": 132,
+                                            "endLine": 132,
+                                            "childNodeList": []
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "type": "SimpleName",
+                                        "label": "println",
+                                        "startLine": 132,
+                                        "endLine": 132,
+                                        "childNodeList": []
+                                      },
+                                      {
+                                        "type": "StringLiteral",
+                                        "label": "\\\"Scan Error!\\\"",
+                                        "startLine": 132,
+                                        "endLine": 132,
+                                        "childNodeList": []
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "ReturnStatement",
+                                "label": "return false;",
+                                "startLine": 133,
+                                "endLine": 133,
+                                "childNodeList": [
+                                  {
+                                    "type": "BooleanLiteral",
+                                    "label": "false",
+                                    "startLine": 133,
+                                    "endLine": 133,
+                                    "childNodeList": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "CatchClause",
+                    "label": "catch (Exception ec) {ec.printStackTrace();return false;}",
+                    "startLine": 136,
+                    "endLine": 140,
+                    "childNodeList": [
+                      {
+                        "type": "SingleVariableDeclaration",
+                        "label": "Exception ec",
+                        "startLine": 136,
+                        "endLine": 136,
+                        "childNodeList": [
+                          {
+                            "type": "SimpleType",
+                            "label": "Exception",
+                            "startLine": 136,
+                            "endLine": 136,
+                            "childNodeList": [
+                              {
+                                "type": "SimpleName",
+                                "label": "Exception",
+                                "startLine": 136,
+                                "endLine": 136,
+                                "childNodeList": []
+                              }
+                            ]
+                          },
+                          {
+                            "type": "SimpleName",
+                            "label": "ec",
+                            "startLine": 136,
+                            "endLine": 136,
+                            "childNodeList": []
+                          }
+                        ]
+                      },
+                      {
+                        "type": "Block",
+                        "label": "{ec.printStackTrace();return false;}",
+                        "startLine": 137,
+                        "endLine": 140,
+                        "childNodeList": [
+                          {
+                            "type": "ExpressionStatement",
+                            "label": "ec.printStackTrace();",
+                            "startLine": 138,
+                            "endLine": 138,
+                            "childNodeList": [
+                              {
+                                "type": "MethodInvocation",
+                                "label": "ec.printStackTrace()",
+                                "startLine": 138,
+                                "endLine": 138,
+                                "childNodeList": [
+                                  {
+                                    "type": "SimpleName",
+                                    "label": "ec",
+                                    "startLine": 138,
+                                    "endLine": 138,
+                                    "childNodeList": []
+                                  },
+                                  {
+                                    "type": "SimpleName",
+                                    "label": "printStackTrace",
+                                    "startLine": 138,
+                                    "endLine": 138,
+                                    "childNodeList": []
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "ReturnStatement",
+                            "label": "return false;",
+                            "startLine": 139,
+                            "endLine": 139,
+                            "childNodeList": [
+                              {
+                                "type": "BooleanLiteral",
+                                "label": "false",
+                                "startLine": 139,
+                                "endLine": 139,
+                                "childNodeList": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
