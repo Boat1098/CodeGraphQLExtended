@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="CodeGraphQLExtended.main:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/CodeGraphQLExtended_main_jar</output-path>
+    <root id="archive" name="CodeGraphQLExtended.main.jar">
+      <element id="module-output" name="CodeGraphQLExtended.main" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../Software/Gradle/repository/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.13.0/15be89db6609bd6fda3dc309bacf0318a312c03f/jackson-annotations-2.13.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../Software/Gradle/repository/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.13.0/e957ec5442966e69cef543927bdc80e5426968bb/jackson-core-2.13.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../Software/Gradle/repository/caches/modules-2/files-2.1/org.jetbrains/annotations/24.0.1/13c5c75c4206580aa4d683bffee658caae6c9f43/annotations-24.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../Software/Gradle/repository/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.13.0/889672a1721d6d85b2834fcd29d3fda92c8c8891/jackson-databind-2.13.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
